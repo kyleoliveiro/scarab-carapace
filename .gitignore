@@ -1,6 +1,5 @@
 build/
 node_modules/
-styleguide-theme/
 
 .DS_Store
 .sass-cache
