@@ -1,0 +1,54 @@
+// X
+//
+// **Configure global sizing for the x-axis**
+//
+// ```
+// @include define( x, (
+// 	XS: (
+// 		base: bl(0.5),
+// 		medium: bl(0.75)
+// 	),
+//
+// 	S: (
+// 		base: bl(1),
+// 		medium: bl(1.5)
+// 	),
+// 	// ... See source file for configuration
+// ) );
+// ```
+//
+// The `x` sizing configuration map is used determine the horizontal sizing of some layout and helpers classes.
+//
+// Style guide: Config.X
+
+@include define( x, (
+	XS: (
+		base: bl(0.5),
+		medium: bl(0.75)
+	),
+
+	S: (
+		base: bl(1),
+		medium: bl(1.5)
+	),
+
+	M: (
+		base: bl(2),
+		medium: bl(3)
+	),
+
+	L: (
+		base: bl(3),
+		medium: bl(4.5)
+	),
+
+	XL: (
+		base: bl(4),
+		medium: bl(6)
+	),
+
+	'0': (
+		base: 0,
+		medium: 0
+	)
+) );

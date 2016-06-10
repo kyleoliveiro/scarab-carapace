@@ -1,0 +1,27 @@
+// Pad Bottom
+//
+// **Controls the bottom padding of an element**
+//
+// .pad-bottom--0  - Remove padding
+// .pad-bottom--xs - Extra small padding
+// .pad-bottom--s  - Small padding
+// .pad-bottom--m  - Medium padding
+// .pad-bottom--l  - Large padding
+// .pad-bottom--xl - Extra large padding
+//
+// Markup: pad-bottom.html
+//
+// Weight: 5
+//
+// Style guide: Layout.Pad.Bottom
+
+%pad-bottom,
+.pad-bottom {
+	@include responsive(( padding-bottom ), y() );
+
+	@each $size in global( size-mods ) {
+		&--#{ $size } {
+			@include responsive( ( padding-bottom ), y( $size ) );
+		}
+	}
+}

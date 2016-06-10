@@ -1,0 +1,27 @@
+// Pad Right
+//
+// **Controls the right padding of an element**
+//
+// .pad-right--0  - Remove padding
+// .pad-right--xs - Extra small padding
+// .pad-right--s  - Small padding
+// .pad-right--m  - Medium padding
+// .pad-right--l  - Large padding
+// .pad-right--xl - Extra large padding
+//
+// Markup: pad-right.html
+//
+// Weight: 2
+//
+// Style guide: Layout.Pad.Right
+
+%pad-right,
+.pad-right {
+	@include responsive(( padding-right ), x() );
+
+	@each $size in global( size-mods ) {
+		&--#{ $size } {
+			@include responsive( ( padding-right ), x( $size ) );
+		}
+	}
+}

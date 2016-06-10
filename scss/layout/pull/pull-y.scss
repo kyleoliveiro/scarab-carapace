@@ -1,0 +1,28 @@
+// Pull Y
+//
+// **Sets negative top and bottom margins on an element**
+//
+// .pull-y--xs - Extra small margin
+// .pull-y--s  - Small margin
+// .pull-y--m  - Medium margin
+// .pull-y--l  - Large margin
+// .pull-y--xl - Extra large margin
+//
+// Markup: pull-y.html
+//
+// Weight: 6
+//
+// Style guide: Layout.Pull.Y
+
+%pull-y,
+.pull-y {
+	@include responsive(( margin-top, margin-bottom ), negative(y()) );
+
+	@each $size in global( size-mods ) {
+		@if $size != '0' {
+			&--#{ $size } {
+				@include responsive( ( margin-top, margin-bottom ), negative(y( $size )) );
+			}
+		}
+	}
+}

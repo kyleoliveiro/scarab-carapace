@@ -1,0 +1,21 @@
+// Media
+//
+// **Global styles for images and other media**
+//
+// Simple styles for media (images, videos, etc) to behave responsively.
+//
+// ```
+// audio, embed, img, iframe, video {
+// 	display: block;
+// 	max-width: 100%;
+// }
+// ```
+//
+// Weight: 1
+//
+// Style guide: Base.Media
+
+audio, embed, img, iframe, video {
+	display: block;
+	max-width: 100%;
+}

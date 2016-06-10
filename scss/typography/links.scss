@@ -1,0 +1,24 @@
+// Links
+//
+// **Hyperlinks**
+//
+// Markup: links.html
+//
+// Weight: 3
+//
+// Style guide: Typography.Links
+
+@at-root {
+	$color: palette( primary );
+	
+	a,
+	%link,
+	.link {
+		color: $color;
+		text-decoration: underline;
+
+		&:hover {
+			color: darken($color, 20);
+		}
+	}
+}

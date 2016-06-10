@@ -1,0 +1,127 @@
+// Button 
+// 
+// **Clickable, focusable button with active, focus and hover states**
+// 
+// :hover    - Hover state 
+// :focus    - Focus state 
+// :active   - Active state
+// .btn--primary - Primary button
+// .btn--warning - Warning button
+// .btn--confirm - Confirm button
+// 
+// Markup: button.html 
+//
+// Weight: 1
+// 
+// Style guide: Components.Button
+
+@at-root {
+	$class: 'btn';
+
+	@if $class {
+		.#{ $class } {
+			$border-color: palette( light grey );
+			$bg-color: palette( xlight grey );
+			$color: palette( dark grey );
+			$radius: 2px;
+
+			@include type-scale( small );
+			
+			appearance: none;
+			display: inline-block;
+			border-radius: $radius;
+			border: 1px solid $border-color;
+			padding: 0.5em 1em;
+			background-color: $bg-color;
+			color: $color;
+			font-family: typeface( primary );
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.125em;
+			vertical-align: middle;
+			cursor: pointer;
+			box-shadow: 0 1px 1px palette( light shadow );
+
+			&:hover,
+			&:focus {
+				background-color: lighten( $bg-color, 5 );
+				box-shadow: 0 1px 1px 1px palette( light shadow );
+			}
+
+			&:focus {
+				outline: none;
+			}
+
+			&:active {
+				transform: translateY( 1px );
+				box-shadow: 0 1px 0 palette( light shadow ) inset;
+
+				&:hover {
+					background-color: $bg-color;
+				}
+			}
+
+		}
+
+		// Button sizes
+		.#{$class}--s {
+			@include type-scale( tiny );
+			font-weight: 700;
+		}
+
+		.#{$class}--l {
+			@include type-scale( accent );
+			font-weight: 600;
+		}
+
+		// Theme buttons
+		@each $modifier in ( primary ) {
+			.#{$class}--#{$modifier} {
+				border-color: darken( palette( #{$modifier} ), 10 );
+				background-color: palette( #{$modifier} );
+				color: palette( white );
+
+				&:hover,
+				&:focus {
+					background-color: lighten( palette( #{$modifier} ), 6.75 );
+
+					&:active {
+						background-color: palette( #{$modifier} );
+					}
+				}
+
+				&:active {
+					background-color: palette( #{$modifier} );
+				}
+			}
+		}
+
+		// Warning button
+		.button--#{ warning } {
+			border-color: palette( ltigh warning )
+		}
+
+		@each $modifier in ( warning, confirm ) {
+
+			.#{$class}--#{$modifier} {
+				border-color: darken( palette( light #{$modifier} ), 5 );
+				background-color: palette( light #{$modifier} );
+				color: palette( #{$modifier} );
+
+				&:hover,
+				&:focus {
+					background-color: lighten( palette( light #{$modifier} ), 1.75 );
+
+					&:active {
+						background-color: palette( light #{$modifier} );
+					}
+				}
+
+				&:active {
+					background-color: palette( light #{$modifier} );
+				}
+			}
+
+		}
+	}
+}

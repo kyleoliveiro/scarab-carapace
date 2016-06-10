@@ -1,0 +1,24 @@
+// Clearfix
+//
+// **Clears the height of floated children**
+//
+// Markup: clearfix.html
+//
+// Weight: 5
+//
+// Style guide: Layout.Clearfix
+
+%clearfix,
+.clearfix {
+	@include breakpoint-hooks() {
+		&:before,
+		&:after {
+			content: ' ';
+			display: table;
+		}
+
+		&:after {
+			clear: both;
+		}
+	}
+}

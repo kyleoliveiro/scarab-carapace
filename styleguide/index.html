@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Carapace</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="kss-assets/kss.css">
+  <link rel="stylesheet" href="./styleguide.min.css">
+
+</head>
+<body id="kss-node">
+
+<div class="kss-sidebar kss-style">
+  <header class="kss-header">
+    <h1 class="kss-doc-title">Carapace</h1>
+  </header>
+  <nav class="kss-nav">
+    <ul class="kss-nav__menu">
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="./">
+          <span class="kss-nav__ref">0</span
+          ><span class="kss-nav__name">Overview</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-config.html">
+          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Configuration</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-base.html">
+          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Base</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-typography.html">
+          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Typography</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-layout.html">
+          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Layout</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-components.html">
+          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Components</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<article role="main" class="kss-main">
+  <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
+    <h1 id="carapace">Carapace</h1>
+<p><a href="https://www.npmjs.com/package/scarab-scss"><img src="https://img.shields.io/npm/v/scarab-carapace.svg" alt="npm"></a> <a href="https://travis-ci.org/watchtowerdigital/carapace"><img src="https://travis-ci.org/watchtowerdigital/carapace.svg?branch=master" alt="Build Status"></a> </p>
+<h2 id="sass-ui-framework-for-rapid-prototying">Sass UI framework for rapid prototying</h2>
+<p>Carapace is an extension of the <a href="https://github.com/watchtowerdigital/scarab.git">Scarab utility framework</a>.</p>
+<h2 id="table-of-contents">Table of contents</h2>
+<ul>
+<li><a href="#installation"><strong>Installation</strong></a></li>
+<li><a href="#features"><strong>Features</strong></a><ul>
+<li><a href="#scarab-framework"><strong>Scarab framework</strong></a></li>
+<li><a href="#object-oriented-approach"><strong>Object-oriented approach</strong></a></li>
+<li><a href="#responsive-by-default"><strong>Responsive by default</strong></a></li>
+<li><a href="#vertical-rythmn"><strong>Vertical rythmn</strong></a></li>
+<li><a href="#automatic-typesetting"><strong>Automatic typesetting</strong></a></li>
+<li><a href="#layout-helper-classes"><strong>Layout &amp; helper classes</strong></a></li>
+<li><a href="#component-inventory"><strong>Component inventory</strong></a></li>
+</ul>
+</li>
+<li><a href="#documentation"><strong>Documentation</strong></a></li>
+<li><a href="#resources"><strong>Resources</strong></a></li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>To get started, add Carapace as a dependency in your project via npm:</p>
+<pre><code>npm install scarab-carapace --save-dev
+</code></pre><p>Import <code>carapace.scss</code> at the beginning of your stylesheet:</p>
+<pre><code class="lang-scss">@import &quot;path/to/node_modules/scarab-carapace/scss/carapace&quot;;
+</code></pre>
+<p>Importing Carapace also imports the Scarab framework, which in turn creates a new global variable, <code>$SCARAB</code> in your Sass project.</p>
+<p>For more information on configuring Scarab and Carapace, refer to <a href="https://github.com/watchtowerdigital/scarab#configuration">Scarab: Configuration</a> and the official Configuration section of Carapace&#39;s documentation.</p>
+<h2 id="features">Features</h2>
+<h3 id="scarab-framework">Scarab framework</h3>
+<p>Carapace imports the the <a href="https://github.com/watchtowerdigital/scarab.git">Scarab utility framework</a>. Scarab&#39;s functions and mixins are made available with Carapace.</p>
+<h3 id="object-oriented-approach">Object-oriented approach</h3>
+<p>Designed with an object-oriented approach in mind. Carapace kickstarts your projects and helps you write scalable and maintainable stylesheets.</p>
+<h3 id="responsive-by-default">Responsive by default</h3>
+<p>Everything is designed for mobile first. Use breakpoint hooks which are available on some helper and layout classes to fine-tune your interface at different breakpoints.</p>
+<h3 id="vertical-rythmn">Vertical rythmn</h3>
+<p>Achieve vertical rythmn by default. Use the <code>bl()</code> and <code>type-scale()</code> functions and mixins to ensure consistent spacings throughout your interface.</p>
+<h3 id="automatic-typesetting">Automatic typesetting</h3>
+<p>Scarab includes styles to apply a consistent visual heirarchy to typographical elements.</p>
+<h3 id="layout-and-helper-classes">Layout and helper classes</h3>
+<p>Included are layout classes which help with rapid prototyping, and helper classes which overwrite specific styles on an element.</p>
+<h3 id="component-inventory">Component inventory</h3>
+<p>Carapace provides a convenient method for managing the UI &quot;components&quot; for your application.</p>
+<h2 id="documentation">Documentation</h2>
+<p>Documentation is in development.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://github.com/watchtowerdigital/scarab-snippets.git"><strong>scarab-snippets</strong></a> — Sublime Text snippets for the Scarab Sass utility framework</li>
+</ul>
+
+  </div>
+</article>
+
+<!-- SCRIPTS -->
+<script src="kss-assets/kss.js"></script>
+<script src="kss-assets/scrollspy.js"></script>
+<script src="kss-assets/prettify.js"></script>
+<script>
+  prettyPrint();
+  var spy = new ScrollSpy('#kss-node', {
+    nav: '.kss-nav__menu-child > li > a',
+    className: 'is-in-viewport'
+  });
+</script>
+<script src="./styleguide.js"></script>
+
+
+
+<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>

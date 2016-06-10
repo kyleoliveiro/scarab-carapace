@@ -1,0 +1,129 @@
+// Flex Grid
+//
+// **Arranges an element's children into a Flexbox-based grid layout**
+//
+// .flex-grid--center               - Center grid items
+// .flex-grid--justify              - Justify grid items
+// .flex-grid--justify-between      - Justify grid items
+// .flex-grid--baseline             - Justify grid items
+// .flex-grid--align-start          - Justify grid items
+// .flex-grid--align-end            - Justify grid items
+// .flex-grid--align-middle         - Justify grid items
+// .flex-grid--align-stretch        - Justify grid items
+//
+// Markup: flex-grid.html
+//
+// Weight: 7
+//
+// Style guide: Layout.Flex--Grid
+
+@include define( flex-grid, (
+	gutter-x: bl(2),
+	gutter-y: bl(2)
+) );
+
+@at-root {
+	$flex-grid: global( flex-grid );
+		$gutter-x: map-get( $flex-grid, gutter-x );
+		$gutter-y: map-get( $flex-grid, gutter-y );
+
+	.flex-grid {
+		@include breakpoint-hooks() {
+			display: flex;
+			margin-left: negative($gutter-x * 0.5);
+			margin-right: negative($gutter-x * 0.5);
+			margin-bottom: negative($gutter-y);
+			flex-wrap: wrap;
+
+			& > * {
+				margin-left: $gutter-x * 0.5;
+				margin-right: $gutter-x * 0.5;
+				margin-bottom: $gutter-y;
+			}
+		}
+	}
+
+	.flex-grid--justify {
+		@include breakpoint-hooks() {
+			justify-content: space-around;
+		}
+	}
+
+	.flex-grid--justify-between {
+		@include breakpoint-hooks() {
+			justify-content: space-between;
+		}
+	}
+
+	.flex-grid--center {
+		@include breakpoint-hooks() {
+			justify-content: center;
+		}
+	}
+
+	.flex-grid--align-baseline {
+		@include breakpoint-hooks() {
+			align-items: baseline;
+		}
+	}
+
+	.flex-grid--align-start {
+		@include breakpoint-hooks() {
+			align-items: flex-start;
+		}
+	}
+
+	.flex-grid--align-end {
+		@include breakpoint-hooks() {
+			align-items: flex-end;
+		}
+	}
+
+	.flex-grid--align-middle {
+		@include breakpoint-hooks() {
+			align-items: center;
+		}
+	}
+
+	.flex-grid--align-stretch {
+		@include breakpoint-hooks() {
+			align-items: stretch;
+		}
+	}
+
+	.flex-grid--no-y-gutter {
+		@include breakpoint-hooks() {
+			margin-bottom: 0;
+
+			& > * {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.flex-grid--no-x-gutter {
+		@include breakpoint-hooks() {
+			margin-left: 0;
+			margin-right: 0;
+
+			& > * {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+
+	.flex-grid--no-gutter {
+		@include breakpoint-hooks() {
+			margin-left: 0;
+			margin-right: 0;
+			margin-bottom: 0;
+
+			& > * {
+				margin-left: 0;
+				margin-right: 0;
+				margin-bottom: 0;
+			}
+		}
+	}
+}

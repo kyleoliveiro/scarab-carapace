@@ -1,0 +1,11 @@
+// Body type
+html {
+	font-size: 100%;
+}
+
+body {
+	@extend %fw-normal;
+	@include type-scale( body );
+	font-family: typeface( primary );
+}
+

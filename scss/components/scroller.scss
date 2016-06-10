@@ -1,0 +1,37 @@
+// Scroller
+//
+// **Enable child elements to scroll horizontally if they exceed the width of the container**
+//
+// .scroller--no-touch-scrolling - Disable iOS smooth touch scrolling
+// .scroller--force-scrollbar    - Force the scrollbar to appear on some devices even if there is no need to scroll 
+//
+// Markup: scroller.html
+//
+// Weight: 101
+//
+// Style guide: Components.Scroller
+
+.scroller {
+	@include breakpoint-hooks() {
+		width: 100%;
+		max-width: 100%;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+
+		& > * {
+			display: table-cell;
+		}	
+	}
+}
+
+.scroller--no-touch-scrolling {
+	@include breakpoint-hooks() {
+		-webkit-overflow-scrolling: auto;
+	}
+}
+
+.scroller--force-scrollbar {
+	@include breakpoint-hooks() {
+		overflow: scroll;
+	}
+}

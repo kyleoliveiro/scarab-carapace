@@ -1,0 +1,28 @@
+// Pull Bottom
+//
+// **Sets a negative bottom margin on an element**
+//
+// .pull-bottom--xs - Extra small margin
+// .pull-bottom--s  - Small margin
+// .pull-bottom--m  - Medium margin
+// .pull-bottom--l  - Large margin
+// .pull-bottom--xl - Extra large margin
+//
+// Markup: pull-bottom.html
+//
+// Weight: 5
+//
+// Style guide: Layout.Pull.Bottom
+
+%pull-bottom,
+.pull-bottom {
+	@include responsive(( margin-bottom ), negative(y()) );
+
+	@each $size in global( size-mods ) {
+		@if $size != '0' {
+			&--#{ $size } {
+				@include responsive( ( margin-bottom ), negative(y( $size )) );
+			}
+		}
+	}
+}

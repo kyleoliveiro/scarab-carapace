@@ -1,0 +1,11 @@
+@mixin breakpoint-hooks() {
+	@content;
+
+	@each $breakpoint in global( breakpoint-mods ) {
+		&\@#{$breakpoint} {
+			@include query( $breakpoint ) {
+				@content;
+			}
+		}
+	}
+}

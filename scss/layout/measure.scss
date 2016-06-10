@@ -1,0 +1,46 @@
+// Measure
+//
+// **Contains an element to a maximum width based on its font size**
+//
+// .measure--xs - Extra small measure
+// .measure--s  - Small measure
+// .measure--l  - Large measure
+// .measure--xl - Extra large measure
+// 
+// Markup: measure.html
+//
+// Weight: 2
+//
+// Style guide: Layout.Measure
+
+@at-root {
+	$min: 17.5em;
+	$max: 60em;
+
+	$average: ( $min + $max ) / 2;
+	$step: ($max - $min) / length(global(size-mods));
+
+	$sizes: global( size-mods );
+
+	$measure: $average;
+
+	%measure,
+	.measure {
+		@include breakpoint-hooks() {
+			max-width: $measure;
+		}
+
+		@each $size in $sizes {
+			$magnitude: strip-units( x( $size, base ) - x( m, base) );
+			$difference: $magnitude * $step;
+			$measure: $average + $difference;
+
+			&--#{$size} {
+				@include breakpoint-hooks() {
+					max-width: $measure;
+				}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,54 @@
+{
+  "name": "scarab-carapace",
+  "version": "1.0.0",
+  "description": "Sass UI framework for rapid prototying",
+  "main": "scss/carapace.scss",
+  "scripts": {
+    "kss": "./node_modules/kss/bin/kss --source ./scss --homepage ../README.md --css ./styleguide.min.css --js ./styleguide.js --title Carapace",
+    "start": "gulp styleguide && gulp serve",
+    "dev": "gulp styleguide && gulp watch & gulp serve",
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watchtowerdigital/carapace.git"
+  },
+  "keywords": [
+    "sass",
+    "scss",
+    "placeholders",
+    "responsive",
+    "ui",
+    "library",
+    "framework",
+    "boilerplate",
+    "front-end",
+    "components"
+  ],
+  "author": "Kyle Oliveiro <kyle@watchtower.digital>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/watchtowerdigital/carapace/issues"
+  },
+  "homepage": "https://github.com/watchtowerdigital/carapace#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-core": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "browser-sync": "^2.12.10",
+    "css-mqpacker": "^5.0.1",
+    "cssnano": "^3.6.2",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1",
+    "gulp-sass-glob": "^1.0.6",
+    "gulp-size": "^2.1.0",
+    "gulp-watch": "^4.3.6",
+    "kss": "^3.0.0-beta.14"
+  },
+  "dependencies": {
+    "scarab-scss": "^3.3.2"
+  }
+}

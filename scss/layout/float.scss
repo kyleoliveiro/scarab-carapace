@@ -1,0 +1,27 @@
+// Float
+//
+// **Floats an element left or right**
+//
+// Markup: float.html
+//
+// Weight: 4
+//
+// Style guide: Layout.Float
+
+.float-left {
+	@include breakpoint-hooks() {
+		float: left;
+	}
+}
+
+.float-right {
+	@include breakpoint-hooks() {
+		float: right;
+	}
+}
+
+.float-none {
+	@include breakpoint-hooks() {
+		float: none;
+	}
+}

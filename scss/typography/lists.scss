@@ -1,0 +1,36 @@
+// Lists
+//
+// **Typographical lists**
+//
+// Markup: lists.html
+//
+// Weight: 4
+//
+// Style guide: Typography.Lists
+
+@at-root {
+	
+	%ul, .ul,
+	%ol, .ol {
+			@extend %contain;
+			@extend %pad-left--s;
+
+			& + & {
+				@extend %push-y;
+			}
+
+			li {
+				@extend %contain;
+				@extend %pad-left--xs;
+			}
+
+			li + li {
+				@extend %push-y--xs;
+			}
+	}
+
+	%ul, .ul {
+		list-style-type: circle;
+	}
+	
+}

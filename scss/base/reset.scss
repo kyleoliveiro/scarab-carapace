@@ -1,0 +1,43 @@
+// Reset
+//
+// **Global style resets**
+//
+// Carapace applies a simple reset which resets `margin` and `padding` on `html` and `body`, and sets `box-sizing` on everything.
+// The reset also sets `display: block;` on HTML5 elements for legacy browsers.
+//
+// ```
+// *, *:before, *:after {
+// 	box-sizing: border-box;
+// }
+//
+// html, body {
+// 	margin: 0;
+// 	padding: 0;
+// }
+//
+// // HTML5 display-role reset for older browsers
+// article, aside, details, figcaption, figure, 
+// footer, header, hgroup, menu, nav, section {
+// 	display: block;
+// }
+// ```
+//
+//
+// Weight 0
+//
+// Style guide: Base.Reset
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+// HTML5 display-role reset for older browsers
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}

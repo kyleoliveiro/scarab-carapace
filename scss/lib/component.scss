@@ -1,0 +1,16 @@
+// Get conifguration options from a component in the inventory
+//
+// @param { string } $query - Query of what to return
+// @return { string }
+
+@function component(
+	$keys...
+) {
+	$value: global( components );
+
+	@each $key in $keys {
+		$value: map-get( $value, #{$key} );
+	}
+
+	@return $value;
+}

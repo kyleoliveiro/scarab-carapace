@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Carapace</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="kss-assets/kss.css">
+  <link rel="stylesheet" href="./styleguide.min.css">
+
+</head>
+<body id="kss-node">
+
+<div class="kss-sidebar kss-style">
+  <header class="kss-header">
+    <h1 class="kss-doc-title">Carapace</h1>
+  </header>
+  <nav class="kss-nav">
+    <ul class="kss-nav__menu">
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="./">
+          <span class="kss-nav__ref">0</span
+          ><span class="kss-nav__name">Overview</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-config.html">
+          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Configuration</span>
+        </a>
+            <ul class="kss-nav__menu-child">
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-config.html#kssref-config-baseline">
+                  <span class="kss-nav__ref ">1.1</span
+                  ><span class="kss-nav__name">Baseline</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-config.html#kssref-config-breakpoints">
+                  <span class="kss-nav__ref ">1.2</span
+                  ><span class="kss-nav__name">Breakpoints</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-config.html#kssref-config-durations">
+                  <span class="kss-nav__ref ">1.3</span
+                  ><span class="kss-nav__name">Durations</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-config.html#kssref-config-palettes">
+                  <span class="kss-nav__ref ">1.4</span
+                  ><span class="kss-nav__name">Palettes</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-config.html#kssref-config-type-scale">
+                  <span class="kss-nav__ref ">1.5</span
+                  ><span class="kss-nav__name">Type Scale</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-config.html#kssref-config-x">
+                  <span class="kss-nav__ref ">1.6</span
+                  ><span class="kss-nav__name">X</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-config.html#kssref-config-y">
+                  <span class="kss-nav__ref ">1.7</span
+                  ><span class="kss-nav__name">Y</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-config.html#kssref-config-breakpoint-modifiers">
+                  <span class="kss-nav__ref ">1.8</span
+                  ><span class="kss-nav__name">Breakpoint modifiers</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-config.html#kssref-config-size-modifiers">
+                  <span class="kss-nav__ref ">1.9</span
+                  ><span class="kss-nav__name">Size modifiers</span>
+                </a>
+              </li>
+            </ul>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-base.html">
+          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Base</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-typography.html">
+          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Typography</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-layout.html">
+          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Layout</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-components.html">
+          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Components</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<article role="main" class="kss-main">
+
+    <div id="kssref-config" class="kss-section kss-section--depth-1">
+
+      <div class="kss-style">
+        <h1 class="kss-title kss-title--level-1">
+          <a class="kss-title__permalink" href="#kssref-config">
+            <span class="kss-title__ref">
+              1
+              <span class="kss-title__permalink-hash">
+                  #Config
+              </span>
+            </span>
+            Configuration
+          </a>
+        </h1>
+
+          <div class="kss-description">
+            <h2 id="stylesheet-configuration">Stylesheet configuration</h2>
+<p>Carapace is built on the <a href="https://github.com/watchtowerdigital/scarab.git">Scarab Sass utility framework</a>.
+This document outlines Carapace&#39;s default Scarab configuration. For more information on configuration for the Scarab framework, refer to Scarab&#39;s documentation.</p>
+<p><strong>To replace the default configuration or define new custom variables, use the <a href="https://github.com/watchtowerdigital/scarab/scss/tree/master/scss/helpers/define.scss"><code>define()</code></a> mixin.</strong></p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>config/_.scss</code>, line 1
+        </div>
+
+    </div>
+    <section id="kssref-config-baseline" class="kss-section kss-section--depth-2">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-config-baseline">
+            <span class="kss-title__ref">
+              1.1
+              <span class="kss-title__permalink-hash">
+                  #Config.Baseline
+              </span>
+            </span>
+            Baseline
+          </a>
+        </h2>
+
+          <div class="kss-description">
+            <p><strong>Configure the global baseline value</strong></p>
+<pre><code>@include define( baseline, rem(16) );
+</code></pre><p>The stylesheet&#39;s <code>BASELINE</code> is responsible for the sizing of most element and components.
+You can declare multiples of your baseline in properties throughout your stylesheet using Scarab&#39;s <code>bl()</code> mixin.</p>
+<p>It is recommended to use <code>rem</code> units for the baseline so that the UI scales with the user&#39;s browser font-size setting.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>config/baseline.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-config-breakpoints" class="kss-section kss-section--depth-2">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-config-breakpoints">
+            <span class="kss-title__ref">
+              1.2
+              <span class="kss-title__permalink-hash">
+                  #Config.Breakpoints
+              </span>
+            </span>
+            Breakpoints
+          </a>
+        </h2>
+
+          <div class="kss-description">
+            <p><strong>Configure global breakpoints</strong></p>
+<pre><code>@include define( breakpoints, (
+    tiny:   em(480),
+    small:  em(640),
+    medium: em(960),
+    large:  em(1440),
+    huge:   em(1920)
+) );
+</code></pre><p>The <code>BREAKPOINTS</code> configuration map is used in conjunction with Scarab&#39;s <code>breakpoint()</code>, <code>type-scale()</code>, <code>query()</code> and <code>responsive()</code> mixins.</p>
+<p>Adjust these breakpoints as required by your design. You may define a different number of breakpoints than what is provided by default and use them throughout your project.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>config/breakpoints.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-config-durations" class="kss-section kss-section--depth-2">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-config-durations">
+            <span class="kss-title__ref">
+              1.3
+              <span class="kss-title__permalink-hash">
+                  #Config.Durations
+              </span>
+            </span>
+            Durations
+          </a>
+        </h2>
+
+          <div class="kss-description">
+            <p><strong>Configure global durations</strong></p>
+<pre><code>@include define( durations, (
+    short:  0.15s,
+    medium: 0.4s,
+    long:   1.2s
+) );
+
+@include define( durations, default, duration(short) );
+</code></pre><p>Configure <code>DURATIONS</code> for consistent transition and animation duration values throughout your project. Use Scarab&#39;s <code>duration()</code> getter function to return the value of a named duration.</p>
+<p>Carapace sets the default duration to <code>short</code>.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>config/durations.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-config-palettes" class="kss-section kss-section--depth-2">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-config-palettes">
+            <span class="kss-title__ref">
+              1.4
+              <span class="kss-title__permalink-hash">
+                  #Config.Palettes
+              </span>
+            </span>
+            Palettes
+          </a>
+        </h2>
+
+          <div class="kss-description">
+            <p><strong>Configure global color palettes</strong></p>
+<pre><code>@include define( palettes, (
+    white: (
+        base: #ffffff
+    ),
+    blue: (
+        light: #e3f2fd,
+        base: #42a5f5,
+        dark: #0d47a1
+    ),
+    // ... See source file for full configuration
+) );
+</code></pre><p>Carapace provides a bunch of default colors, but you should configure these on a per-project basis.</p>
+<p><code>PALETTES</code> should be defined as a map with base color names as keys, and the value of each key should be a map shades to color values.</p>
+<p>Use Scarab&#39;s <code>palette()</code> getter function to return the color of a color palette.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>config/palettes.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-config-type-scale" class="kss-section kss-section--depth-2">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-config-type-scale">
+            <span class="kss-title__ref">
+              1.5
+              <span class="kss-title__permalink-hash">
+                  #Config.Type-Scale
+              </span>
+            </span>
+            Type Scale
+          </a>
+        </h2>
+
+          <div class="kss-description">
+            <p><strong>Configure global type scale</strong></p>
+<pre><code>@include define( type-scale, (
+    title: (
+        base:  ( font-size: rem(26), line-height: bl(2) ),
+        tiny:  ( font-size: rem(28), line-height: bl(2.5) ),
+        large: ( font-size: rem(32), line-height: bl(3) )
+    ),
+    heading: (
+        base:  ( font-size: rem(22), line-height: bl(2) ),
+        tiny:  ( font-size: rem(24), line-height: bl(2) ),
+        large: ( font-size: rem(28), line-height: bl(2.5) )
+    ),
+    ... See source file for full configuration
+) );
+</code></pre><p>The <code>TYPE-SCALE</code> configuration map is Used in conjunction with Scarab&#39;s <code>type-scale()</code> mixin to generate responsive <code>font-size</code> and <code>line-height</code> declarations while maintaining vertical rythmn.</p>
+<p>Carapace generates a <code>.fs-#{$size}</code> class for each size name in the <code>TYPE-SCALE</code> configuration map.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>config/type-scale.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-config-x" class="kss-section kss-section--depth-2">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-config-x">
+            <span class="kss-title__ref">
+              1.6
+              <span class="kss-title__permalink-hash">
+                  #Config.X
+              </span>
+            </span>
+            X
+          </a>
+        </h2>
+
+          <div class="kss-description">
+            <p><strong>Configure global sizing for the x-axis</strong></p>
+<pre><code>@include define( x, (
+    XS: (
+        base: bl(0.5),
+        medium: bl(0.75)
+    ),
+
+    S: (
+        base: bl(1),
+        medium: bl(1.5)
+    ),
+    // ... See source file for configuration
+) );
+</code></pre><p>The <code>x</code> sizing configuration map is used determine the horizontal sizing of some layout and helpers classes.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>config/x.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-config-y" class="kss-section kss-section--depth-2">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-config-y">
+            <span class="kss-title__ref">
+              1.7
+              <span class="kss-title__permalink-hash">
+                  #Config.Y
+              </span>
+            </span>
+            Y
+          </a>
+        </h2>
+
+          <div class="kss-description">
+            <p><strong>Configure global sizing for the y-axis</strong></p>
+<pre><code>See source file for configuration
+</code></pre><p>Similar to the its counterpart, the <code>y</code> configuration map is responsible for the vertical sizing of some layout and helper classes.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>config/y.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-config-breakpoint-modifiers" class="kss-section kss-section--depth-2">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-config-breakpoint-modifiers">
+            <span class="kss-title__ref">
+              1.8
+              <span class="kss-title__permalink-hash">
+                  #Config.Breakpoint-Modifiers
+              </span>
+            </span>
+            Breakpoint modifiers
+          </a>
+        </h2>
+
+          <div class="kss-description">
+            <p><strong>Configure breakpoint-based class modifiers</strong></p>
+<pre><code>@include define( breakpoint-mods, (
+    tiny,
+    small,
+    medium,
+    large,
+    huge
+) );
+</code></pre><p>Define a list of <code>BREAKPOINT-MODS</code> that Carapace will use to generate breakpoint &quot;hooks&quot; for each layout and helper class.</p>
+<p>An example of a breakpoint &quot;hook&quot; is the <code>.align-right@medium</code> class, which will only apply the <code>.align-right</code> class to an element if the viewport is <code>&gt;=</code> the width of the <code>medium</code> breakpoint.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>config/breakpoint-mods.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-config-size-modifiers" class="kss-section kss-section--depth-2">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-config-size-modifiers">
+            <span class="kss-title__ref">
+              1.9
+              <span class="kss-title__permalink-hash">
+                  #Config.Size-Modifiers
+              </span>
+            </span>
+            Size modifiers
+          </a>
+        </h2>
+
+          <div class="kss-description">
+            <p><strong>Configure size-based class modifiers</strong></p>
+<pre><code>@include define( size-mods, (
+    xs,
+    s,
+    l,
+    xl,
+    &#39;0&#39;
+) );
+</code></pre><p>Define a list of <code>SIZE-MODS</code> that will be used in conjunction with the <code>x</code> and <code>y</code> configuration variables and helper functions.
+Carapace generates different sizes for some layout and component classes (like <code>.block--xl, .card--s, etc...</code>) for each value in <code>SIZE-MODS</code>.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>config/size-mods.scss</code>, line 1
+        </div>
+
+    </section>
+</article>
+
+<!-- SCRIPTS -->
+<script src="kss-assets/kss.js"></script>
+<script src="kss-assets/scrollspy.js"></script>
+<script src="kss-assets/prettify.js"></script>
+<script>
+  prettyPrint();
+  var spy = new ScrollSpy('#kss-node', {
+    nav: '.kss-nav__menu-child > li > a',
+    className: 'is-in-viewport'
+  });
+</script>
+<script src="./styleguide.js"></script>
+
+
+
+<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>

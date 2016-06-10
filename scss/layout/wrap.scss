@@ -1,0 +1,76 @@
+// Wrap
+//
+// **Contains an element to a maximum width**
+//
+// .wrap--s - Smaller maximum width
+// .wrap--l - Larger maximum width
+//
+// Markup: wrap.html
+//
+// Weight: 1
+//
+// Style guide: Layout.Wrap
+
+
+.wrap {
+	@include responsive(( padding-left, padding-right ), (
+		base: 	bl(1),
+		tiny:  	bl(2),
+		medium: 	0
+	));
+
+	@include responsive(( max-width ), (
+		base: 	rem(400),
+		tiny: 	rem(560),
+		small: 	rem(640),
+		medium: rem(800),
+		large: 	rem(1024),
+		huge:	rem(1280)
+	));
+
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+.wrap--s {
+	@include responsive(( padding-left, padding-right ), (
+		base: 	bl(2),
+		tiny:  	bl(4),
+		medium: 	0
+	));
+
+	@include responsive(( max-width ), (
+		base: 	rem(360),
+		tiny: 	rem(480),
+		small: 	rem(560),
+		medium: rem(720),
+		large: 	rem(840),
+		huge:	rem(960)
+	));
+
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+.wrap--l {
+	@include responsive(( padding-left, padding-right ), (
+		base: 0,
+		tiny: 0,
+		medium: 0
+	));
+
+	@include responsive(( max-width ), (
+		base: 	rem(480),
+		tiny: 	rem(640),
+		small: 	rem(720),
+		medium: rem(960),
+		large: 	rem(1120),
+		huge:	rem(1440)
+	));
+
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}

@@ -1,0 +1,74 @@
+// Stack
+//
+// **Stacks an element's children evenly**
+//
+// .stack--xs         - Extra small stack
+// .stack--s          - Small stack
+// .stack--l          - Large stack
+// .stack--xl         - Extra large stack
+// .stack--horizontal - Stack children horizontally
+//
+// Markup: stack.html
+//
+// Weight: 7
+//
+// Style guide: Layout.Stack
+
+%stack,
+.stack {	
+	& > * {
+		@extend %contain;
+		display: block;
+	}
+
+	& > * + * {
+		@include responsive(( margin-top ), y( m ) );
+	}
+
+	@each $size in global( size-mods ) {
+		&--#{$size} {
+			& > * {
+				& + * {
+					@include responsive(( margin-top ), y( #{$size} ) );
+				}
+			}
+		}
+	}
+}
+
+%stack--horizontal,
+.stack--horizontal {
+	@include responsive(( margin-bottom ), negative(y( m )) );
+
+	& > * {
+		@include responsive(( margin-right ), x( m ) );
+		@include responsive(( margin-bottom ), y( m ) );
+
+		display: inline-block;
+		vertical-align: middle;
+		margin-top: 0 !important;
+
+		&:first-child {
+			@include responsive(( margin-bottom ), y( m ) );
+		}
+
+		&:last-child {
+			margin-right: 0 !important;
+		}
+	}
+
+	@each $size in global( size-mods ) {
+		&.stack--#{$size} {
+			@include responsive(( margin-bottom ), negative(y( #{$size} )) );
+
+			& > * {
+				@include responsive(( margin-right ), x( #{$size} ) );
+				@include responsive(( margin-bottom ), y( #{$size} ) );
+
+				&:first-child {
+					@include responsive(( margin-bottom ), y( #{$size} ) );
+				}
+			}
+		}
+	}
+}

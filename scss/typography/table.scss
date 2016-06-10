@@ -1,0 +1,42 @@
+// Tables
+//
+// **Tables for displaying tabular data**
+//
+// .table--full - Full width table
+//
+// Markup: table.html
+//
+// Weight: 4
+//
+// Style guide: Typography.Tables
+
+%table,
+.table {
+	display: block;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	max-width: 100%;
+	text-align: left;
+
+	tr {
+		width: 100%;
+		display: table;
+	}
+
+	td, th {
+		@extend %pad--xs;
+		min-width: 10em;
+	}
+}
+
+%table--full,
+.table--full {
+	@include breakpoint-hooks() {
+		width: 100%;
+
+		thead, tbody {
+			display: block;
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+// Paragraphs
+//
+// **Paragraph text**
+//
+// Markup: paragraphs.html
+//
+// Weight: 2
+//
+// Style guide: Typography.Paragraphs
+
+p, %p, .p {
+	@include type-scale( body );
+}
+
+* + p, * + %p, * + .p {
+	@extend %push-y--s !optional;
+}

@@ -1,0 +1,54 @@
+// Headings
+//
+// **Typographical headings**
+//
+// Markup: headings.html
+//
+// Weight: 1
+//
+// Style guide: Typography.Headings
+
+// Heading sizes and weights
+%h1, .h1 {
+	@extend %fw-bold;
+	@include type-scale( title );
+}
+
+%h2, .h2 {
+	@extend %fw-bold;
+	@include type-scale( heading );
+}
+
+%h3, .h3 {
+	@extend %fw-bold;
+	@include type-scale( subheading );
+}
+
+%h4, .h4 {
+	@extend %fw-bold;
+	@include type-scale( accent );
+}
+
+%h5, .h5 {
+	@extend %fw-bold;
+	@include type-scale( body );
+}
+
+%h6, .h6 {
+	@extend %fw-bold;
+	@include type-scale( small );
+}
+
+// Heading layouts
+%h1, .h1,
+%h2, .h2,
+%h3, .h3,
+%h4, .h4,
+%h5, .h5,
+%h6, .h6 {
+	@extend %push-y;
+
+	& + * {
+		@extend %pull-top--s;
+	}
+}

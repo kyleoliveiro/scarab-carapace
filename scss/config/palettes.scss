@@ -1,0 +1,88 @@
+// Palettes
+//
+// **Configure global color palettes**
+//
+// ```
+// @include define( palettes, (
+//		white: (
+//			base: #ffffff
+//		),
+//		blue: (
+//			light: #e3f2fd,
+//			base: #42a5f5,
+//			dark: #0d47a1
+//		),
+//		// ... See source file for full configuration
+// ) );
+// 
+//
+// ```
+//
+// Carapace provides a bunch of default colors, but you should configure these on a per-project basis.
+//
+// `PALETTES` should be defined as a map with base color names as keys, and the value of each key should be a map shades to color values.
+//
+// Use Scarab's `palette()` getter function to return the color of a color palette.
+//
+// Style guide: Config.Palettes
+
+@include define( palettes, (
+
+	white: (
+		base: #ffffff
+	),
+
+	black: (
+		light: #212121,
+		base: #101010,
+		dark: #000000
+	),
+
+	grey: (
+		xlight: #fafafa,
+		light: #e0e0e0,
+		base: #bdbdbd,
+		dark: #9e9e9e,
+		xdark: #424242
+	),
+
+	blue: (
+		light: #e3f2fd,
+		base: #42a5f5,
+		dark: #0d47a1
+	),
+
+	green: (
+		light: #f1f8e9,
+		base: #7cb342,
+		dark: #33691e
+	),
+
+	red: (
+		light: #ffebee,
+		base: #e57373,
+		dark: #b71c1c
+	),
+
+	shadow: (
+		light: rgba( 0, 0, 0, 0.125 ),
+		base: rgba( 0, 0, 0, 0.25 )
+	)
+
+) );
+
+@include define( palettes, primary, (
+	light: palette( light blue ),
+	base: palette( blue ),
+	dark: palette( dark blue )
+) );
+
+@include define( palettes, confirm, (
+	light: palette( light green ),
+	base: palette( green )
+) );
+
+@include define( palettes, warning, (
+	light: palette( light red ),
+	base:  palette( red )
+) );

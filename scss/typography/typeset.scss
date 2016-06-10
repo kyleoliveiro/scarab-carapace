@@ -1,0 +1,46 @@
+// Typeset
+//
+// **Apply typographical styles to a container**
+//
+// Typographical elements within a container that has the `.typeset` class will have their typographical styles applied without the need to apply a class name individually on each element.
+//
+// This is useful for blog posts, articles and WYSIWYG or markdown-generated content.
+//
+// Markup: typeset.html
+//
+// Weight: 9
+//
+// Style guide: Typography.Typeset
+
+.typeset {
+	@each $element in ( p, h1, h2, h3, h4, h5, h6, ul, ol ) {
+		#{ $element } {
+			@extend %#{ $element };
+		}
+	}
+
+	a {
+		@extend %link;
+	}
+
+	strong, b {
+		@extend %fw-bold;
+	}
+
+	i, em {
+		@extend %font-italic;
+	}
+
+	u {
+		@extend %font-underline;
+	}
+
+	strike {
+		@extend %font-strikethrough;
+	}
+
+	table {
+		@extend %table;
+		@extend %table--full;
+	}
+}

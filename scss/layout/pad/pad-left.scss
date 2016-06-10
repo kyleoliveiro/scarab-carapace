@@ -1,0 +1,27 @@
+// Pad Left
+//
+// **Controls the left padding of an element**
+//
+// .pad-left--0  - Remove padding
+// .pad-left--xs - Extra small padding
+// .pad-left--s  - Small padding
+// .pad-left--m  - Medium padding
+// .pad-left--l  - Large padding
+// .pad-left--xl - Extra large padding
+//
+// Markup: pad-left.html
+//
+// Weight: 1
+//
+// Style guide: Layout.Pad.Left
+
+%pad-left,
+.pad-left {
+	@include responsive(( padding-left ), x() );
+
+	@each $size in global( size-mods ) {
+		&--#{ $size } {
+			@include responsive( ( padding-left ), x( $size ) );
+		}
+	}
+}
