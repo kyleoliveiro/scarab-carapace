@@ -1,6 +1,6 @@
 {
   "name": "scarab-carapace",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sass UI framework for rapid prototying",
   "main": "scss/carapace.scss",
   "scripts": {
