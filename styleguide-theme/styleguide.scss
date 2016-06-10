@@ -1,0 +1,244 @@
+@import '../scss/carapace.scss';
+
+html #kss-node {
+	padding: 0;
+
+	pre code {
+		display: block;
+	}
+
+	code {
+		background-color: palette( xlight grey );
+	}
+
+	.kss-main {
+		@include responsive(( padding-bottom ), (
+			base: bl(6),
+			medium: 25vh,
+			large: 35vh,
+			huge: 40vh
+		));
+	}
+
+	pre code {
+		@extend %pad--s;
+	}
+
+	.kss-style ul, .kss-style ol {
+		margin: 0;
+	}
+
+	.kss-overview {
+		@extend .typeset;
+
+		a {
+			@extend %link;
+		}
+
+		p, h1, h2, h3, h4, h5, h6, ul, ol, dl, div {
+			@extend %measure;
+		}
+	}
+
+	pre, code {
+		color: palette( dark blue );
+		-webkit-overflow-scrolling: touch;
+	}
+
+	pre {
+		@extend .push-y--xs;
+	}
+
+	.kss-nav__menu-link:before {
+		height: 1.625em;
+	}
+
+	.kss-sidebar {
+		@extend .pad--s;
+
+		background: palette( black );
+		color: palette( white );
+
+		.kss-doc-title {
+			@extend .h2;
+			color: palette( xlight grey );
+		}
+
+		a {
+			color: palette( xdark grey );
+		}
+
+		.kss-nav {
+			@extend .push-y--s;
+		}
+
+		.kss-nav__menu {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		.kss-nav__menu-link {			
+			color: palette( dark grey );
+			
+			&:hover {
+				color: darken( palette( dark grey ), 10 );
+			}
+		}
+
+		.kss-nav__menu-item {
+			@extend .push-y--xs;
+			@include type-scale( accent );
+			font-weight: bold;
+		}
+
+		.kss-nav__menu-child {
+			li {
+				padding-left: 1.5em;
+				@include type-scale( body );
+
+				a {
+					font-weight: normal;
+
+					&.is-in-viewport {
+						color: palette( primary );
+
+						&:before {
+							background: palette( dark primary );
+						}
+					}
+				}
+			}
+
+			li:first-child,
+			li:last-child {
+				border-color: palette( xdark grey );
+			}
+		}
+	}
+
+	.kss-header {
+		@extend .contain;
+		margin: 0;
+	}
+
+	.kss-nav {
+		// display: none;
+	}
+	
+	.kss-main {
+		@extend .contain;
+		@extend .pad--s;
+		margin-right: 0;
+		overflow: hidden;
+	}
+
+	.kss-section {
+		@extend .push-y--l;
+		max-width: none;
+	}
+
+	.kss-title {
+		@extend .h2;
+	}
+
+	.kss-title__ref {
+		@include type-scale( small );
+	}
+
+	.kss-markup {
+		@extend .push-y--xs;
+	}
+
+	.kss-style {
+		@extend .contain;
+		@include type-scale( body );
+
+		&.kss-source {
+			@include type-scale( small );
+			font-family: monospace;
+		}
+
+		p {
+			@extend .p;
+		}
+
+		h1 {
+			@extend .h1;
+		}
+
+		h2 {
+			@extend .h2;
+		}
+
+		h3 {
+			@extend .h3;
+		}
+
+		h4 {
+			@extend .h4;
+		}
+
+		h5 {
+			@extend .h5;
+		}
+
+		h6 {
+			@extend .h6;
+		}
+
+		pre {
+			@include type-scale( small );
+			width: 100%;
+			overflow: auto;
+		}
+	}
+
+	ol.linenums{
+		padding: 0;
+
+		 li, li:first-child, li:last-child {
+			margin: 0;
+			padding: bl(0.25);
+			min-height: 0;
+		}
+
+		code {
+			@extend %pad--0;
+		}
+	}
+
+	.kss-modifier__default-name,
+	.kss-modifier__name {
+		@include type-scale( accent );
+	}
+
+	.kss-modifier__heading {
+		display: none;
+		border: none;
+		margin: 0;
+		padding: 0;
+		background-color: transparent;
+	}
+
+	.kss-description {
+		@extend .measure--l;
+		@extend .push-bottom--s;
+		@extend .pull-top--s;
+	}
+
+	.kss-modifier__description {
+		@include type-scale( body );
+	}
+
+	.kss-modifier__wrapper {
+		@extend .push-y--s;
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+
+	.kss-modifier__example {
+		@extend .pad--s;
+		background: palette( xlight grey );
+	}
+}
