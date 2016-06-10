@@ -72,7 +72,7 @@ Carapace provides a convenient method for managing the UI "components" for your 
 
 ## Documentation
 
-Documentation is in development.
+Documentation is available at [https://watchtowerdigital.github.io/carapace/](https://watchtowerdigital.github.io/carapace/).
 
 
 
