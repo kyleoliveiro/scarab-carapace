@@ -8,7 +8,7 @@
 
 Carapace is an extension of the [Scarab utility framework](https://github.com/watchtowerdigital/scarab.git).
 
-
+[![Carapace: Sass UI framework for rapid prototying](https://raw.githubusercontent.com/watchtowerdigital/carapace/master/images/carapace-banner.png)](https://watchtowerdigital.github.io/carapace)
 
 ## Table of contents
 * [**Installation**](#installation)
@@ -33,13 +33,22 @@ To get started, add Carapace as a dependency in your project via npm:
 npm install scarab-carapace --save-dev
 ```
 
-Import `carapace.scss` at the beginning of your stylesheet:
+This will download the `scarab-scss` and `scarab-carapace` packages into your project's `node_modules` folder.
+
+At the beginning of your stylesheet, import `scarab.scss` from `scarab-scss` and `carapace.scss` from `scarab-carapace`, like so: 
 
 ```scss
+// Import Scarab
+@import "path/to/node_modules/scarab-scss/scss/scarab";
+
+// Import your custom Scarab/Carapace configuration
+@import "path/to/my/config/config.scss";
+
+// Import Carapace
 @import "path/to/node_modules/scarab-carapace/scss/carapace";
 ```
 
-Importing Carapace also imports the Scarab framework, which in turn creates a new global variable, `$SCARAB` in your Sass project.
+Importing the Scarab framework creates a new global variable, `$SCARAB` in your Sass project. This is where your stylesheet configuration is stored.
 
 For more information on configuring Scarab and Carapace, refer to [Scarab: Configuration](https://github.com/watchtowerdigital/scarab#configuration) and the official Configuration section of Carapace's documentation.
 
@@ -48,7 +57,7 @@ For more information on configuring Scarab and Carapace, refer to [Scarab: Confi
 ## Features
 
 ### Scarab framework
-Carapace imports the the [Scarab utility framework](https://github.com/watchtowerdigital/scarab.git). Scarab's functions and mixins are made available with Carapace.
+Carapace is an extension of the [Scarab utility framework](https://github.com/watchtowerdigital/scarab.git). Scarab's functions and mixins are compatible with Carapace.
 
 ### Object-oriented approach
 Designed with an object-oriented approach in mind. Carapace kickstarts your projects and helps you write scalable and maintainable stylesheets.
