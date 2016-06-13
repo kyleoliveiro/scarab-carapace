@@ -49,6 +49,6 @@
     "kss": "^3.0.0-beta.14"
   },
   "dependencies": {
-    "scarab-scss": "^3.3.2"
+    "scarab-scss": "^4.0.3"
   }
 }
