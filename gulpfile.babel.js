@@ -36,7 +36,8 @@ const paths = {
 
 const config = {
 	sass: {
-		outputStyle: 'expanded'
+		outputStyle: 'expanded',
+		includePaths: ['node_modules']
 	},
 	autoprefixer: {
 		browsers: ['last 2 versions']
