@@ -8,8 +8,6 @@
 
 Carapace is an extension of the [Scarab utility framework](https://github.com/watchtowerdigital/scarab.git).
 
-[![Carapace: Sass UI framework for rapid prototying](https://raw.githubusercontent.com/watchtowerdigital/carapace/master/images/carapace-banner.png)](https://watchtowerdigital.github.io/carapace)
-
 ## Table of contents
 * [**Installation**](#installation)
 * [**Features**](#features)
