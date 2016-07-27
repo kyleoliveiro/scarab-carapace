@@ -2,6 +2,7 @@
 //
 // **Enable child elements to scroll horizontally if they exceed the width of the container**
 //
+// .scroller--equal-width        - Makes each content item occupy the same width
 // .scroller--no-touch-scrolling - Disable iOS smooth touch scrolling
 // .scroller--force-scrollbar    - Force the scrollbar to appear on some devices even if there is no need to scroll 
 //
@@ -28,6 +29,12 @@
 					max-width: none;
 				}
 			}	
+		}
+	}
+
+	&--equal-width {
+		& > .scroller__content > * {
+			width: 1%;
 		}
 	}
 
