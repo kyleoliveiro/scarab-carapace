@@ -15,32 +15,65 @@
 .typeset {
 	@each $element in ( p, h1, h2, h3, h4, h5, h6, ul, ol ) {
 		#{ $element } {
-			@extend %#{ $element };
+			@extend %#{ $element } !optional;
+		}
+	}
+
+	@each $element in ( h1, h2, h3, h4, h5, h6, ul, ol ) {
+		.#{ $element } {
+			@extend %#{ $element } !optional;
 		}
 	}
 
 	a {
-		@extend %link;
+		@extend %link !optional;
 	}
 
 	strong, b {
-		@extend %fw-bold;
+		@extend %fw-bold !optional;
 	}
 
 	i, em {
-		@extend %font-italic;
+		@extend %font-italic !optional;
 	}
 
 	u {
-		@extend %font-underline;
+		@extend %font-underline !optional;
 	}
 
 	strike {
-		@extend %font-strikethrough;
+		@extend %font-strikethrough !optional;
 	}
 
 	table {
-		@extend %table;
-		@extend %table--full;
+		@extend %table !optional;
+		@extend %table--full !optional;
+	}
+
+	%fw-bold,
+	.fw-bold {
+		font-weight: bold !important;
+	}
+
+	%fw-normal,
+	.fw-normal {
+		font-weight: normal !important;
+	}
+
+	@each $weight in (
+		100,
+		200,
+		300,
+		400,
+		500,
+		600,
+		700,
+		800,
+		900
+	) {
+		%fw-#{ $weight },
+		.fw-#{ $weight } {
+			font-weight: $weight !important;
+		}	
 	}
 }

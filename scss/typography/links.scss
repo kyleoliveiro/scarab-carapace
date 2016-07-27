@@ -8,17 +8,31 @@
 //
 // Style guide: Typography.Links
 
-@at-root {
-	$color: palette( primary );
-	
-	a,
-	%link,
-	.link {
-		color: $color;
-		text-decoration: underline;
+// @include set-default( components, link, () );
+// @include set-default( components, link, class, 'link' );
+// @include set-default( components, link, underline, true );
+// @include set-default( components, link, color, palette(primary) );
+// @include set-default( components, link, hover, () );
+// @include set-default( components, link, hover, color, darken( palette(primary), 10 ) );
 
-		&:hover {
-			color: darken($color, 20);
-		}
-	}
-}
+// @include component( link ) {
+// 	$underline: get( components, link, underline );
+// 	$color: get( components, link, color );
+
+// 	@include transitions((
+// 		color: duration() easing(),
+// 	));
+
+// 	color: $color;
+
+// 	@if $underline {
+// 		text-decoration: underline;
+// 	} @else {
+// 		text-decoration: none;
+// 	}
+
+// 	&:hover {
+// 		$color: get( components, link, hover, color );
+// 		color: $color;
+// 	}
+// }

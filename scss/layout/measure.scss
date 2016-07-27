@@ -13,32 +13,33 @@
 //
 // Style guide: Layout.Measure
 
-@at-root {
-	$min: 17.5em;
-	$max: 60em;
+@include component ( measure ) {
+
+	$options: get( components, measure, options );
+	$min: map-get( $options, min );
+	$max: map-get( $options, max );
+	$size-mods: map-get( $options, size-mods );
+	$breakpoint-mods: map-get( $options, breakpoint-mods );
 
 	$average: ( $min + $max ) / 2;
-	$step: ($max - $min) / length(global(size-mods));
-
-	$sizes: global( size-mods );
-
+	$step: ( $max - $min ) / length( $size-mods );
 	$measure: $average;
+	
+	@include breakpoint-hooks( $breakpoint-mods ) {
+		max-width: $measure;
+	}
 
-	%measure,
-	.measure {
-		@include breakpoint-hooks() {
-			max-width: $measure;
+	@for $i from 1 through length( $size-mods ) {
+		$size: nth( $size-mods, $i );
+		$measure: $min + ($step * ($i - 1));
+
+		@if $measure >= $average {
+			$measure: $min + ($step * ($i));
 		}
-
-		@each $size in $sizes {
-			$magnitude: strip-units( x( $size, base ) - x( m, base) );
-			$difference: $magnitude * $step;
-			$measure: $average + $difference;
-
-			&--#{$size} {
-				@include breakpoint-hooks() {
-					max-width: $measure;
-				}
+		
+		&--#{$size} {
+			@include breakpoint-hooks( $breakpoint-mods ) {
+				max-width: $measure;
 			}
 		}
 	}

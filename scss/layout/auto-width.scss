@@ -1,0 +1,16 @@
+// Auto Width
+//
+// **Sets an element's width to take up only as much space as it needs**
+//
+// Markup: auto-width.html
+//
+// Weight: 3
+//
+// Style guide: Layout.Auto-Width
+
+@include component ( auto-width ) {
+	@include breakpoint-hooks() {
+		display: table;
+		width: auto;
+	}
+}

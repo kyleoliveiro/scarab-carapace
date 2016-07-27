@@ -1,0 +1,107 @@
+@include set-default( components, button, (
+
+	class: 'btn',
+	placeholder: 'btn',
+
+	properties: (
+		type-scale: small,
+		border-width: 1px,
+		border-style: solid,
+		border-color: palette( light grey ),
+		padding: 0.5em 1em,
+		background-color: palette( xlight grey ),
+		color: palette( dark grey ),
+		font-family: typeface( primary ),
+		font-weight: 700,
+		letter-spacing: 0.12em,
+		text-transform: uppercase,
+		border-radius: 3px,
+		box-shadow: 0 0.1em 0.3em -0.15em palette( light shadow ),
+		transition: box-shadow duration() easing(),
+		appearance: none,
+		display: inline-block,
+		vertical-align: middle,
+		cursor: pointer,
+		outline: none
+	)
+
+) );
+
+@include set-default( components, button, modifiers, (
+		s: (
+			type-scale: tiny,
+			font-weight: 700
+		),
+		l: (
+			type-scale: accent,
+			font-weight: 600
+		),
+		primary: (
+			border-color: darken( palette(primary), 5% ),
+			background-color: palette(primary),
+			color: palette(white),
+		),
+		confirm: (
+			border-color: darken( palette(confirm), 5% ),
+			background-color: palette(confirm),
+			color: palette(white)
+		),
+		warning: (
+			border-color: darken( palette(warning), 5% ),
+			background-color: palette(warning),
+			color: palette(white)
+		)
+) );
+
+@include set-default( components, button, states, (
+	hover: (
+		background-color: lighten( get(components, button, properties, background-color), 5% ),
+		box-shadow: 0 0.025em 0.025em 0.05em palette( shadow )
+	),
+	active: (
+		background-color: lighten( get(components, button, properties, background-color), 5% ),
+		box-shadow: 0 0.025em 0.025em 0.025em palette( shadow ) inset,
+		transform: translateY(1px),
+		transition: none
+	),
+	focus: (
+		background-color: lighten( get(components, button, properties, background-color), 10% ),
+		box-shadow: 0 0.05em 0.05em 0.05em palette( shadow )
+	)
+) );
+
+@include set-default( components, button, modifiers, primary, states, (
+	hover: (
+		background-color: lighten( get(components, button, modifiers, primary, background-color), 5% )
+	),
+	active: (
+		background-color: get(components, button, modifiers, primary, background-color)
+	),
+	focus: (
+		background-color: lighten( get(components, button, modifiers, primary, background-color), 7.5% )
+	)
+) );
+
+@include set-default( components, button, modifiers, warning, states, (
+	hover: (
+		background-color: lighten( get(components, button, modifiers, warning, background-color), 5% )
+	),
+	active: (
+		background-color: get(components, button, modifiers, warning, background-color)
+	),
+	focus: (
+		background-color: lighten( get(components, button, modifiers, warning, background-color), 7.5% )
+	)
+) );
+
+@include set-default( components, button, modifiers, confirm, states, (
+	hover: (
+		background-color: lighten( get(components, button, modifiers, confirm, background-color), 5% )
+	),
+	active: (
+		background-color: get(components, button, modifiers, confirm, background-color)
+	),
+	focus: (
+		background-color: lighten( get(components, button, modifiers, confirm, background-color), 7.5% )
+	)
+) );

@@ -1,0 +1,10 @@
+@include set-default( components, stack, ( 
+
+	class: 'stack',
+	placeholder: 'stack',
+
+	options: (
+		size-mods: get( size-mods )
+	)
+
+) );

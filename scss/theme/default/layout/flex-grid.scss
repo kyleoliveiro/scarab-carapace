@@ -1,0 +1,10 @@
+@include set-default( components, flex-grid, ( 
+
+	class: 'flex-grid',
+
+	options: (
+		gutter-x: x($breakpoint: base),
+		gutter-y: y($breakpoint: base)
+	)
+
+) );

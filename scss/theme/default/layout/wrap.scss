@@ -1,0 +1,11 @@
+@include set-default( components, wrap, ( 
+
+	class: 'wrap',
+	placeholder: 'wrap',
+
+	options: (
+		breakpoint-mods: get( breakpoint-mods ),
+		size-mods: get( size-mods )
+	)
+
+) );

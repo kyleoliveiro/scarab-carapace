@@ -1,0 +1,27 @@
+// Size modifiers
+//
+// **Configure size-based class modifiers**
+//
+// ```
+// @include set-default( size-mods, (
+// 	xs,
+// 	s,
+// 	l,
+// 	xl,
+// 	'0'
+// ) );
+// ```
+//
+// Define a list of `size-mods` that will be used in conjunction with the `x` and `y` configuration variables and helper functions.
+// Carapace generates different sizes for some layout and component classes (like `.block--xl, .card--s, etc...`) for each value in `SIZE-MODS`.
+//
+// Weight: 101
+//
+// Style guide: Config.Size-Modifiers
+
+@include set-default( size-mods, (
+	xs,
+	s,
+	l,
+	xl
+) );

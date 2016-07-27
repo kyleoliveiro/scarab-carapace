@@ -1,0 +1,10 @@
+@include set-default( components, contain, ( 
+
+	class: 'contain',
+	placeholder: 'contain',
+
+	options: (
+		breakpoint-mods: get( breakpoint-mods )
+	)
+
+) );

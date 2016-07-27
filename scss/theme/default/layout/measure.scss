@@ -1,0 +1,13 @@
+@include set-default( components, measure, (
+
+	class: 'measure',
+	placeholder: 'measure',
+
+	options: (
+		min: 15em,
+		max: 60em,
+		breakpoint-mods: get( breakpoint-mods ),
+		size-mods: get( size-mods )
+	)
+
+) );

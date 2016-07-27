@@ -4,13 +4,15 @@
 //
 // Markup: contain.html
 //
-// Weight: 8
+// Weight: 9
 //
 // Style guide: Layout.Contain
 
-%contain,
-.contain {
-	@include breakpoint-hooks() {
+@include component ( contain ) {
+	$options: get( components, contain, options );
+	$breakpoint-mods: map-get( $options, breakpoint-mods );
+
+	@include breakpoint-hooks( $breakpoint-mods ) {
 		& > * {
 			&:first-child {
 				margin-top: 0 !important;

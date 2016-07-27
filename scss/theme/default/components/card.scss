@@ -1,0 +1,13 @@
+@include set-default( components, card, (
+
+	class: 'card',
+	placeholder: 'card',
+
+	properties: (
+		border-width: 1px,
+		border-style: solid,
+		border-color: palette( light grey ),
+		background-color: palette( white )
+	)
+	
+) );

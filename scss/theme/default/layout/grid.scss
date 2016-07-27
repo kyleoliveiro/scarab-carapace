@@ -1,0 +1,11 @@
+@include set-default( components, grid, ( 
+
+	class: 'grid',
+
+	options: (
+		columns: 12,
+		gutter-x: x($breakpoint: base),
+		gutter-y: y($breakpoint: base)
+	)
+
+) );

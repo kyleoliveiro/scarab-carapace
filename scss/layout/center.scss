@@ -1,6 +1,6 @@
 // Center
 //
-// **Centers an element horizontally inside its parent**
+// **Centers an element horizontally by setting its horizontal margins to `auto`**
 //
 // Markup: center.html
 //
@@ -8,10 +8,8 @@
 //
 // Style guide: Layout.Center
 
-%center,
-.center {
+@include component ( center ) {
 	@include breakpoint-hooks() {
-		display: table;
 		margin-left: auto;
 		margin-right: auto;
 	}

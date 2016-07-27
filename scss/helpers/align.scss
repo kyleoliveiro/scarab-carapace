@@ -1,0 +1,33 @@
+// Align
+//
+// **Set the text alignment of an element**
+//
+// Markup: align.html
+//
+// Weight: 10
+//
+// Style guide: Typography.Align
+
+.align-left {
+	@include breakpoint-hooks {
+		text-align: left !important;
+	}
+}
+
+.align-center {
+	@include breakpoint-hooks {
+		text-align: center !important;
+	}
+}
+
+.align-right {
+	@include breakpoint-hooks {
+		text-align: right !important;
+	}
+}
+
+.align-justify {
+	@include breakpoint-hooks {
+		text-align: justify !important;
+	}
+}

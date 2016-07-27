@@ -1,0 +1,36 @@
+// Font weights
+//
+// **Set the font weight of text elements**
+//
+// Markup: font-weights.html
+//
+// Weight: 102
+//
+// Style guide: Typography.Weights
+
+%fw-bold,
+.fw-bold {
+	font-weight: bold !important;
+}
+
+%fw-normal,
+.fw-normal {
+	font-weight: normal !important;
+}
+
+@each $weight in (
+	100,
+	200,
+	300,
+	400,
+	500,
+	600,
+	700,
+	800,
+	900
+) {
+	%fw-#{ $weight },
+	.fw-#{ $weight } {
+		font-weight: $weight !important;
+	}	
+}

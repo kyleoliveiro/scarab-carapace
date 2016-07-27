@@ -37,36 +37,35 @@
         </a>
       </li>
       <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-typography.html">
-          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Typography</span>
+        <a class="kss-nav__menu-link" href="section-layout.html">
+          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Layout</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-layout.html">
-          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Layout</span>
+        <a class="kss-nav__menu-link" href="section-typography.html">
+          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Typography</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-helpers.html">
+          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Helpers</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-components.html">
-          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Components</span>
+          <span class="kss-nav__ref">6</span><span class="kss-nav__name">Components</span>
         </a>
             <ul class="kss-nav__menu-child">
               <li class="kss-nav__menu-item">
                 <a class="kss-nav__menu-link" href="section-components.html#kssref-components-button">
-                  <span class="kss-nav__ref ">5.1</span
+                  <span class="kss-nav__ref ">6.1</span
                   ><span class="kss-nav__name">Button</span>
                 </a>
               </li>
               <li class="kss-nav__menu-item">
                 <a class="kss-nav__menu-link" href="section-components.html#kssref-components-card">
-                  <span class="kss-nav__ref ">5.2</span
+                  <span class="kss-nav__ref ">6.2</span
                   ><span class="kss-nav__name">Card</span>
-                </a>
-              </li>
-              <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-components.html#kssref-components-scroller">
-                  <span class="kss-nav__ref ">5.3</span
-                  ><span class="kss-nav__name">Scroller</span>
                 </a>
               </li>
             </ul>
@@ -82,7 +81,7 @@
         <h1 class="kss-title kss-title--level-1">
           <a class="kss-title__permalink" href="#kssref-components">
             <span class="kss-title__ref">
-              5
+              6
               <span class="kss-title__permalink-hash">
                   #Components
               </span>
@@ -110,7 +109,7 @@
         <h2 class="kss-title kss-title--level-2">
           <a class="kss-title__permalink" href="#kssref-components-button">
             <span class="kss-title__ref">
-              5.1
+              6.1
               <span class="kss-title__permalink-hash">
                   #Components.Button
               </span>
@@ -297,7 +296,7 @@
         <h2 class="kss-title kss-title--level-2">
           <a class="kss-title__permalink" href="#kssref-components-card">
             <span class="kss-title__ref">
-              5.2
+              6.2
               <span class="kss-title__permalink-hash">
                   #Components.Card
               </span>
@@ -410,213 +409,6 @@
 
         <div class="kss-source kss-style">
           Source: <code>components/card.scss</code>, line 1
-        </div>
-
-    </section>
-    <section id="kssref-components-scroller" class="kss-section kss-section--depth-2">
-
-      <div class="kss-style">
-        <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-components-scroller">
-            <span class="kss-title__ref">
-              5.3
-              <span class="kss-title__permalink-hash">
-                  #Components.Scroller
-              </span>
-            </span>
-            Scroller
-          </a>
-        </h2>
-
-          <div class="kss-description">
-            <p><strong>Enable child elements to scroll horizontally if they exceed the width of the container</strong></p>
-
-          </div>
-
-      </div>
-
-        <div class="kss-modifier__wrapper">
-          <div class="kss-modifier__heading kss-style">
-            Examples
-          </div>
-
-            <div class="kss-modifier__default-name kss-style">
-              Default styling
-            </div>
-
-          <div class="kss-modifier__example">
-            <div class="contain">
-	<code class="h3">.scroller .[modifier class]</code>
-</div>
-
-<div class="scroller [modifier class]">
-	<div class="card">
-		<p class="h1">1</p>
-	</div>
-	<div class="card">
-		<p class="h1">2</p>
-	</div>
-	<div class="card">
-		<p class="h1">3</p>
-	</div>
-	<div class="card">
-		<p class="h1">4</p>
-	</div>
-	<div class="card">
-		<p class="h1">5</p>
-	</div>
-	<div class="card">
-		<p class="h1">6</p>
-	</div>
-	<div class="card">
-		<p class="h1">7</p>
-	</div>
-	<div class="card">
-		<p class="h1">8</p>
-	</div>
-	<div class="card">
-		<p class="h1">9</p>
-	</div>
-	<div class="card">
-		<p class="h1">10</p>
-	</div>
-</div>
-
-          </div>
-
-            <div class="kss-modifier__name kss-style">
-              .scroller--no-touch-scrolling
-            </div>
-            <div class="kss-modifier__description kss-style">
-              Disable iOS smooth touch scrolling
-            </div>
-            <div class="kss-modifier__example">
-              <div class="contain">
-	<code class="h3">.scroller .scroller--no-touch-scrolling</code>
-</div>
-
-<div class="scroller scroller--no-touch-scrolling">
-	<div class="card">
-		<p class="h1">1</p>
-	</div>
-	<div class="card">
-		<p class="h1">2</p>
-	</div>
-	<div class="card">
-		<p class="h1">3</p>
-	</div>
-	<div class="card">
-		<p class="h1">4</p>
-	</div>
-	<div class="card">
-		<p class="h1">5</p>
-	</div>
-	<div class="card">
-		<p class="h1">6</p>
-	</div>
-	<div class="card">
-		<p class="h1">7</p>
-	</div>
-	<div class="card">
-		<p class="h1">8</p>
-	</div>
-	<div class="card">
-		<p class="h1">9</p>
-	</div>
-	<div class="card">
-		<p class="h1">10</p>
-	</div>
-</div>
-
-            </div>
-            <div class="kss-modifier__name kss-style">
-              .scroller--force-scrollbar
-            </div>
-            <div class="kss-modifier__description kss-style">
-              Force the scrollbar to appear on some devices even if there is no need to scroll
-            </div>
-            <div class="kss-modifier__example">
-              <div class="contain">
-	<code class="h3">.scroller .scroller--force-scrollbar</code>
-</div>
-
-<div class="scroller scroller--force-scrollbar">
-	<div class="card">
-		<p class="h1">1</p>
-	</div>
-	<div class="card">
-		<p class="h1">2</p>
-	</div>
-	<div class="card">
-		<p class="h1">3</p>
-	</div>
-	<div class="card">
-		<p class="h1">4</p>
-	</div>
-	<div class="card">
-		<p class="h1">5</p>
-	</div>
-	<div class="card">
-		<p class="h1">6</p>
-	</div>
-	<div class="card">
-		<p class="h1">7</p>
-	</div>
-	<div class="card">
-		<p class="h1">8</p>
-	</div>
-	<div class="card">
-		<p class="h1">9</p>
-	</div>
-	<div class="card">
-		<p class="h1">10</p>
-	</div>
-</div>
-
-            </div>
-        </div>
-          <div class="kss-markup kss-style">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;contain&quot;&gt;
-	&lt;code class&#x3D;&quot;h3&quot;&gt;.scroller .[modifier class]&lt;/code&gt;
-&lt;/div&gt;
-
-&lt;div class&#x3D;&quot;scroller [modifier class]&quot;&gt;
-	&lt;div class&#x3D;&quot;card&quot;&gt;
-		&lt;p class&#x3D;&quot;h1&quot;&gt;1&lt;/p&gt;
-	&lt;/div&gt;
-	&lt;div class&#x3D;&quot;card&quot;&gt;
-		&lt;p class&#x3D;&quot;h1&quot;&gt;2&lt;/p&gt;
-	&lt;/div&gt;
-	&lt;div class&#x3D;&quot;card&quot;&gt;
-		&lt;p class&#x3D;&quot;h1&quot;&gt;3&lt;/p&gt;
-	&lt;/div&gt;
-	&lt;div class&#x3D;&quot;card&quot;&gt;
-		&lt;p class&#x3D;&quot;h1&quot;&gt;4&lt;/p&gt;
-	&lt;/div&gt;
-	&lt;div class&#x3D;&quot;card&quot;&gt;
-		&lt;p class&#x3D;&quot;h1&quot;&gt;5&lt;/p&gt;
-	&lt;/div&gt;
-	&lt;div class&#x3D;&quot;card&quot;&gt;
-		&lt;p class&#x3D;&quot;h1&quot;&gt;6&lt;/p&gt;
-	&lt;/div&gt;
-	&lt;div class&#x3D;&quot;card&quot;&gt;
-		&lt;p class&#x3D;&quot;h1&quot;&gt;7&lt;/p&gt;
-	&lt;/div&gt;
-	&lt;div class&#x3D;&quot;card&quot;&gt;
-		&lt;p class&#x3D;&quot;h1&quot;&gt;8&lt;/p&gt;
-	&lt;/div&gt;
-	&lt;div class&#x3D;&quot;card&quot;&gt;
-		&lt;p class&#x3D;&quot;h1&quot;&gt;9&lt;/p&gt;
-	&lt;/div&gt;
-	&lt;div class&#x3D;&quot;card&quot;&gt;
-		&lt;p class&#x3D;&quot;h1&quot;&gt;10&lt;/p&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-          </div>
-
-        <div class="kss-source kss-style">
-          Source: <code>components/scroller.scss</code>, line 1
         </div>
 
     </section>

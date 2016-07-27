@@ -5,9 +5,8 @@
   "main": "scss/carapace.scss",
   "scripts": {
     "kss": "./node_modules/kss/bin/kss --source ./scss --homepage ../README.md --css ./styleguide.min.css --js ./styleguide.js --title Carapace",
-    "start": "gulp styleguide && gulp serve",
-    "dev": "gulp styleguide && gulp watch & gulp serve",
-    "test": "gulp"
+    "start": "gulp styleguide && gulp watch & gulp serve",
+    "test": "npm run kss"
   },
   "repository": {
     "type": "git",
@@ -45,10 +44,11 @@
     "gulp-sass": "^2.3.1",
     "gulp-sass-glob": "^1.0.6",
     "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
     "gulp-watch": "^4.3.6",
     "kss": "^3.0.0-beta.14"
   },
   "dependencies": {
-    "scarab-scss": "^4.0.3"
+    "scarab-scss": "^4.2.0"
   }
 }

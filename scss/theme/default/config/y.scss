@@ -1,0 +1,43 @@
+// Y
+//
+// **Configure global sizing for the y-axis**
+//
+// ```
+// See source file for configuration
+// ```
+//
+// Similar to the its counterpart, the `y` configuration map is responsible for the vertical sizing of some layout and helper classes.
+//
+// Style guide: Config.Y
+
+@include set-default( y, xs, (
+	base:   bl(0.5),
+	medium: bl(0.75)
+) );
+
+@include set-default( y, s, (
+	base:   bl(1),
+	medium: bl(1.5)
+) );
+
+@include set-default( y, m, (
+	base:   bl(2),
+	medium: bl(3)
+) );
+
+@include set-default( y, l, (
+	base:   bl(3),
+	medium: bl(4.5)
+) );
+
+@include set-default( y, xl, (
+	base:   bl(4),
+	medium: bl(6)
+) );
+
+@include set-default( y, '0', (
+	base:   0,
+	medium: 0
+) );
+
+@include set-default( y, default, y(m) );

@@ -1,0 +1,34 @@
+// Pad X
+//
+// **Controls the left and right padding of an element**
+//
+// .pad-x--0  - Remove padding
+// .pad-x--xs - Extra small padding
+// .pad-x--s  - Small padding
+// .pad-x--m  - Medium padding
+// .pad-x--l  - Large padding
+// .pad-x--xl - Extra large padding
+//
+// Markup: pad-x.html
+//
+// Weight: 3
+//
+// Style guide: Layout.Pad.X
+
+%pad-x,
+.pad-x {
+	@include responsive(( padding-left, padding-right ), x() );
+
+	@each $size in get( size-mods ) {
+		&--#{ $size } {
+			@include responsive( ( padding-left, padding-right ), x( $size ) );
+		}
+	}
+
+	&--0 {
+		@include breakpoint-hooks() {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}

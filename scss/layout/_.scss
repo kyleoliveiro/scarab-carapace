@@ -1,21 +1,18 @@
 // Layout
 //
-// ## Ready-to-use classes for quick layout and prototyping
+// ## Classes for structure and layout
 //
-// Weight: 3
+// Weight: 1
 //
 // Style guide: Layout
 
-@import 'push/_';
-@import 'pull/_';
-@import 'pad/_';
-
 @import 'contain';
 @import 'stack';
+@import 'scroller';
 @import 'wrap';
 @import 'measure';
+@import 'auto-width';
 @import 'center';
-@import 'float';
 @import 'clearfix';
 @import 'grid';
 @import 'flex-grid';

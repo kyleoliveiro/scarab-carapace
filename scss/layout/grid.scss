@@ -12,56 +12,51 @@
 //
 // Style guide: Layout.Grid
 
-@include define( grid, (
-	columns: 12,
-	gutter-x: bl(2),
-	gutter-y: bl(2)
-) );
+@include component ( grid ) {
+	
+	$options: get( components, grid, options );
+	$columns:  map-get( $options, columns );
+	$gutter-x: map-get( $options, gutter-x );
+	$gutter-y: map-get( $options, gutter-y );
 
-@at-root {
-	$grid: global( grid );
-		$columns:  map-get( $grid, columns );
-		$gutter-x: map-get( $grid, gutter-x );
-		$gutter-y: map-get( $grid, gutter-y );
+	@extend %clearfix !optional;
 
-	.grid {
-		@extend .clearfix;
+	margin-bottom: $gutter-y * -1;
+	margin-left: $gutter-x * 0.5 * -1;
+	margin-right: $gutter-x * 0.5 * -1;
 
-		margin-bottom: $gutter-y * -1;
-		margin-left: $gutter-x * 0.5 * -1;
-		margin-right: $gutter-x * 0.5 * -1;
+	& > [ class ^= g__ ] {
+		width: 100%;
+		float: left;
+		margin-bottom: $gutter-y;
+		padding-left: $gutter-x * 0.5;
+		padding-right: $gutter-x * 0.5;
+		box-sizing: border-box;
 
-		& > [ class ^= g__ ] {
-			width: 100%;
-			float: left;
-			margin-bottom: $gutter-y;
-			padding-left: $gutter-x * 0.5;
-			padding-right: $gutter-x * 0.5;
-			box-sizing: border-box;
-
-			& + [ class ^= g__ ] {
-				clear: right;
-			}
+		& + [ class ^= g__ ] {
+			clear: right;
 		}
 	}
 
-	.grid--#{ $columns } {
-		@for $column from 1 through $columns {
-			.g__#{ $column } {
-				@include breakpoint-hooks() {
-					width: 100% / $columns * $column;	
+	@each $column-size in $columns {
+		&--#{ $column-size } {
+			@for $column from 1 through $column-size {
+				.g__#{ $column } {
+					@include breakpoint-hooks() {
+						width: 100% / $column-size * $column;	
+					}
 				}
-			}
 
-			.g--push-#{ $column } {
-				@include breakpoint-hooks() {
-					margin-left: 100% / $columns * $column;
+				.g--push-#{ $column } {
+					@include breakpoint-hooks() {
+						margin-left: 100% / $column-size * $column;
+					}
 				}
 			}
 		}
 	}
 
-	.grid--gutter-x-0 {
+	&--gutter-x-0 {
 		@include breakpoint-hooks() {
 			margin-left: 0;
 			margin-right: 0;
@@ -73,7 +68,7 @@
 		}
 	}
 
-	.grid--gutter-y-0 {
+	&--gutter-y-0 {
 		@include breakpoint-hooks() {
 			margin-bottom: 0;
 
@@ -83,7 +78,7 @@
 		}
 	}
 
-	.grid--gutter-0 {
+	&--gutter-0 {
 		@include breakpoint-hooks() {
 			margin-left: 0;
 			margin-right: 0;
@@ -95,5 +90,5 @@
 				margin-bottom: 0;
 			}
 		}
-	}	
+	}
 }

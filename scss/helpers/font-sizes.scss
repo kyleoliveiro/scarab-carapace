@@ -1,0 +1,17 @@
+// Font sizes
+//
+// **Set the size of text elements**
+//
+// Markup: font-sizes.html
+//
+// Weight: 100
+//
+// Style guide: Typography.Sizes
+
+// Generate fs- classes based on keys in TYPE-SCALE
+@each $size in map-keys( get( type-scale ) ) {
+	%fs-#{ $size },
+	.fs-#{ $size } {
+		@include type-scale( $size );
+	}
+}

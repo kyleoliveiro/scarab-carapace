@@ -37,18 +37,23 @@
         </a>
       </li>
       <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-typography.html">
-          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Typography</span>
+        <a class="kss-nav__menu-link" href="section-layout.html">
+          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Layout</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-layout.html">
-          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Layout</span>
+        <a class="kss-nav__menu-link" href="section-typography.html">
+          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Typography</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-helpers.html">
+          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Helpers</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-components.html">
-          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Components</span>
+          <span class="kss-nav__ref">6</span><span class="kss-nav__name">Components</span>
         </a>
       </li>
     </ul>
@@ -79,14 +84,22 @@
 <h2 id="installation">Installation</h2>
 <p>To get started, add Carapace as a dependency in your project via npm:</p>
 <pre><code>npm install scarab-carapace --save-dev
-</code></pre><p>Import <code>carapace.scss</code> at the beginning of your stylesheet:</p>
-<pre><code class="lang-scss">@import &quot;path/to/node_modules/scarab-carapace/scss/carapace&quot;;
+</code></pre><p>This will download the <code>scarab-scss</code> and <code>scarab-carapace</code> packages into your project&#39;s <code>node_modules</code> folder.</p>
+<p>At the beginning of your stylesheet, import <code>scarab.scss</code> from <code>scarab-scss</code> and <code>carapace.scss</code> from <code>scarab-carapace</code>, like so: </p>
+<pre><code class="lang-scss">// Import Scarab
+@import &quot;path/to/node_modules/scarab-scss/scss/scarab&quot;;
+
+// Import your custom Scarab/Carapace configuration
+@import &quot;path/to/my/config/config.scss&quot;;
+
+// Import Carapace
+@import &quot;path/to/node_modules/scarab-carapace/scss/carapace&quot;;
 </code></pre>
-<p>Importing Carapace also imports the Scarab framework, which in turn creates a new global variable, <code>$SCARAB</code> in your Sass project.</p>
+<p>Importing the Scarab framework creates a new global variable, <code>$SCARAB</code> in your Sass project. This is where your stylesheet configuration is stored.</p>
 <p>For more information on configuring Scarab and Carapace, refer to <a href="https://github.com/watchtowerdigital/scarab#configuration">Scarab: Configuration</a> and the official Configuration section of Carapace&#39;s documentation.</p>
 <h2 id="features">Features</h2>
 <h3 id="scarab-framework">Scarab framework</h3>
-<p>Carapace imports the the <a href="https://github.com/watchtowerdigital/scarab.git">Scarab utility framework</a>. Scarab&#39;s functions and mixins are made available with Carapace.</p>
+<p>Carapace is an extension of the <a href="https://github.com/watchtowerdigital/scarab.git">Scarab utility framework</a>. Scarab&#39;s functions and mixins are compatible with Carapace.</p>
 <h3 id="object-oriented-approach">Object-oriented approach</h3>
 <p>Designed with an object-oriented approach in mind. Carapace kickstarts your projects and helps you write scalable and maintainable stylesheets.</p>
 <h3 id="responsive-by-default">Responsive by default</h3>

@@ -1,0 +1,5 @@
+.hidden {
+	@include breakpoint-hooks {
+		display: none !important;
+	}
+}

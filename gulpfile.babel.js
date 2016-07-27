@@ -62,6 +62,8 @@ gulp.task('sass', () => {
 
 	return gulp.src( paths.sass.src + paths.sass.main )
 
+		.pipe( $.sourcemaps.init() )
+
 		.pipe( $.sass( config.sass )
 			.on('error', $.sass.logError) )
 
@@ -84,6 +86,8 @@ gulp.task('sass', () => {
 
 	.pipe( $.size({ title: 'minified' }) )
 	.pipe( $.size({ title: 'minified, gzipped', gzip: true }) )
+
+	.pipe( $.sourcemaps.write() )
 	
 	.pipe( gulp.dest( paths.sass.dest ) )
 
@@ -109,10 +113,8 @@ gulp.task('styleguide', ['sass'], () => {
 			.on('error', $.sass.logError) )
 
 		.pipe( $.postcss([
-
 			autoprefixer( config.autoprefixer ),
 			mqpacker( config.mqpacker )
-
 		]) )
 
 		.pipe( $.postcss([
@@ -146,10 +148,6 @@ gulp.task('watch', () => {
 	}
 
 	$.watch([ _glob('sass')], ( file ) => {
-		gulp.start('styleguide');
-	});
-
-	$.watch([ _glob('styleguide')], ( file ) => {
 		gulp.start('styleguide');
 	});
 

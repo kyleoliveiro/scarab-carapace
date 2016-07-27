@@ -15,6 +15,10 @@
 			@extend %contain;
 			@extend %pad-left--s;
 
+			& & {
+				@extend %push-y--xs;
+			}
+
 			& + & {
 				@extend %push-y;
 			}

@@ -1,0 +1,29 @@
+// Breakpoint modifiers
+//
+// **Configure breakpoint-based class modifiers**
+//
+// ```
+// @include set-default( breakpoint-mods, (
+// 	tiny,
+// 	small,
+// 	medium,
+// 	large,
+// 	huge
+// ) );
+// ```
+//
+// Define a list of `breakpoint-mods` that Carapace will use to generate breakpoint "hooks" for each layout and helper class.
+//
+// An example of a breakpoint "hook" is the `.align-right@medium` class, which will only apply the `.align-right` class to an element if the viewport is `>=` the width of the `medium` breakpoint.
+//
+// Weight: 100
+//
+// Style guide: Config.Breakpoint-Modifiers
+
+@include set-default( breakpoint-mods, (
+	tiny,
+	small,
+	medium,
+	large,
+	huge
+) );

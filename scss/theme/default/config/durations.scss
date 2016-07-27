@@ -1,0 +1,31 @@
+// Durations
+//
+// **Configure global durations**
+//
+// ```
+// @include set-default( durations, (
+// 	pulse:   0.05s,
+// 	short:   0.1,
+// 	medium:  0.25s,
+// 	long:    0.8s,
+// 	gradual: 1.6s
+// ) );
+//
+// @include set-default( durations, default, duration(short) );
+// ```
+//
+// Configure `durations` for consistent transition and animation duration values throughout your project. Use Scarab's `duration()` getter function to return the value of a named duration.
+//
+// Carapace sets the default duration to `short`.
+//
+// Style guide: Config.Durations
+
+@include set-default( durations, (
+	pulse:   0.05s,
+	short:   0.1,
+	medium:  0.25s,
+	long:    0.8s,
+	gradual: 1.6s
+) );
+
+@include set-default( durations, default, duration(short) );

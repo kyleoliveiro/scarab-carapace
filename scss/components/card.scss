@@ -8,25 +8,7 @@
 //
 // Style guide: Components.Card
 
-@include define( card, (
-	background-color: palette( white ),
-	border-radius: 1px
-) );
-
-@at-root {
-	$card: global( card );
-
-	$background-color: map-get( $card, background-color );
-	$border-radius: map-get( $card, border-radius );
-	$box-shadow: map-get( $card, box-shadow );
-
-	.card {
-		@extend %pad;
-		@extend %contain;
-
-		border-radius: $border-radius;
-		border: 1px solid palette( light grey );
-		background-color: palette( white );
-		box-shadow: $box-shadow;
-	}
-}
+@include component ( card ) {
+	@extend %contain !optional;
+	@extend %pad !optional;	
+};

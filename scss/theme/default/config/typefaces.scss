@@ -1,0 +1,22 @@
+// Typefaces
+//
+// **Configure global typefaces**
+//
+// ```
+// @include set-default( typefaces, 'primary', (sans-serif) );
+// @include set-default( typefaces, 'secondary', (serif) );
+// @include set-default( typefaces, 'accent', (monospace) );
+// ```
+//
+// Configure `typefaces` for use throughout your project. Carapace sets the primary typeface to `Open Sans`.
+//
+// Carapace sets the default easings to `ease-out-quart`.
+//
+// Style guide: Config.Easings
+
+@include set-default( typefaces, (
+	primary:   ( sans-serif ),
+	secondary: ( serif ),
+	accent:    ( monospace )
+) );
+

@@ -1,11 +1,13 @@
-@mixin breakpoint-hooks() {
+@mixin breakpoint-hooks ( $hooks: get( breakpoint-mods ) ) {
+
 	@content;
 
-	@each $breakpoint in global( breakpoint-mods ) {
+	@each $breakpoint in $hooks {
 		&\@#{$breakpoint} {
 			@include query( $breakpoint ) {
 				@content;
 			}
 		}
 	}
+	
 }

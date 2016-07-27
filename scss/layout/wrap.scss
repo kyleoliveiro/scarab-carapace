@@ -13,12 +13,6 @@
 
 
 .wrap {
-	@include responsive(( padding-left, padding-right ), (
-		base: 	bl(1),
-		tiny:  	bl(2),
-		medium: 	0
-	));
-
 	@include responsive(( max-width ), (
 		base: 	rem(400),
 		tiny: 	rem(560),
@@ -34,12 +28,6 @@
 }
 
 .wrap--s {
-	@include responsive(( padding-left, padding-right ), (
-		base: 	bl(2),
-		tiny:  	bl(4),
-		medium: 	0
-	));
-
 	@include responsive(( max-width ), (
 		base: 	rem(360),
 		tiny: 	rem(480),
@@ -55,12 +43,6 @@
 }
 
 .wrap--l {
-	@include responsive(( padding-left, padding-right ), (
-		base: 0,
-		tiny: 0,
-		medium: 0
-	));
-
 	@include responsive(( max-width ), (
 		base: 	rem(480),
 		tiny: 	rem(640),

@@ -14,59 +14,60 @@
 //
 // Style guide: Layout.Stack
 
-%stack,
-.stack {	
+@include component ( stack ) {
+	$options: get( components, stack, options );
+	$size-mods: map-get( $options, size-mods );
+
 	& > * {
 		@extend %contain;
 		display: block;
 	}
 
 	& > * + * {
-		@include responsive(( margin-top ), y( m ) );
+		@include responsive(( margin-top ), y( m ));
 	}
 
-	@each $size in global( size-mods ) {
+	@each $size in $size-mods {
 		&--#{$size} {
 			& > * {
 				& + * {
-					@include responsive(( margin-top ), y( #{$size} ) );
+					@include responsive(( margin-top ), y( #{$size} ));
 				}
 			}
 		}
 	}
-}
 
-%stack--horizontal,
-.stack--horizontal {
-	@include responsive(( margin-bottom ), negative(y( m )) );
+	&--horizontal {
+		@include responsive(( margin-bottom ), negative( y( m )) );
 
-	& > * {
-		@include responsive(( margin-right ), x( m ) );
-		@include responsive(( margin-bottom ), y( m ) );
+		& > * {
+			@include responsive(( margin-right ), x( m ));
+			@include responsive(( margin-bottom ), y( m ));
 
-		display: inline-block;
-		vertical-align: middle;
-		margin-top: 0 !important;
+			display: inline-block;
+			vertical-align: middle;
+			margin-top: 0 !important;
 
-		&:first-child {
-			@include responsive(( margin-bottom ), y( m ) );
+			&:first-child {
+				@include responsive(( margin-bottom ), y( m ));
+			}
+
+			&:last-child {
+				margin-right: 0 !important;
+			}
 		}
 
-		&:last-child {
-			margin-right: 0 !important;
-		}
-	}
+		@each $size in get( size-mods ) {
+			&.stack--#{$size} {
+				@include responsive(( margin-bottom ), negative( y( #{$size} ) ));
 
-	@each $size in global( size-mods ) {
-		&.stack--#{$size} {
-			@include responsive(( margin-bottom ), negative(y( #{$size} )) );
+				& > * {
+					@include responsive(( margin-right ), x( #{$size} ));
+					@include responsive(( margin-bottom ), y( #{$size} ));
 
-			& > * {
-				@include responsive(( margin-right ), x( #{$size} ) );
-				@include responsive(( margin-bottom ), y( #{$size} ) );
-
-				&:first-child {
-					@include responsive(( margin-bottom ), y( #{$size} ) );
+					&:first-child {
+						@include responsive(( margin-bottom ), y( #{$size} ));
+					}
 				}
 			}
 		}

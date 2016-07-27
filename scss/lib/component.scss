@@ -3,14 +3,136 @@
 // @param { string } $query - Query of what to return
 // @return { string }
 
-@function component(
-	$keys...
-) {
-	$value: global( components );
+// @function component(
+// 	$keys...
+// ) {
+// 	$value: get( components );
 
-	@each $key in $keys {
-		$value: map-get( $value, #{$key} );
+// 	@each $key in $keys {
+// 		$value: map-get( $value, #{$key} );
+// 	}
+
+// 	@return $value;
+// }
+
+$_reserved-properties: ( transitions, type-scale, states );
+
+@mixin _generate-component-state-properties( $states ) {
+	@if $states != null {
+		@each $state in map-keys($states) {
+			$properties: map-get( $states, $state );						
+			@if $state == 'active' {
+				&:hover:#{$state}, &:focus:#{$state} {
+					@each $property-pair in $properties {
+						$property: nth($property-pair, 1);
+						$value: nth($property-pair, 2);
+
+						@if index( $_reserved-properties, $property ) == null {
+							#{$property}: #{$value};
+						}
+
+						@if $property == 'transitions' {
+							@include type-scale( $value );
+						}
+
+						@if $property == 'type-scale' {
+							@include type-scale( $value );
+						}
+					}
+				}
+			} @else {
+				&:#{$state} {
+					@each $property-pair in $properties {
+						$property: nth($property-pair, 1);
+						$value: nth($property-pair, 2);
+
+						@if index( $_reserved-properties, $property ) == null {
+							#{$property}: #{$value};
+						}
+
+						@if $property == 'transitions' {
+							@include type-scale( $value );
+						}
+
+						@if $property == 'type-scale' {
+							@include type-scale( $value );
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@mixin _generate-component-properties( $properties ) {
+	@if $properties != null {
+		@each $property-pair in $properties {
+			$property: nth($property-pair, 1);
+			$value: nth($property-pair, 2);
+
+			@if index( $_reserved-properties, $property ) == null {
+				#{$property}: #{$value};
+			}
+
+			@if $property == 'transitions' {
+				@include type-scale( $value );
+			}
+
+			@if $property == 'type-scale' {
+				@include type-scale( $value );
+			}
+		}
+	}
+}
+
+@mixin component ( $name, $options: null ) {
+	@if $options != null {
+		@include set( components, $name, $options );
 	}
 
-	@return $value;
+	$component: get( components, $name );
+	@if $component != null {
+		$class: map-get( $component, class );
+		$placeholder: map-get( $component, placeholder );
+		$selector: null;
+
+		@if $class != null {
+			$selector: ( str-insert( $class, '.', 1 ) );
+		}
+
+		@if $placeholder != null {
+			$selector: #{ append( $selector, str-insert( $placeholder, '%', 1 ), 'comma' ) };
+		}
+
+		@if $selector != null {
+			@at-root {
+				#{$selector} {
+					// Generate styles for component
+					$properties: map-get( $component, properties );
+					@include _generate-component-properties( $properties );
+
+					// Generate styles for component states
+					$states: map-get( $component, states );
+					@include _generate-component-state-properties( $states );
+				
+					// Generate modifier styles
+					$modifiers: map-get( $component, modifiers );
+					@if $modifiers {
+						@each $modifier in map-keys($modifiers) {
+							&--#{$modifier} {
+								$properties: map-get( $modifiers, $modifier );
+								@include _generate-component-properties( $properties );
+
+								// Generate styles for modifier states
+								$states: map-get( $properties, states );
+								@include _generate-component-state-properties( $states );
+							}
+						}
+					}
+					
+					@content;
+				}
+			}
+		}
+	}
 }
