@@ -10,7 +10,7 @@
 
 @include component ( auto-width ) {
 	@include breakpoint-hooks() {
-		display: table;
-		width: auto;
+		display: table !important;
+		width: auto !important;
 	}
 }

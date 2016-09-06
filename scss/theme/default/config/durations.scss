@@ -22,7 +22,7 @@
 
 @include set-default( durations, (
 	pulse:   0.05s,
-	short:   0.1,
+	short:   0.1s,
 	medium:  0.25s,
 	long:    0.8s,
 	gradual: 1.6s

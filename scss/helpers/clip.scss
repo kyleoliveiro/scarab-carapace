@@ -1,0 +1,17 @@
+.clip-x {
+	@include breakpoint-hooks {
+		overflow-x: hidden;
+	}
+}
+
+.clip-y {
+	@include breakpoint-hooks {
+		overflow-y: hidden;
+	}
+}
+
+.clip {
+	@include breakpoint-hooks {
+		overflow: hidden;
+	}
+}

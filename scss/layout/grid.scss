@@ -13,7 +13,6 @@
 // Style guide: Layout.Grid
 
 @include component ( grid ) {
-	
 	$options: get( components, grid, options );
 	$columns:  map-get( $options, columns );
 	$gutter-x: map-get( $options, gutter-x );

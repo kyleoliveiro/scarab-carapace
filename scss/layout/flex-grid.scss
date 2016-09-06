@@ -30,6 +30,7 @@
 
 @include component ( flex-grid ) {
 	$options: get( components, flex-grid, options );
+	$columns:  map-get( $options, columns );
 	$gutter-x: map-get( $options, gutter-x );
 	$gutter-y: map-get( $options, gutter-y );
 
@@ -41,9 +42,28 @@
 		flex-wrap: wrap;
 
 		& > * {
-			margin-left: $gutter-x * 0.5;
-			margin-right: $gutter-x * 0.5;
-			margin-bottom: $gutter-y;
+			padding-left: $gutter-x * 0.5;
+			padding-right: $gutter-x * 0.5;
+			padding-bottom: $gutter-y;
+		}
+	}
+
+	@each $column-size in $columns {
+		&--#{ $column-size } {
+			@for $column from 1 through $column-size {
+				.g__#{ $column } {
+					@include breakpoint-hooks() {
+						width: 100% / $column-size * $column;
+						flex-basis: 100% / $column-size * $column;
+					}
+				}
+
+				.g--push-#{ $column } {
+					@include breakpoint-hooks() {
+						margin-left: 100% / $column-size * $column;
+					}
+				}
+			}
 		}
 	}
 
@@ -100,7 +120,7 @@
 			margin-bottom: 0;
 
 			& > * {
-				margin-bottom: 0;
+				padding-bottom: 0;
 			}
 		}
 	}
@@ -111,8 +131,8 @@
 			margin-right: 0;
 
 			& > * {
-				margin-left: 0;
-				margin-right: 0;
+				padding-left: 0;
+				padding-right: 0;
 			}
 		}
 	}
@@ -124,9 +144,9 @@
 			margin-bottom: 0;
 
 			& > * {
-				margin-left: 0;
-				margin-right: 0;
-				margin-bottom: 0;
+				padding-left: 0;
+				padding-right: 0;
+				padding-bottom: 0;
 			}
 		}
 	}
