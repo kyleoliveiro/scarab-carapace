@@ -1,0 +1,6 @@
+@include set-default( modules, 'rotate-z', (
+	root        : 'rotateZ',
+	values      : get(angles),
+	breakpoints : get-keys(breakpoints),
+	states      : get-keys(states)
+) );

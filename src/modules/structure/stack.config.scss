@@ -1,0 +1,5 @@
+@include set-default( modules, 'stack', (
+	root        : 'stack',
+	values      : get(sizes),
+	breakpoints : get-keys(breakpoints)
+) );

@@ -1,0 +1,9 @@
+@include set-default( modules, 'min-width', (
+	root        : 'mnw',
+	values      : (
+		a     : auto,
+		100   : 100%,
+		100vw : 100vw
+	),
+	breakpoints : get-keys(breakpoints)
+) );

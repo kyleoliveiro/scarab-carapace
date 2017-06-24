@@ -1,0 +1,44 @@
+{
+  "name": "scarab-carapace",
+  "version": "3.0.0",
+  "description": "Highly configurable framework for generating functional CSS classes",
+  "main": "core.scss",
+  "scripts": {
+    "prebuild": "rm -f build/*",
+    "build": "node-sass test/test.scss -o build/",
+    "postbuild": "npm run split && npm run minify && npm run gzip",
+    "split": "sakugawa -n 9999999999 -m separate build/test.css",
+    "preminify": "rm -f build/*.min.css",
+    "minify": "for file in build/*.css\ndo\n cssnano \"$file\" \"$file\".min \ndone",
+    "gzip": "for file in build/*.css.min\ndo\n tar -zcvf \"$file\".tar.gz \"$file\" \ndone",
+    "test": "node-sass test/test.scss -o build/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watchtowerdigital/scarab-carapace.git"
+  },
+  "keywords": [
+    "sass",
+    "scss",
+    "css",
+    "atomic",
+    "functional",
+    "framework",
+    "responsive",
+    "front-end"
+  ],
+  "author": "Kyle Oliveiro <kyle@watchtower.digital>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/watchtowerdigital/scarab-carapace/issues"
+  },
+  "homepage": "https://github.com/watchtowerdigital/scarab-carapace#readme",
+  "dependencies": {
+    "scarab-scss": "^6.0.0"
+  },
+  "devDependencies": {
+    "cssnano-cli": "^1.0.5",
+    "node-sass": "^4.5.3",
+    "sakugawa": "^0.5.3"
+  }
+}

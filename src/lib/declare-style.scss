@@ -1,0 +1,72 @@
+@mixin declare-style ( $module,
+	$variant         : null,
+	$modifier        : null
+) {
+	@at-root {
+		// Get module options
+		$output-classes    : get(output-classes);
+
+		$breakpoints       : module($module, 'breakpoints');		
+		$breakpoint-prefix : get(breakpoint-prefix);
+		$breakpoint-suffix : get(breakpoint-suffix);
+
+		$states            : module($module, 'states');
+		$state-prefix      : get(state-prefix);
+		$state-suffix      : get(state-suffix);
+
+		@if module($module, breakpoint-prefix) != null {
+			$breakpoint-prefix : module($module, breakpoint-prefix);
+		}
+
+		@if module($module, breakpoint-suffix) != null {
+			$breakpoint-suffix : module($module, breakpoint-suffix);
+		}
+
+		@if module($module, state-prefix) != null {
+			$state-prefix : module($module, state-prefix);
+		}
+
+		@if module($module, state-suffix) != null {
+			$state-suffix : module($module, state-suffix);
+		}
+
+		@if module($module, output-classes) != null {
+			$output-classes : module($module, output-classes);
+		}
+
+		@if $output-classes != false {
+			// Build selector string
+			$selector: create-selector( $module, $variant, $modifier );
+
+			// Declare properties for base selector
+			.#{validate-selector($selector)} {
+				@content;
+			}
+
+			// Declare properties for breakpoint hooks
+			@include breakpoint-hooks($selector, $breakpoints, $breakpoint-prefix, $breakpoint-suffix) {
+				@content
+			};
+
+			// Declare properties for state hooks
+			@if $states {
+				@each $state in $states {
+					$state-selector: str-replace($selector, '{{s}}', get(states, $state));
+					$state-selector: str-replace($state-selector, '{{sp}}', $state-prefix);
+					$state-selector: str-replace($state-selector, '{{ss}}', $state-suffix);
+
+					.#{validate-selector($state-selector)}:#{$state} {
+						@content;
+
+						@include breakpoint-hooks($state-selector, $breakpoints, $breakpoint-prefix, $breakpoint-suffix) {
+							&:#{$state} {
+								@content
+							}
+						};
+					}
+				}
+			}
+		}
+		
+	}
+}

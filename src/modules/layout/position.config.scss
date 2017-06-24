@@ -1,0 +1,10 @@
+@include set-default( modules, 'position', (
+	root        : 'pos',
+	values      : (
+		s : static,
+		r : relative,
+		a : absolute,
+		f : fixed
+	),
+	breakpoints : get-keys(breakpoints)
+) );

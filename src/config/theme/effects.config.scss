@@ -1,0 +1,42 @@
+// Line Widths
+@include set-default( line-widths, (
+	0 : 0,
+	s : 1px,
+	m : 2px,
+	l : 3px
+) );
+
+// Line Styles
+@include set-default( line-styles, (
+	n    : none,
+	s    : solid,
+	dot  : dotted,
+	dash : dashed
+) );
+
+// Opacity
+@include set-default( opacity, (
+	0   : 0,
+	25  : 0.25,
+	50  : 0.5,
+	75  : 0.75,
+	100 : 1
+) );
+
+// Border Radius
+@include set-default( radii, (
+	0     : 0,
+	pill  : 99999px,
+	round : 100%
+) );
+
+// Box Shadows
+@include set-default( box-shadows, (
+	0 : none,
+	s : 0 rem(4) rem(2) rem(1) rgba(0,0,0,0.2)
+) );
+
+@include set-default( text-shadows, (
+	0 : none,
+	s : 0 rem(4) rem(2) rgba(0,0,0,0.2)
+) );

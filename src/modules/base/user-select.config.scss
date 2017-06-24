@@ -1,0 +1,9 @@
+@include set-default( modules, 'user-select', (
+	root        : 'select',
+	values      : (
+		n   : none,
+		a   : auto,
+		t   : text,
+		all : all
+	)
+) );

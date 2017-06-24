@@ -1,0 +1,15 @@
+@at-root {
+
+	$module: 'transition';
+
+	@each $key, $value in module($module, 'values') {
+		@include declare-style(
+			$module   : $module,
+			$modifier : $key
+		) {
+			transition-duration: $value;
+			transition-property: all;
+		}
+	}
+
+}

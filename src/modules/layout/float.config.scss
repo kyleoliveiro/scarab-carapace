@@ -1,0 +1,9 @@
+@include set-default( modules, 'float', (
+	root        : 'fl',
+	values      : (
+		n : none,
+		l : left,
+		r : right
+	),
+	breakpoints : get-keys(breakpoints)
+) );

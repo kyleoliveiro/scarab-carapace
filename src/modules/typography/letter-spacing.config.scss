@@ -1,0 +1,5 @@
+@include set-default( modules, 'letter-spacing', (
+	root        : 'ls',
+	values      : get(tracking),
+	breakpoints : get-keys(breakpoints)
+) );

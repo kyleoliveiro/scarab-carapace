@@ -1,0 +1,10 @@
+@include set-default( modules, 'background-repeat', (
+	root        : 'bgr',
+	values : (
+		x  : repeat-x,
+		y  : repeat-y,
+		xy : repeat,
+		n  : no-repeat
+	),
+	breakpoints : get-keys(breakpoints)
+) );

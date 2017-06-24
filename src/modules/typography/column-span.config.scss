@@ -1,0 +1,8 @@
+@include set-default( modules, 'column-span', (
+	root        : 'colspan',
+	values      : (
+		none : none,
+		all  : all
+	),
+	breakpoints : get-keys(breakpoints)
+) );

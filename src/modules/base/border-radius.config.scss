@@ -1,0 +1,6 @@
+@include set-default( modules, 'border-radius', (
+	root        : 'rad',
+	values      : get(radii),
+	breakpoints : get-keys(breakpoints),
+	states      : get-keys(states)
+) );

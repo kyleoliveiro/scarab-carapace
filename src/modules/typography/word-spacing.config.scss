@@ -1,0 +1,5 @@
+@include set-default( modules, 'word-spacing', (
+	root        : 'ws',
+	values      : get(tracking),
+	breakpoints : get-keys(breakpoints)
+) );

@@ -1,0 +1,15 @@
+@at-root {
+
+	$module: 'webkit-overflow-scrolling';
+
+	@each $key, $value in module($module, 'values') {
+		@include declare-style(
+			$module   : $module,
+			$modifier : $key
+		) {
+			-webkit-: flex;
+			flex-wrap: wrap;
+		}
+	}
+
+}

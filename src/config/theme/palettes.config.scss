@@ -1,0 +1,17 @@
+// Color palettes
+@include set-default( palettes, (
+	black: (
+		base: #000000
+	),
+	grey:  (
+		light: #f3f3f3,
+		base:  #cccccc,
+		dark:  #666666
+	),
+	white: (
+		base: #ffffff
+	),
+	transparent: (
+		base: transparent
+	)
+) );

@@ -1,0 +1,10 @@
+@include set-default( modules, 'overflow', (
+	root        : 'of',
+	values:      (
+		a : auto,
+		v : visible,
+		h : hidden,
+		s : scroll
+	),
+	breakpoints : get-keys(breakpoints)
+) );

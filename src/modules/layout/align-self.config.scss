@@ -1,0 +1,13 @@
+@include set-default( modules, 'align-self', (
+	root        : 'as',
+	values      : (
+		a  : auto,
+		n  : normal,
+		c  : center,
+		s  : stretch,
+		bl : baseline,
+		fs : flex-start,
+		fe : flex-end
+	),
+	breakpoints : get-keys(breakpoints)
+) );

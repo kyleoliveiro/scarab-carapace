@@ -1,0 +1,38 @@
+@at-root {
+
+	$module: 'margin';
+
+	@each $key, $value in module($module, 'values') {
+		@include declare-style(
+			$module   : $module,
+			$modifier : $key
+		) {
+			margin: $value;
+		}
+	}
+
+	// Directional margins
+	//
+	// intentionally declared after the base margins
+	// so that directional margins are lower in the cascade
+	@each $direction, $d in get(directions) {
+		@each $key, $value in module($module, 'values') {
+			@include declare-style(
+				$module   : $module,
+				$variant  : $d,
+				$modifier : $key
+			) {
+				@if $direction == 'horizontal' {
+					margin-left: $value;
+					margin-right: $value;
+				} @else if $direction == 'vertical' {
+					margin-top: $value;
+					margin-bottom: $value;
+				} @else {
+					margin-#{$direction}: $value;
+				}
+			}
+		}
+	}
+
+}

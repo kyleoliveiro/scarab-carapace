@@ -1,0 +1,16 @@
+@import 'transition.config';
+@import 'transition-property.config';
+@import 'transition-duration.config';
+@import 'transition-delay.config';
+@import 'transition-timing-function.config';
+@import 'animation-name.config';
+@import 'animation-duration.config';
+@import 'animation-delay.config';
+@import 'animation-timing-function.config';
+@import 'animation-direction.config';
+@import 'animation-fill-mode.config';
+@import 'animation-iteration-count.config';
+
+@each $module in map-keys( get(modules) ) {
+	@include set-default( modules, $module, module-group, 'animation' );
+}

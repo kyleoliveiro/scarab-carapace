@@ -1,0 +1,6 @@
+@include set-default( modules, 'text-decoration-color', (
+	root        : 'tdc',
+	values      : build-color-map(get-keys(palettes)),
+	breakpoints : get-keys(breakpoints),
+	states      : get-keys(states)
+) );

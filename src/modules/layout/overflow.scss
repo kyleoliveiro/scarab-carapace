@@ -1,0 +1,34 @@
+@at-root {
+
+	$module: 'overflow';
+
+	@each $key, $value in module($module, 'values') {
+		@include declare-style(
+			$module   : $module,
+			$modifier : $key
+		) {
+			overflow: $value;
+		}
+	}
+
+	// Directional overflows
+	//
+	// intentionally declared after the base overflows
+	// so that directional overflows are lower in the cascade
+	@each $direction, $d in get(directions) {
+		@each $key, $value in module($module, 'values') {
+			@include declare-style(
+				$module   : $module,
+				$variant  : $d,
+				$modifier : $key
+			) {
+				@if $direction == 'horizontal' {
+					overflow-x: $value;
+				} @else if $direction == 'vertical' {
+					overflow-y: $value;
+				}
+			}
+		}
+	}
+
+}

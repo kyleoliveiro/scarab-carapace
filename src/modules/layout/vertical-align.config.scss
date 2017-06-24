@@ -1,0 +1,14 @@
+@include set-default( modules, 'vertical-align', (
+	root        : 'va',
+	values      : (
+		t   : top,
+		m   : middle,
+		b   : bottom,
+		bl  : baseline,
+		tt  : text-top,
+		tb  : text-bottom,
+		sub : sub,
+		sup : super
+	),
+	breakpoints : get-keys(breakpoints)
+) );

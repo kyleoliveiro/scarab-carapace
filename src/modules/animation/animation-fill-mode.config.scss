@@ -1,0 +1,10 @@
+@include set-default( modules, 'animation-fill-mode', (
+	root   : 'anim-mode',
+	values : (
+		n  : normal,
+		f  : forwards,
+		b  : backwards,
+		fb : both
+	),
+	states : get-keys(states)
+) );

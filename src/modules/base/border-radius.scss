@@ -1,0 +1,15 @@
+@at-root {
+
+	$module: 'border-radius';
+
+	@each $key, $value in module($module, 'values') {
+		@include declare-style(
+			$module   : $module,
+			$modifier : $key
+		) {
+			border-radius: $value;
+			-webkit-border-radius: $value;
+		}
+	}
+
+}

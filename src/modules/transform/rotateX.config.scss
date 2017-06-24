@@ -1,0 +1,6 @@
+@include set-default( modules, 'rotate-x', (
+	root        : 'rotateX',
+	values      : get(angles),
+	breakpoints : get-keys(breakpoints),
+	states      : get-keys(states)
+) );

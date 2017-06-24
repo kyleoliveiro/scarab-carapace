@@ -1,0 +1,14 @@
+@at-root {
+
+	$module: 'min-width';
+
+	@each $key, $value in module($module, 'values') {
+		@include declare-style(
+			$module   : $module,
+			$modifier : $key
+		) {
+			min-width: $value;
+		}
+	}
+
+}

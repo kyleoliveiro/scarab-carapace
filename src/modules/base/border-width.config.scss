@@ -1,0 +1,6 @@
+@include set-default( modules, 'border-width', (
+	root        : 'bdw',
+	values      : get(line-widths),
+	breakpoints : get-keys(breakpoints),
+	states      : get-keys(states)
+) );

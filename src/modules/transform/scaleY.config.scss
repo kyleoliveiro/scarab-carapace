@@ -1,0 +1,6 @@
+@include set-default( modules, 'scale-y', (
+	root        : 'scaleY',
+	values      : get(sizes),
+	breakpoints : get-keys(breakpoints),
+	states      : get-keys(states)
+) );

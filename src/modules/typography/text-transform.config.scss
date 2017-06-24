@@ -1,0 +1,10 @@
+@include set-default( modules, 'text-transform', (
+	root        : 'tt',
+	values      : (
+		c : capitalize,
+		u : uppercase,
+		l : lowercase,
+		n : none
+	),
+	breakpoints : get-keys(breakpoints)
+) );

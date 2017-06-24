@@ -1,0 +1,6 @@
+@include set-default( modules, 'translate-z', (
+	root        : 'Z',
+	values      : get(coordinates),
+	breakpoints : get-keys(breakpoints),
+	states      : get-keys(states)
+) );

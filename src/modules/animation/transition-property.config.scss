@@ -1,0 +1,13 @@
+@include set-default( modules, 'transition-property', (
+	root   : 'tsn-prop',
+	values : (
+		n  : none,
+		a  : all,
+		o  : opacity,
+		t  : transform,
+		c  : color,
+		bd : border,
+		bg : background
+	),
+	states : get-keys(states)
+) );

@@ -1,0 +1,8 @@
+// Breakpoints
+@include set-default( breakpoints, (
+	xs : em(400),
+	s  : em(600),
+	m  : em(800),
+	l  : em(1440),
+	xl : em(1920)
+) );

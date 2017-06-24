@@ -1,0 +1,10 @@
+@include set-default( modules, 'background-size', (
+	root        : 'bgs',
+	values      : (
+		a   : auto,
+		con : contain,
+		cov : cover,
+		100 : 100%
+	),
+	breakpoints : get-keys(breakpoints)
+) );

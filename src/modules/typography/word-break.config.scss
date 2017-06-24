@@ -1,0 +1,10 @@
+@include set-default( modules, 'word-break', (
+	root        : 'wb',
+	values      : (
+		n  : normal,
+		ba : break-all,
+		bw : break-word,
+		ka : keep-all
+	),
+	breakpoints : get-keys(breakpoints)
+) );

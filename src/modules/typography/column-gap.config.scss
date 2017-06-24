@@ -1,0 +1,10 @@
+@include set-default( modules, 'column-gap', (
+	root        : 'colgap',
+	values      : map-merge(
+		get(sizes),
+		(
+			auto : normal
+		)
+	),
+	breakpoints : get-keys(breakpoints)
+) );

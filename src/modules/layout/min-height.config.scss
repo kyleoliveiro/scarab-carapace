@@ -1,0 +1,9 @@
+@include set-default( modules, 'min-height', (
+	root        : 'mnh',
+	values      : (
+		a     : auto,
+		100   : 100%,
+		100vh : 100vh
+	),
+	breakpoints : get-keys(breakpoints)
+) );

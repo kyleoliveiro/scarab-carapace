@@ -1,0 +1,38 @@
+@at-root {
+
+	$module: 'border-width';
+
+	@each $key, $value in module($module, 'values') {
+		@include declare-style(
+			$module   : $module,
+			$modifier : $key
+		) {
+			border-width: $value;
+		}
+	}
+
+	// Directional border widths
+	//
+	// intentionally declared after the base border widths
+	// so that directional border widths are lower in the cascade
+	@each $direction, $d in get(directions) {
+		@each $key, $value in module($module, 'values') {
+			@include declare-style(
+				$module   : $module,
+				$variant  : $d,
+				$modifier : $key
+			) {
+				@if $direction == 'horizontal' {
+					border-left-width: $value;
+					border-right-width: $value;
+				} @else if $direction == 'vertical' {
+					border-top-width: $value;
+					border-bottom-width: $value;
+				} @else {
+					border-#{$direction}-width: $value;
+				}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,28 @@
+@at-root {
+
+	$module: 'flex-grid-column';
+
+	// Loop 'flex-grid' values
+	@each $key, $value in module('flex-grid', 'values') {
+		@for $col from 1 through $value {
+			@include declare-style(
+				$module   : $module,
+				$modifier : $col
+			) {
+				// Create the flex-grid selector
+				$flex-grid-selector: create-selector(
+					$module:   'flex-grid',
+					$modifier: $key
+				);
+
+				$flex-grid-selector: validate-selector($flex-grid-selector);
+
+				.#{$flex-grid-selector} & {
+					$column-width: ($col / $value) * 100%;
+					width: $column-width;
+					flex-basis: $column-width;
+				}
+			}
+		}
+	}
+}

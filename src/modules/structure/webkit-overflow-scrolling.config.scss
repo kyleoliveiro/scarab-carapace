@@ -1,0 +1,7 @@
+@include set-default( modules, 'webkit-overflow-scrolling', (
+	root        : 'scrolling',
+	values      : (
+		a : auto,
+		t : touch
+	)
+) );

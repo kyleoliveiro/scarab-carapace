@@ -1,0 +1,5 @@
+@include set-default( modules, 'transition-duration', (
+	root   : 'tsn-dur',
+	values : get(durations),
+	states : get-keys(states)
+) );

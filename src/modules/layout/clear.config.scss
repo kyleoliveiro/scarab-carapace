@@ -1,0 +1,10 @@
+@include set-default( modules, 'clear', (
+	root        : 'cl',
+	values      : (
+		n : none,
+		l : left,
+		r : right,
+		b : both
+	),
+	breakpoints : get-keys(breakpoints)
+) );

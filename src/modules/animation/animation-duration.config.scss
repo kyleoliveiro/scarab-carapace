@@ -1,0 +1,5 @@
+@include set-default( modules, 'animation-duration', (
+	root   : 'anim-dur',
+	values : get(durations),
+	states : get-keys(states)
+) );

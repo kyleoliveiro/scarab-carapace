@@ -1,0 +1,76 @@
+@at-root {
+
+	$module: 'typeset';
+
+	@each $key, $value in module($module, 'values') {
+		@include declare-style(
+			$module   : $module
+		) {
+			& #{$key}, & .#{$key} {
+				@each $property, $val in $value {
+					@if($property == 'type-scale' and $val) {
+						@include type-scale($val);
+					}
+
+					@else if($property == 'margin' and $val) {
+						@include responsive((margin-top, margin-bottom), $val);
+					}
+
+					@else {
+						@include responsive($property, $val);
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+// @at-root {
+
+	// typeset
+	// 
+	// **`.typeset`**
+	//
+	// Typesets text.
+	//
+	// Styleguide modules.typography.typeset
+
+// 	$module:   'typeset';
+
+// 	// Get module options
+// 	$class-root:  get(modules, $module, class-root);
+// 	$values:      get(modules, $module, values);
+// 	$breakpoints: get(modules, $module, breakpoints);
+// 	$generate:    get(modules, $module, generate);
+// 	$states:      get(modules, $module, states);
+
+// 	$class: assemble-class($class-root, null, null);
+// 	$type-scale:  get(modules, $module, type-scale);
+
+// 	@include declare($class, null, $generate, $states) {
+// 		@include type-scale($type-scale);
+// 	}
+
+// 	@each $element, $map in $values {
+// 		@include declare($class, null, $generate, $states) {
+// 			#{$element}, .#{$element} {
+// 				@each $property, $value in $map {
+// 					@if($property == 'type-scale' and $value) {
+// 						@include type-scale($value);
+// 					}
+
+// 					@else if($property == 'margin' and $value) {
+// 						@include responsive((margin-top, margin-bottom), $value);
+// 					}
+
+// 					@else {
+// 						@include responsive($property, $value);
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+
+// }

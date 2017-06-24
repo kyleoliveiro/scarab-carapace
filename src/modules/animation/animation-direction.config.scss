@@ -1,0 +1,10 @@
+@include set-default( modules, 'animation-direction', (
+	root   : 'anim-dir',
+	values : (
+		n  : normal,
+		r  : reverse,
+		a  : alternate,
+		ar : alternate-reverse
+	),
+	states : get-keys(states)
+) );

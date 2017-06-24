@@ -1,0 +1,8 @@
+@include set-default( modules, 'animation-iteration-count', (
+	root   : 'anim-count',
+	values : (
+		0 : 0,
+		1 : 1,
+		i : infinite
+	)
+) );

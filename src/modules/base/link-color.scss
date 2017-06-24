@@ -1,0 +1,16 @@
+@at-root {
+
+	$module: 'link-color';
+
+	@each $key, $value in module($module, 'values') {
+		@include declare-style(
+			$module   : $module,
+			$modifier : $key
+		) {
+			a {
+				color: $value;
+			}
+		}
+	}
+
+}
