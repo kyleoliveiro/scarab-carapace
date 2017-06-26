@@ -36,23 +36,25 @@ Although Carapace provides some defaults, it is not an opinionated CSS library. 
 
 
 ## Installation
-Install `scarab-carapace` as a dev-dependency in your project via npm:
+1. Install `scarab-carapace` as a dev-dependency in your project via npm:
 ```
 npm install scarab-carapace --save-dev
 ```
 
-Import the necessary files in your main stylesheet:
+2. Add your `node_modules` folder to your Sass [`includePath`](https://github.com/sass/node-sass#includepaths).
+
+3. Import the necessary files in your main stylesheet:
 ```scss
 // IMPORTANT
 // 
 // Follow the import order below to ensure modules are generated properly.
 
-@import 'path/to/node_modules/scarab-carapace/core';    // Imports scarab-scss, core utils & config
-@import 'custom/config/settings';                       // Your custom Carapace settings
-@import 'custom/config/theme';                          // Your custom Carapace theme configuration
-@import 'path/to/node_modules/scarab-carapace/config';  // Imports default module config
-@import 'custom/config/modules';                        // Your custom Carapace module configuration
-@import 'path/to/node_modules/scarab-carapace/modules'; // Generates CSS classes
+@import 'scarab-carapace/core';    // Imports scarab-scss, core utils & config
+@import 'custom/config/settings';  // Your custom Carapace settings
+@import 'custom/config/theme';     // Your custom Carapace theme configuration
+@import 'scarab-carapace/config';  // Imports default module config
+@import 'custom/config/modules';   // Your custom Carapace module configuration
+@import 'scarab-carapace/modules'; // Generates CSS classes
 ```
 
 ## Configuration
