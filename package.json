@@ -5,13 +5,13 @@
   "main": "core.scss",
   "scripts": {
     "prebuild": "rm -f build/*",
-    "build": "node-sass test/test.scss -o build/",
+    "build": "node-sass --include-path node_modules test/test.scss -o build/",
     "postbuild": "npm run split && npm run minify && npm run gzip",
     "split": "sakugawa -n 9999999999 -m separate build/test.css",
     "preminify": "rm -f build/*.min.css",
     "minify": "for file in build/*.css\ndo\n cssnano \"$file\" \"$file\".min \ndone",
     "gzip": "for file in build/*.css.min\ndo\n tar -zcvf \"$file\".tar.gz \"$file\" \ndone",
-    "test": "node-sass test/test.scss -o build/"
+    "test": "node-sass --include-path node_modules test/test.scss -o build/"
   },
   "repository": {
     "type": "git",
