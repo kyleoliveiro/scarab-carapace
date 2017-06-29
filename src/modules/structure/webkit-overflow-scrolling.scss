@@ -7,8 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			-webkit-: flex;
-			flex-wrap: wrap;
+			-webkit-overflow-scrolling: $value;
 		}
 	}
 
