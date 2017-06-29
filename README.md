@@ -129,7 +129,7 @@ Documentation is a work-in-progress.
 
 
 
-## Resources
+## Related
 * [**scarab-scss**](https://github.com/watchtowerdigital/scarab.git) — Sass utility framework for rapid stylesheet development
 * [**scarab-styleguide**](https://github.com/watchtowerdigital/scarab-styleguide.git) — Generate automatic styleguides from scarab-carapace configuration
 * [**scarab-cli**](https://github.com/watchtowerdigital/scarab-cli.git) — Command-Line Interface for the Scarab Sass ecosystem
