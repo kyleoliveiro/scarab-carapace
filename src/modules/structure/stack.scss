@@ -12,11 +12,11 @@
 					$modifier : $key
 				) {
 					& > * {
-						display: inline-block;
-
 						@if $direction == 'horizontal' {
+							display: inline-block;
 							margin-right: $value;
 						} @else if $direction == 'vertical' {
+							display: block;
 							margin-bottom: $value;
 						}
 					}
