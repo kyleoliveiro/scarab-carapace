@@ -102,7 +102,7 @@ Modules are single-purpose, functional CSS classes. Module class names and value
 
 Module class names consist of a `root`, and optionally: `variant`, `modifier`, `breakpoint` and `state`.
 
-In Caparace, configuration for a module typically looks like this:
+In Carapace, configuration for a module typically looks like this:
 ```scss
 @include set-default( modules, 'opacity', (
   root        : 'o',                  // String which defines the module's `root`
