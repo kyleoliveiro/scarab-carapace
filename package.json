@@ -1,6 +1,6 @@
 {
   "name": "scarab-carapace",
-  "version": "3.0.6",
+  "version": "3.1.0",
   "description": "Highly configurable framework for generating functional CSS classes",
   "main": "core.scss",
   "scripts": {
