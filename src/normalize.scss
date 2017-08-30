@@ -23,6 +23,12 @@
 		button, input[type=submit], input[type=reset] {
 			cursor: pointer;
 		}
+
+		// Normalize type styles for input elements
+		input, textarea {
+			font-size: inherit;
+			font-family: inherit;
+		}
 		
 	}
 
