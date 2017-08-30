@@ -49,12 +49,11 @@ npm install scarab-carapace --save-dev
 // 
 // Follow the import order below to ensure modules are generated properly.
 
-@import 'scarab-carapace/core';    // Imports scarab-scss, core utils & config
-@import 'custom/config/settings';  // Your custom Carapace settings
-@import 'custom/config/theme';     // Your custom Carapace theme configuration
-@import 'scarab-carapace/config';  // Imports default module config
-@import 'custom/config/modules';   // Your custom Carapace module configuration
-@import 'scarab-carapace/modules'; // Generates CSS classes
+@import 'scarab-carapace/core';      // Imports scarab-scss, core utils & config
+@import 'custom/config.scss';        // Your custom Carapace settings & config
+@import 'scarab-carapace/config';    // Imports default module config
+@import 'custom/module-config.scss'; // Your custom Carapace module config
+@import 'scarab-carapace/modules';   // Generates CSS classes
 ```
 
 ## Configuration
