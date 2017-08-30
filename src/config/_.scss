@@ -1,4 +1,8 @@
-@include set-default( __carapace-version, '3.0.0' );
-
+// Scarab Config
 @import 'settings';
-@import 'theme/_';
+@import 'breakpoints';
+@import 'palettes';
+@import 'effects';
+@import 'animation';
+@import 'typography';
+@import 'layout';
