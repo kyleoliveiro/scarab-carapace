@@ -36,7 +36,25 @@
 	s : 0 rem(4) rem(2) rem(1) rgba(0,0,0,0.2)
 ) );
 
+// Text Shadows
 @include set-default( text-shadows, (
 	0 : none,
 	s : 0 rem(4) rem(2) rgba(0,0,0,0.2)
+) );
+
+// Gradients
+@include set-default( gradients, (
+  to-white-top    : linear-gradient( to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100% ),
+  to-white-right  : linear-gradient( to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100% ),
+  to-white-bottom : linear-gradient( to bottom rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100% ),
+  to-white-left   : linear-gradient( to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100% ),
+  to-black-top    : linear-gradient( to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100% ),
+  to-black-right  : linear-gradient( to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100% ),
+  to-black-bottom : linear-gradient( to bottom rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100% ),
+  to-black-left   : linear-gradient( to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100% )
+) );
+
+// Background Images
+@include set-default( background-images, (
+	n: none
 ) );
