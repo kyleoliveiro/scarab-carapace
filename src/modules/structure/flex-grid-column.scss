@@ -20,7 +20,6 @@
 				.#{$flex-grid-selector} & {
 					$column-width: ($col / $value) * 100%;
 					width: $column-width;
-					flex-basis: $column-width;
 				}
 			}
 		}
