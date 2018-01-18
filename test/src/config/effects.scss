@@ -1,0 +1,52 @@
+@include set( line-width, (
+	0 : 0,
+	s : 1px,
+	m : 2px,
+	l : 3px
+) );
+
+@include set( line-style, (
+	n    : none,
+	s    : solid,
+	dot  : dotted,
+	dash : dashed
+) );
+
+@include set( opacity, (
+	0   : 0,
+	25  : 0.25,
+	50  : 0.5,
+	75  : 0.75,
+	100 : 1
+) );
+
+@include set( border-radius, (
+	0     : 0,
+	pill  : 99999px,
+	round : 100%
+) );
+
+@include set( box-shadow, (
+	0 : none,
+	s : 0 rem(4) rem(2) rem(1) rgba(0,0,0,0.2)
+) );
+
+@include set( text-shadow, (
+	0 : none,
+	s : 0 rem(4) rem(2) rgba(0,0,0,0.2)
+) );
+
+@include set( gradient, (
+  to-white-top    : linear-gradient( to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100% ),
+  to-white-right  : linear-gradient( to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100% ),
+  to-white-bottom : linear-gradient( to bottom rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100% ),
+  to-white-left   : linear-gradient( to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100% ),
+  to-black-top    : linear-gradient( to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100% ),
+  to-black-right  : linear-gradient( to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100% ),
+  to-black-bottom : linear-gradient( to bottom rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100% ),
+  to-black-left   : linear-gradient( to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100% )
+) );
+
+@include set( background-image, (
+	n: none
+) );

@@ -1,0 +1,5 @@
+@include set-default(module, 'transition-delay', (
+	root   : 'tsn-delay',
+  group  : 'animation',
+	values : get(duration)
+) );

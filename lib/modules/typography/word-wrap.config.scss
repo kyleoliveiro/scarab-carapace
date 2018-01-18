@@ -1,0 +1,9 @@
+@include set-default(module, 'word-wrap', (
+	root        : 'ww',
+  group       : 'typography',
+	values      : (
+		n  : normal,
+		bw : break-word
+	),
+	breakpoints : get(breakpoint)
+) );

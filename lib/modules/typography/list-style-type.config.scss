@@ -1,0 +1,17 @@
+@include set-default(module, 'list-style-type', (
+	root        : 'lst',
+	group       : 'typography',
+	values      : (
+		n : none,
+		d : disc,
+		c : circle,
+		s : square,
+		a : lower-alpha,
+		A : upper-alpha,
+		1 : decimal,
+		0 : decimal-leading-zero,
+		r : lower-roman,
+		R : upper-roman
+	),
+	breakpoints : get(breakpoint)
+) );

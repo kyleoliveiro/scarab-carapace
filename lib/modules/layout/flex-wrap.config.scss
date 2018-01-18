@@ -1,0 +1,10 @@
+@include set-default(module, 'flex-wrap', (
+	root        : 'flw',
+  group       : 'layout',
+	values      : (
+		w  : wrap,
+		n  : nowrap,
+		wr : wrap-reverse
+	),
+	breakpoints : get(breakpoint)
+) );

@@ -1,4 +1,0 @@
-@include set-default(module, 'flex-grid-column', (
-	root        : 'gcol',
-	breakpoints : get(breakpoint)
-) );

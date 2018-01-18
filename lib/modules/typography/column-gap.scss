@@ -1,0 +1,14 @@
+@at-root {
+
+	$module: 'column-gap';
+
+	@each $key, $value in module($module, 'values') {
+		@include css-ruleset(
+			$module   : $module,
+			$modifier : $key
+		) {
+			column-gap: $value;
+		}
+	}
+
+}

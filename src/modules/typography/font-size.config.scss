@@ -1,5 +1,0 @@
-@include set-default(module, 'font-size', (
-	root        : 'fz',
-	values      : get(font-sizes),
-	breakpoints : get(breakpoint)
-) );

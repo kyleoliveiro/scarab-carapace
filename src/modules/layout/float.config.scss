@@ -1,9 +1,0 @@
-@include set-default(module, 'float', (
-	root        : 'fl',
-	values      : (
-		n : none,
-		l : left,
-		r : right
-	),
-	breakpoints : get(breakpoint)
-) );

@@ -1,8 +1,0 @@
-@include set-default(module, 'appearance', (
-	root        : 'appearance',
-	values      : (
-		a : auto,
-		n : none
-	),
-	breakpoints : get(breakpoint)
-) );

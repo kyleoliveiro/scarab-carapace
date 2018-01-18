@@ -1,0 +1,12 @@
+@include set-default(module, 'text-decoration-line', (
+	root        : 'tdl',
+  group       : 'typography',
+	values      : (
+		u  : underline,
+		o  : overline,
+		lt : line-through,
+		n  : none
+	),
+	breakpoints : get(breakpoint),
+	states      : option(namescheme, states)
+) );

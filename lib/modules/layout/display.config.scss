@@ -1,0 +1,18 @@
+@include set-default(module, 'display', (
+	root        : 'd',
+	group       : 'layout',
+	values      : (
+		n  : none,
+		i  : inline,
+		b  : block,
+		ib : inline-block,
+		li : list-item,
+		t  : table,
+		it : inline-table,
+		tc : table-cell,
+		f  : flex,
+		if : inline-flex
+	),
+	breakpoints : get(breakpoint),
+	states      : option(namescheme, states)
+) );

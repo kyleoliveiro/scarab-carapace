@@ -1,0 +1,14 @@
+@at-root {
+
+	$module: 'user-select';
+
+	@each $key, $value in module($module, 'values') {
+		@include css-ruleset(
+			$module   : $module,
+			$modifier : $key
+		) {
+			user-select: $value;
+		}
+	}
+
+}

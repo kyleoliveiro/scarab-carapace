@@ -1,8 +1,0 @@
-@include set-default(module, 'negative-margin', (
-	root        : 'nm',
-	values      : map-remove(
-		get(coordinates),
-		'0', 'a'
-	),
-	breakpoints : get(breakpoint)
-) );

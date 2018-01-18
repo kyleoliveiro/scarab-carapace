@@ -1,5 +1,0 @@
-@include set-default(module, 'animation-name', (
-	root   : 'anim',
-	values : get-keys(animations),
-	states : option(namescheme, states)
-) );

@@ -1,6 +1,0 @@
-@include set-default(module, 'link-color', (
-	root        : 'lc',
-	values      : build-color-map(get-keys(palettes)),
-	breakpoints : get(breakpoint),
-	states      : option(namescheme, states)
-) );

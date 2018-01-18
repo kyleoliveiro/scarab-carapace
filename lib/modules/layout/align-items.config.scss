@@ -1,0 +1,15 @@
+@include set-default(module, 'align-items', (
+	root        : 'ai',
+	group       : 'layout',
+	values      : (
+		n  : normal,
+		c  : center,
+		s  : stretch,
+		bl : baseline,
+		fs : flex-start,
+		fe : flex-end,
+		ss : self-start,
+		se : self-end
+	),
+	breakpoints : get(breakpoint)
+) );

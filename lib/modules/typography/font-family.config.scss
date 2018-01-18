@@ -1,0 +1,6 @@
+@include set-default(module, 'font-family', (
+	root        : 'ff',
+  group       : 'typography',
+	values      : get(font-family),
+	breakpoints : get(breakpoint)
+) );

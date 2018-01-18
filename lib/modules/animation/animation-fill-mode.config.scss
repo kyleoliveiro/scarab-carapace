@@ -1,0 +1,10 @@
+@include set-default(module, 'animation-fill-mode', (
+	root   : 'anim-mode',
+  group  : 'animation',
+	values : (
+		n  : normal,
+		f  : forwards,
+		b  : backwards,
+		fb : both
+	)
+) );

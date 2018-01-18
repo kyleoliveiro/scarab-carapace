@@ -1,0 +1,7 @@
+@include set-default(module, 'outline-offset', (
+	root        : 'lno',
+  group       : 'base',
+	values      : get(spacing),
+	breakpoints : get(breakpoint),
+	states      : option(namescheme, states)
+) );

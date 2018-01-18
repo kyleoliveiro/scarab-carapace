@@ -1,0 +1,6 @@
+@include set-default(module, 'measure', (
+	root        : 'measure',
+  group       : 'structure',
+	values      : get(measure),
+	breakpoints : get(breakpoint)
+) );

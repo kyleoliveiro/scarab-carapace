@@ -1,0 +1,10 @@
+@include set-default(module, 'min-width', (
+	root        : 'mnw',
+  group       : 'layout',
+	values      : (
+		'a'     : auto,
+		'100'   : 100%,
+		'100vw' : 100vw
+	),
+	breakpoints : get(breakpoint)
+) );

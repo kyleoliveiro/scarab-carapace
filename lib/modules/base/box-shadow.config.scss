@@ -1,0 +1,7 @@
+@include set-default(module, 'box-shadow', (
+	root        : 'bsh',
+  group       : 'base',
+	values      : get(box-shadow),
+	breakpoints : get(breakpoint),
+	states      : option(namescheme, states)
+) );

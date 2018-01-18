@@ -1,0 +1,9 @@
+@include set-default(module, 'appearance', (
+  root        : 'appearance',
+  group       : 'base',
+  values      : (
+    a : auto,
+    n : none
+  ),
+  breakpoints : get(breakpoint)
+) );

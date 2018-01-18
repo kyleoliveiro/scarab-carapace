@@ -1,0 +1,6 @@
+@include set-default(module, 'line-height', (
+	root        : 'lh',
+  group       : 'typography',
+	values      : map-flatten(get(line-height)),
+	breakpoints : get(breakpoint)
+) );

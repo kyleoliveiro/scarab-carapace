@@ -1,0 +1,15 @@
+@include set-default(module, 'vertical-align', (
+	root        : 'va',
+	group       : 'layout',
+	values      : (
+		t   : top,
+		m   : middle,
+		b   : bottom,
+		bl  : baseline,
+		tt  : text-top,
+		tb  : text-bottom,
+		sub : sub,
+		sup : super
+	),
+	breakpoints : get(breakpoint)
+) );

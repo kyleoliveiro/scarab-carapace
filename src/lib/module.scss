@@ -1,7 +1,0 @@
-@function module($module, $property: null) {
-	@if( $property ) {
-		@return get(modules, $module, $property);
-	} @else {
-		@return get(modules, $module);
-	}
-}

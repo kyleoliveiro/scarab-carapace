@@ -1,0 +1,11 @@
+@include set-default(module, 'flex-direction', (
+	root        : 'fld',
+  group       : 'layout',
+	values      : (
+		r  : row,
+		c  : column,
+		rr : row-reverse,
+		cr : column-reverse
+	),
+	breakpoints : get(breakpoint)
+) );

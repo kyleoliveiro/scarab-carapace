@@ -1,0 +1,9 @@
+@include set-default(module, 'direction', (
+	root        : 'dir',
+  group       : 'typography',
+	values      : (
+		ltr : ltr,
+		rtl : rtl
+	),
+	breakpoints : get(breakpoint)
+) );

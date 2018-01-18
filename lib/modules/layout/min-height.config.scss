@@ -1,0 +1,10 @@
+@include set-default(module, 'min-height', (
+	root        : 'mnh',
+  group       : 'layout',
+	values      : (
+		'a'     : auto,
+		'100'   : 100%,
+		'100vh' : 100vh
+	),
+	breakpoints : get(breakpoint)
+) );

@@ -1,0 +1,6 @@
+@include set-default(module, 'ratio', (
+	root        : 'ratio',
+	group       : 'structure',
+	values      : get(ratio),
+	breakpoints : get(breakpoint)
+) );

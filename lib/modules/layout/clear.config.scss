@@ -1,0 +1,11 @@
+@include set-default(module, 'clear', (
+	root        : 'cl',
+  group       : 'layout',
+	values      : (
+		n : none,
+		l : left,
+		r : right,
+		b : both
+	),
+	breakpoints : get(breakpoint)
+) );

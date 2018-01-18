@@ -1,0 +1,11 @@
+@include set-default(module, 'text-transform', (
+	root        : 'tt',
+  group       : 'typography',
+	values      : (
+		c : capitalize,
+		u : uppercase,
+		l : lowercase,
+		n : none
+	),
+	breakpoints : get(breakpoint)
+) );

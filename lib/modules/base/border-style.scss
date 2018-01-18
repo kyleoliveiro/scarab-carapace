@@ -1,0 +1,37 @@
+@at-root {
+
+	$module: 'border-style';
+
+	@each $key, $value in module($module, 'values') {
+		@include css-ruleset(
+			$module   : $module,
+			$modifier : $key
+		) {
+			border-style: $value;
+		}
+	}
+
+	// Directional border styles
+	//
+	// intentionally declared after the base border styles
+	// so that directional border styles are lower in the cascade
+	@each $d, $direction in option(namescheme, directions) {
+		@each $key, $value in module($module, 'values') {
+			@include css-ruleset(
+				$module   : $module,
+				$variant  : $d,
+				$modifier : $key
+			) {
+				@if $direction == 'horizontal' {
+					border-left-style: $value;
+					border-right-style: $value;
+				} @else if $direction == 'vertical' {
+					border-top-style: $value;
+					border-bottom-style: $value;
+				} @else {
+					border-#{$direction}-style: $value;
+				}
+			}
+		}
+	}
+}

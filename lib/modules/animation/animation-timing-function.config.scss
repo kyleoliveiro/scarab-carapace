@@ -1,0 +1,5 @@
+@include set-default(module, 'animation-timing-function', (
+	root   : 'anim-ease',
+  group  : 'animation',
+	values : get(easing)
+) );

@@ -1,0 +1,11 @@
+// Import Scarab
+@import '../../core';
+
+// Import example Scarab config
+@import 'config/_';
+
+// Import module config
+@import '../../lib/modules/_.config';
+
+// Generate modules
+@import '../../lib/modules/_';

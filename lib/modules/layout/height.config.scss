@@ -1,0 +1,11 @@
+@include set-default(module, 'height', (
+	root        : 'h',
+  group       : 'layout',
+	values      : map-merge(
+		get(coordinate),
+		(
+			100vh : 100vh
+		)
+	),
+	breakpoints : get(breakpoint)
+) );

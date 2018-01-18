@@ -1,5 +1,0 @@
-@include set-default(module, 'border-spacing', (
-	root        : 'bs',
-	values      : get(spacing),
-	breakpoints : get(breakpoint)
-) );

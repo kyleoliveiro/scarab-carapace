@@ -1,0 +1,6 @@
+@include set-default(module, 'margin', (
+	root        : 'm',
+  group       : 'layout',
+	values      : get(coordinate),
+	breakpoints : get(breakpoint)
+) );

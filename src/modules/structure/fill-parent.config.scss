@@ -1,4 +1,0 @@
-@include set-default(module, 'fill-parent', (
-	root        : 'fill-parent',
-	breakpoints : get(breakpoint)
-) );

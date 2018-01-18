@@ -1,6 +1,0 @@
-@include set-default(module, 'font-weight', (
-	root        : 'fw',
-	values      : get(font-weights),
-	breakpoints : get(breakpoint),
-	states      : option(namescheme, states)
-) );

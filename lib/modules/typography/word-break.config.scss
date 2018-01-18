@@ -1,0 +1,11 @@
+@include set-default(module, 'word-break', (
+	root        : 'wb',
+  group       : 'typography',
+	values      : (
+		n  : normal,
+		ba : break-all,
+		bw : break-word,
+		ka : keep-all
+	),
+	breakpoints : get(breakpoint)
+) );

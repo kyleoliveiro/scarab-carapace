@@ -1,5 +1,0 @@
-@include set-default(module, 'animation-delay', (
-	root   : 'anim-delay',
-	values : get(durations),
-	states : option(namescheme, states)
-) );

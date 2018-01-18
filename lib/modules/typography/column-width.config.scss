@@ -1,0 +1,11 @@
+@include set-default(module, 'column-width', (
+	root        : 'colwidth',
+  group       : 'typography',
+	values      : map-merge(
+		get(spacing),
+		(
+			a : auto
+		)
+	),
+	breakpoints : get(breakpoint)
+) );

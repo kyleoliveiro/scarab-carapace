@@ -1,0 +1,9 @@
+@include set-default(module, 'column-span', (
+	root        : 'colspan',
+  group       : 'typography',
+	values      : (
+		n   : none,
+		all : all
+	),
+	breakpoints : get(breakpoint)
+) );

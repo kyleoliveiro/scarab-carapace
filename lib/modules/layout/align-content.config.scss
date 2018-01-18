@@ -1,0 +1,14 @@
+@include set-default(module, 'align-content', (
+	root        : 'ac',
+	group       : 'layout',
+	values      : (
+		c  : center,
+		s  : stretch,
+		bl : baseline,
+		fs : flex-start,
+		fe : flex-end,
+		sb : space-between,
+		sa : space-around,
+	),
+	breakpoints : get(breakpoint)
+) );

@@ -1,8 +1,0 @@
-@include set-default(module, 'resize', (
-	root        : 'resize',
-	values      : (
-		n: none,
-		b: both
-	),
-	breakpoints : get(breakpoint)
-) );

@@ -1,0 +1,12 @@
+@include set-default(module, 'max-width', (
+	root        : 'mxw',
+	group       : 'layout',
+	values      : (
+		'n'     : none,
+		'0'     : 0,
+		'100'   : 100%,
+		'100vw' : 100vw
+	),
+	breakpoints : get(breakpoint),
+	states      : option(namescheme, states)
+) );

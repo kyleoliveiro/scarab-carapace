@@ -1,0 +1,24 @@
+@include set( spacing, (
+	0  : 0,
+	xs : bl(0.50),
+	s  : bl(1.00),
+	m  : bl(2.00),
+	l  : bl(4.00),
+	xl : bl(8.00)
+) );
+
+@include set( coordinate, map-merge(
+	get(spacing), 
+	(
+		50  : 50%,
+		100 : 100%,
+		a   : auto
+	)
+) );
+
+@include set( angle, (
+	0   : 0,
+	45  : 45deg,
+	90  : 90deg,
+	180 : 180deg
+) );

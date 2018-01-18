@@ -1,0 +1,16 @@
+@include set-default(module, 'font-variant-ligatures', (
+	root        : 'fvl',
+	group       : 'typography',
+	values      : (
+		n    : normal,
+		cl   : common-ligatures,
+		ncl  : no-common-ligatures,
+		dl   : discretionary-ligatures,
+		ndl  : no-discretionary-ligatures,
+		hl   : historical-ligatures,
+		nhl  : no-historical-ligatures,
+		c    : contextual,
+		nc   : no-contextual,
+		none : none
+	)
+) );

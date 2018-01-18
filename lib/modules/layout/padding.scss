@@ -1,0 +1,37 @@
+@at-root {
+
+	$module: 'padding';
+
+	@each $key, $value in module($module, 'values') {
+		@include css-ruleset(
+			$module   : $module,
+			$modifier : $key
+		) {
+			padding: $value;
+		}
+	}
+
+	// Directional padding
+	//
+	// intentionally declared after the base padding
+	// so that directional padding are lower in the cascade
+	@each $d, $direction in option(namescheme, directions) {
+		@each $key, $value in module($module, 'values') {
+			@include css-ruleset(
+				$module   : $module,
+				$variant  : $d,
+				$modifier : $key
+			) {
+				@if $direction == 'horizontal' {
+					padding-left: $value;
+					padding-right: $value;
+				} @else if $direction == 'vertical' {
+					padding-top: $value;
+					padding-bottom: $value;
+				} @else {
+					padding-#{$direction}: $value;
+				}
+			}
+		}
+	}
+}

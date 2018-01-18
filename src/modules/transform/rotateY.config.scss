@@ -1,6 +1,0 @@
-@include set-default(module, 'rotate-y', (
-	root        : 'rotateY',
-	values      : get(angles),
-	breakpoints : get(breakpoint),
-	states      : option(namescheme, states)
-) );

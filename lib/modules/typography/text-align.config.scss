@@ -1,0 +1,12 @@
+@include set-default(module, 'text-align', (
+	root        : 'ta',
+  group       : 'typography',
+	values      : (
+		l  : left,
+		r  : right,
+		c  : center,
+		j  : justify,
+		ja : justify-all
+	),
+	breakpoints : get(breakpoint)
+) );

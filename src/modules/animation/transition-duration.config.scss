@@ -1,5 +1,0 @@
-@include set-default(module, 'transition-duration', (
-	root   : 'tsn-dur',
-	values : get(durations),
-	states : option(namescheme, states)
-) );

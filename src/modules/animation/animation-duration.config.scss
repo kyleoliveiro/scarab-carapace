@@ -1,5 +1,0 @@
-@include set-default(module, 'animation-duration', (
-	root   : 'anim-dur',
-	values : get(durations),
-	states : option(namescheme, states)
-) );

@@ -1,0 +1,6 @@
+@include set-default(module, 'padding', (
+	root        : 'p',
+  group       : 'layout',
+	values      : get(spacing),
+	breakpoints : get(breakpoint)
+) );

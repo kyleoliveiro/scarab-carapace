@@ -1,0 +1,11 @@
+@include set-default(module, 'column-gap', (
+	root        : 'colgap',
+  group       : 'typography',
+	values      : map-merge(
+		get(spacing),
+		(
+			a : normal
+		)
+	),
+	breakpoints : get(breakpoint)
+) );

@@ -1,0 +1,6 @@
+@include set-default(module, 'right', (
+	root        : 'r',
+  group       : 'layout',
+	values      : get(coordinate),
+	breakpoints : get(breakpoint)
+) );

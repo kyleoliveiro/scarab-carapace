@@ -1,6 +1,0 @@
-@include set-default(module, 'border-color', (
-	root        : 'bdc',
-	values      : build-color-map(get-keys(palettes)),
-	breakpoints : get(breakpoint),
-	states      : option(namescheme, states)
-) );

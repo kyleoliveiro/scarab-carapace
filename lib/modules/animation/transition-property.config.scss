@@ -1,0 +1,13 @@
+@include set-default(module, 'transition-property', (
+	root   : 'tsn-prop',
+	group  : 'animation',
+	values : (
+		n  : none,
+		a  : all,
+		o  : opacity,
+		t  : transform,
+		c  : color,
+		bd : border,
+		bg : background
+	)
+) );

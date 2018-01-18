@@ -1,0 +1,5 @@
+@include set-default(module, 'transition-timing-function', (
+	root   : 'tsn-ease',
+  group  : 'animation',
+	values : get(easing)
+));

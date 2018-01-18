@@ -1,8 +1,0 @@
-@include set-default(module, 'border-collapse', (
-	root        : 'bc',
-	values      : (
-		c: collapse,
-		s: separate
-	),
-	breakpoints : get(breakpoint)
-) );

@@ -1,0 +1,11 @@
+@include set-default(module, 'width', (
+	root        : 'w',
+  group       : 'layout',
+	values      : map-merge(
+		get(coordinate),
+		(
+			100vw : 100vw
+		)
+	),
+	breakpoints : get(breakpoint)
+) );

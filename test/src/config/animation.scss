@@ -1,0 +1,88 @@
+@include set( duration, (
+	0 : 0,
+	s : 0.2s,
+	m : 0.5s,
+	l : 1.0s
+) );
+
+@include set( easing, (
+	l        : linear,
+	o        : ease-out,
+	i        : ease-in,
+	io       : ease-in-out,
+	o-sine   : cubic-bezier(0.39, 0.575, 0.565, 1),
+	o-cubic  : cubic-bezier(0.215, 0.61, 0.355, 1),
+	o-quint  : cubic-bezier(0.23, 1, 0.32, 1),
+	o-circ   : cubic-bezier(0.075, 0.82, 0.165, 1),
+	o-quad   : cubic-bezier(0.25, 0.46, 0.45, 0.94),
+	o-quart  : cubic-bezier(0.165, 0.84, 0.44, 1),
+	o-expo   : cubic-bezier(0.19, 1, 0.22, 1),
+	o-back   : cubic-bezier(0.175, 0.885, 0.32, 1.275),
+	i-sine   : cubic-bezier(0.47, 0, 0.745, 0.715),
+	i-cubic  : cubic-bezier(0.55, 0.055, 0.675, 0.19),
+	i-quint  : cubic-bezier(0.755, 0.05, 0.855, 0.06),
+	i-circ   : cubic-bezier(0.6, 0.04, 0.98, 0.335),
+	i-quad   : cubic-bezier(0.55, 0.085, 0.68, 0.53),
+	i-quart  : cubic-bezier(0.895, 0.03, 0.685, 0.22),
+	i-expo   : cubic-bezier(0.95, 0.05, 0.795, 0.035),
+	i-back   : cubic-bezier(0.6, -0.28, 0.735, 0.045),
+	io-sine  : cubic-bezier(0.445, 0.05, 0.55, 0.95),
+	io-cubic : cubic-bezier(0.645, 0.045, 0.355, 1),
+	io-quint : cubic-bezier(0.86, 0, 0.07, 1),
+	io-circ  : cubic-bezier(0.785, 0.135, 0.15, 0.86),
+	io-quad  : cubic-bezier(0.455, 0.03, 0.515, 0.955),
+	io-quart : cubic-bezier(0.77, 0, 0.175, 1),
+	io-expo  : cubic-bezier(1, 0, 0, 1),
+	io-back  : cubic-bezier(0.68, -0.55, 0.265, 1.55)
+) );
+
+@include set( keyframe, (
+	fade : (
+		0%: (
+			opacity: 0
+		),
+		100%: (
+			opacity: 1
+		)
+	),
+	grow  : (
+		0%: (
+			transform: scale(0)
+		),
+		100%: (
+			transform: scale(1)
+		)
+	),
+	growX : (
+		0%: (
+			transform: scaleX(0)
+		),
+		100%: (
+			transform: scaleX(1)
+		)
+	),
+	growY : (
+		0%: (
+			transform: scaleY(0)
+		),
+		100%: (
+			transform: scaleY(1)
+		)
+	),
+	slideX : (
+		0%: (
+			transform: translateX(0)
+		),
+		100%: (
+			transform: translateX(100%)
+		)
+	),
+	slideY : (
+		0%: (
+			transform: translateY(0)
+		),
+		100%: (
+			transform: translateY(100%)
+		)
+	)
+) );

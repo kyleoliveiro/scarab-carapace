@@ -1,0 +1,14 @@
+@at-root {
+
+	$module: 'transition-timing-function';
+
+	@each $key, $value in module($module, 'values') {
+		@include css-ruleset(
+			$module   : $module,
+			$modifier : $key
+		) {
+			transition-timing-function: $value;
+		}
+	}
+
+}

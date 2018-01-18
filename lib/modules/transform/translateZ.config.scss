@@ -1,0 +1,7 @@
+@include set-default(module, 'translate-z', (
+	root        : 'Z',
+  group       : 'transform',
+	values      : get(coordinate),
+	breakpoints : get(breakpoint),
+	states      : option(namescheme, states)
+) );

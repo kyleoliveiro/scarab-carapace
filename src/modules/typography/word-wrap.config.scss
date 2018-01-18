@@ -1,8 +1,0 @@
-@include set-default(module, 'word-wrap', (
-	root        : 'ww',
-	values      : (
-		n  : normal,
-		bw : break-word
-	),
-	breakpoints : get(breakpoint)
-) );

@@ -1,0 +1,19 @@
+@at-root {
+
+	$module: 'clearfix';
+
+	@include css-ruleset(
+		$module : $module
+	) {
+		&:before,
+		&:after {
+			content: " ";
+			display: table;
+		}
+
+		&:after {
+			clear: both;
+		}
+	}
+
+}

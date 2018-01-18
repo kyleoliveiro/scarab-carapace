@@ -1,6 +1,0 @@
-@include set-default(module, 'scale-y', (
-	root        : 'scaleY',
-	values      : get(spacing),
-	breakpoints : get(breakpoint),
-	states      : option(namescheme, states)
-) );

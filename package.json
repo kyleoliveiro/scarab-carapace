@@ -1,17 +1,17 @@
 {
   "name": "scarab-carapace",
-  "version": "3.2.4",
+  "version": "4.0.0-beta.0",
   "description": "Highly configurable framework for generating functional CSS classes",
   "main": "core.scss",
   "scripts": {
-    "prebuild": "rm -f build/*",
-    "build": "node-sass --include-path node_modules test/test.scss -o build/",
+    "prebuild": "rm -f test/build/*",
+    "build": "node-sass --include-path node_modules test/src/test.scss -o test/build/",
     "postbuild": "npm run split && npm run minify && npm run gzip",
-    "split": "sakugawa -n 9999999999 -m separate build/test.css",
-    "preminify": "rm -f build/*.min.css",
-    "minify": "for file in build/*.css\ndo\n cssnano \"$file\" \"$file\".min \ndone",
-    "gzip": "for file in build/*.css.min\ndo\n tar -zcvf \"$file\".tar.gz \"$file\" \ndone",
-    "test": "node-sass --include-path node_modules test/test.scss -o build/"
+    "split": "sakugawa -n 9999999999 -m separate test/build/test.css",
+    "preminify": "rm -f test/build/*.min.css",
+    "minify": "for file in test/build/*.css\ndo\n cssnano \"$file\" \"$file\".min \ndone",
+    "gzip": "for file in test/build/*.css.min\ndo\n tar -zcvf \"$file\".tar.gz \"$file\" \ndone",
+    "test": "node-sass --include-path node_modules test/src/test.scss -o test/build/"
   },
   "repository": {
     "type": "git",
@@ -34,11 +34,11 @@
   },
   "homepage": "https://github.com/watchtowerdigital/scarab-carapace#readme",
   "dependencies": {
-    "scarab-scss": "^6.0.0"
+    "scarab-scss": "^7.0.0-beta.0"
   },
   "devDependencies": {
     "cssnano-cli": "^1.0.5",
-    "node-sass": "^4.5.3",
+    "node-sass": "^4.7.2",
     "sakugawa": "^0.5.3"
   }
 }

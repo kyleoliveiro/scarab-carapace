@@ -1,0 +1,12 @@
+@include set-default(module, 'justify-content', (
+	root        : 'jc',
+  group       : 'layout',
+	values      : (
+		c  : center,
+		fs : flex-start,
+		fe : flex-end,
+		sb : space-between,
+		sa : space-around
+	),
+	breakpoints : get(breakpoint)
+) );

@@ -1,6 +1,0 @@
-@include set-default(module, 'text-shadow', (
-	root        : 'tsh',
-	values      : get(text-shadows),
-	breakpoints : get(breakpoint),
-	states      : option(namescheme, states)
-) );

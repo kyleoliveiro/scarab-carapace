@@ -1,5 +1,0 @@
-@include set-default(module, 'line-height', (
-	root        : 'lh',
-	values      : get(line-heights),
-	breakpoints : get(breakpoint)
-) );
