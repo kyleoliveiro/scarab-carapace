@@ -1,4 +1,4 @@
-@include set-default( modules, 'font-variant-caps', (
+@include set-default(module, 'font-variant-caps', (
 	root        : 'fvc',
 	values      : (
 		n   : normal,
@@ -9,5 +9,5 @@
 		asc : all-small-caps,
 		tc  : titling-caps
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

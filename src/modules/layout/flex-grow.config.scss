@@ -1,4 +1,4 @@
-@include set-default( modules, 'flex-grow', (
+@include set-default(module, 'flex-grow', (
 	root        : 'flg',
 	values      : (
 		a : auto,
@@ -8,5 +8,5 @@
 		3 : 3,
 		4 : 4
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

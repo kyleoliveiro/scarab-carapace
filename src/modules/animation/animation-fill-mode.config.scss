@@ -1,4 +1,4 @@
-@include set-default( modules, 'animation-fill-mode', (
+@include set-default(module, 'animation-fill-mode', (
 	root   : 'anim-mode',
 	values : (
 		n  : normal,
@@ -6,5 +6,5 @@
 		b  : backwards,
 		fb : both
 	),
-	states : get-keys(states)
+	states : option(namescheme, states)
 ) );

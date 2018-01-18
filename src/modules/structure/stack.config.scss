@@ -1,5 +1,5 @@
-@include set-default( modules, 'stack', (
+@include set-default(module, 'stack', (
 	root        : 'stack',
-	values      : get(sizes),
-	breakpoints : get-keys(breakpoints)
+	values      : get(spacing),
+	breakpoints : get(breakpoint)
 ) );

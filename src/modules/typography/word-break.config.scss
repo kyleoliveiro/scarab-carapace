@@ -1,4 +1,4 @@
-@include set-default( modules, 'word-break', (
+@include set-default(module, 'word-break', (
 	root        : 'wb',
 	values      : (
 		n  : normal,
@@ -6,5 +6,5 @@
 		bw : break-word,
 		ka : keep-all
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

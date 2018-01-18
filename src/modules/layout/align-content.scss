@@ -3,8 +3,8 @@
 	$module: 'align-content';
 
 	@each $key, $value in module($module, 'values') {
-		@include declare-style(
-			$module   : $module,
+		@include css-ruleset(
+			$module   : module($module),
 			$modifier : $key
 		) {
 			align-content: $value;

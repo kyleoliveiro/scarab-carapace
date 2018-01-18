@@ -32,6 +32,6 @@
 @import 'border-spacing.config';
 @import 'empty-cells.config';
 
-@each $module in map-keys( get(modules) ) {
-	@include set-default( modules, $module, module-group, 'layout' );
+@each $module in map-keys(get(module)) {
+	@include set-default(module, $module, group, 'layout' );
 }

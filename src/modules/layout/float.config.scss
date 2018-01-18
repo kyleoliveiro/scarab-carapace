@@ -1,9 +1,9 @@
-@include set-default( modules, 'float', (
+@include set-default(module, 'float', (
 	root        : 'fl',
 	values      : (
 		n : none,
 		l : left,
 		r : right
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

@@ -2,8 +2,8 @@
 
 	$module: 'clearfix';
 
-	@include declare-style(
-		$module : $module
+	@include css-ruleset(
+		$module : module($module)
 	) {
 		&:before,
 		&:after {

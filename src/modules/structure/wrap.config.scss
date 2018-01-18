@@ -1,4 +1,4 @@
-@include set-default( modules, 'wrap', (
+@include set-default(module, 'wrap', (
 	root        : 'wrap',
 	values      : (
 		xs : rem(300),
@@ -7,5 +7,5 @@
 		l  : rem(960),
 		xl : rem(1120)
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

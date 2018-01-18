@@ -1,4 +1,4 @@
-@include set-default( modules, 'user-select', (
+@include set-default(module, 'user-select', (
 	root        : 'select',
 	values      : (
 		n   : none,

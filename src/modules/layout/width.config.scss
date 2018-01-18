@@ -1,4 +1,4 @@
-@include set-default( modules, 'width', (
+@include set-default(module, 'width', (
 	root        : 'w',
 	values      : map-merge(
 		get(coordinates),
@@ -6,5 +6,5 @@
 			100vw : 100vw
 		)
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

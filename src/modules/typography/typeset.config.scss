@@ -1,4 +1,4 @@
-@include set-default( modules, 'typeset', (
+@include set-default(module, 'typeset', (
 	root        : 'typeset',
 	values      : (
 		b: ( font-weight: bold ),

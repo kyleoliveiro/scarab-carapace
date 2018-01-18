@@ -1,4 +1,4 @@
-@include set-default( modules, 'align-self', (
+@include set-default(module, 'align-self', (
 	root        : 'as',
 	values      : (
 		a  : auto,
@@ -9,5 +9,5 @@
 		fs : flex-start,
 		fe : flex-end
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

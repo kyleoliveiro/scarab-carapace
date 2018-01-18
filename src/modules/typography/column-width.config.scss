@@ -1,10 +1,10 @@
-@include set-default( modules, 'column-width', (
+@include set-default(module, 'column-width', (
 	root        : 'colwidth',
 	values      :  map-merge(
-		get(sizes),
+		get(spacing),
 		(
 			auto : auto
 		)
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

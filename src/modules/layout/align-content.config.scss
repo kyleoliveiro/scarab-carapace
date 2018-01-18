@@ -1,4 +1,4 @@
-@include set-default( modules, 'align-content', (
+@include set-default(module, 'align-content', (
 	root        : 'ac',
 	values      : (
 		c  : center,
@@ -9,5 +9,5 @@
 		sb : space-between,
 		sa : space-around,
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

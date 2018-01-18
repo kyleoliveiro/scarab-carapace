@@ -3,8 +3,8 @@
 	$module: 'font-variant-ligatures';
 
 	@each $key, $value in module($module, 'values') {
-		@include declare-style(
-			$module   : $module,
+		@include css-ruleset(
+			$module   : module($module),
 			$modifier : $key
 		) {
 			font-variant-ligatures: $value;

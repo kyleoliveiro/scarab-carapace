@@ -1,5 +1,5 @@
-@include set-default( modules, 'transition-timing-function', (
+@include set-default(module, 'transition-timing-function', (
 	root   : 'tsn-ease',
 	values : get(easings),
-	states : get-keys(states)
+	states : option(namescheme, states)
 ) );

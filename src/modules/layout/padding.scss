@@ -3,8 +3,8 @@
 	$module: 'padding';
 
 	@each $key, $value in module($module, 'values') {
-		@include declare-style(
-			$module   : $module,
+		@include css-ruleset(
+			$module   : module($module),
 			$modifier : $key
 		) {
 			padding: $value;
@@ -17,8 +17,8 @@
 	// so that directional padding are lower in the cascade
 	@each $direction, $d in get(directions) {
 		@each $key, $value in module($module, 'values') {
-			@include declare-style(
-				$module   : $module,
+			@include css-ruleset(
+				$module   : module($module),
 				$variant  : $d,
 				$modifier : $key
 			) {

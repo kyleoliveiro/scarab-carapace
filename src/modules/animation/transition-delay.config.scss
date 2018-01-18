@@ -1,5 +1,5 @@
-@include set-default( modules, 'transition-delay', (
+@include set-default(module, 'transition-delay', (
 	root   : 'tsn-delay',
 	values : get(durations),
-	states : get-keys(states)
+	states : option(namescheme, states)
 ) );

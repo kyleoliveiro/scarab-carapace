@@ -1,8 +1,8 @@
-@include set-default( modules, 'direction', (
+@include set-default(module, 'direction', (
 	root        : 'dir',
 	values      : (
 		ltr: ltr,
 		rtl: rtl
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

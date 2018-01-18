@@ -1,4 +1,4 @@
-@include set-default( modules, 'transition-property', (
+@include set-default(module, 'transition-property', (
 	root   : 'tsn-prop',
 	values : (
 		n  : none,
@@ -9,5 +9,5 @@
 		bd : border,
 		bg : background
 	),
-	states : get-keys(states)
+	states : option(namescheme, states)
 ) );

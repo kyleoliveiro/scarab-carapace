@@ -1,4 +1,4 @@
-@include set-default( modules, 'animation-iteration-count', (
+@include set-default(module, 'animation-iteration-count', (
 	root   : 'anim-count',
 	values : (
 		0 : 0,

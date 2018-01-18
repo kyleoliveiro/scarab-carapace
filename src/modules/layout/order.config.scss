@@ -1,4 +1,4 @@
-@include set-default( modules, 'order', (
+@include set-default(module, 'order', (
 	root        : 'ord',
 	values      : (
 		-4 : -4,
@@ -10,5 +10,5 @@
 		3  : 3,
 		4  : 4
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

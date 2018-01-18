@@ -1,8 +1,8 @@
-@include set-default( modules, 'word-wrap', (
+@include set-default(module, 'word-wrap', (
 	root        : 'ww',
 	values      : (
 		n  : normal,
 		bw : break-word
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

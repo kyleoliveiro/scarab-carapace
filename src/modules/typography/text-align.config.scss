@@ -1,4 +1,4 @@
-@include set-default( modules, 'text-align', (
+@include set-default(module, 'text-align', (
 	root        : 'ta',
 	values      : (
 		l  : left,
@@ -7,5 +7,5 @@
 		j  : justify,
 		ja : justify-all
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

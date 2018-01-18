@@ -1,6 +1,6 @@
-@include set-default( modules, 'border', (
+@include set-default(module, 'border', (
 	root        : 'bd',
 	values      : get(line-widths),
-	breakpoints : get-keys(breakpoints),
-	states      : get-keys(states)
+	breakpoints : get(breakpoint),
+	states      : option(namescheme, states)
 ) );

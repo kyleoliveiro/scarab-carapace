@@ -6,8 +6,8 @@
 		// Only generate horizontal and vertical classes
 		@if $direction == 'horizontal' or $direction == 'vertical' {
 			@each $key, $value in module($module, 'values') {
-				@include declare-style(
-					$module   : $module,
+				@include css-ruleset(
+					$module   : module($module),
 					$variant  : $d,
 					$modifier : $key
 				) {

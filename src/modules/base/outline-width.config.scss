@@ -1,6 +1,6 @@
-@include set-default( modules, 'outline-width', (
+@include set-default(module, 'outline-width', (
 	root        : 'lnw',
 	values      : get(line-widths),
-	breakpoints : get-keys(breakpoints),
-	states      : get-keys(states)
+	breakpoints : get(breakpoint),
+	states      : option(namescheme, states)
 ) );

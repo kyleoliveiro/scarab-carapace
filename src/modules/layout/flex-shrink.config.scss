@@ -1,4 +1,4 @@
-@include set-default( modules, 'flex-shrink', (
+@include set-default(module, 'flex-shrink', (
 	root        : 'fls',
 	values      : (
 		a : auto,
@@ -8,5 +8,5 @@
 		3 : 3,
 		4 : 4
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

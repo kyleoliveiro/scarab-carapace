@@ -1,4 +1,4 @@
-@include set-default( modules, 'z-index', (
+@include set-default(module, 'z-index', (
 	root        : 'z',
 	values      : (
 		a : auto,
@@ -12,5 +12,5 @@
 		2    : 2,
 		3    : 3
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

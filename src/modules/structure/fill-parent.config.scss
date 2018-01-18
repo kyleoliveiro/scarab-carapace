@@ -1,4 +1,4 @@
-@include set-default( modules, 'fill-parent', (
+@include set-default(module, 'fill-parent', (
 	root        : 'fill-parent',
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

@@ -1,6 +1,6 @@
-@include set-default( modules, 'text-decoration-style', (
+@include set-default(module, 'text-decoration-style', (
 	root        : 'tds',
 	values      : get(line-styles),
-	breakpoints : get-keys(breakpoints),
-	states      : get-keys(states)
+	breakpoints : get(breakpoint),
+	states      : option(namescheme, states)
 ) );

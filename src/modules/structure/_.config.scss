@@ -9,6 +9,6 @@
 @import 'measure.config';
 @import 'webkit-overflow-scrolling.config';
 
-@each $module in map-keys( get(modules) ) {
-	@include set-default( modules, $module, module-group, 'structure' );
+@each $module in map-keys(get(module)) {
+	@include set-default(module, $module, group, 'structure' );
 }

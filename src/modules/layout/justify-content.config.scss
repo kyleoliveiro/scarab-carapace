@@ -1,4 +1,4 @@
-@include set-default( modules, 'justify-content', (
+@include set-default(module, 'justify-content', (
 	root        : 'jc',
 	values      : (
 		c : center,
@@ -7,5 +7,5 @@
 		sb : space-between,
 		sa : space-around
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

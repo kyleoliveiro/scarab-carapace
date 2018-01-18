@@ -1,6 +1,6 @@
-@include set-default( modules, 'transform-origin', (
+@include set-default(module, 'transform-origin', (
 	root        : 'origin',
 	values      : get(anchors),
-	breakpoints : get-keys(breakpoints),
-	states      : get-keys(states)
+	breakpoints : get(breakpoint),
+	states      : option(namescheme, states)
 ) );

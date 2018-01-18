@@ -1,4 +1,4 @@
-@include set-default( modules, 'list-style-type', (
+@include set-default(module, 'list-style-type', (
 	root        : 'lst',
 	values      : (
 		n : none,
@@ -12,5 +12,5 @@
 		r : lower-roman,
 		R : upper-roman
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

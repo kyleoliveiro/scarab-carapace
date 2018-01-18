@@ -1,4 +1,4 @@
-@include set-default( modules, 'display', (
+@include set-default(module, 'display', (
 	root        : 'd',
 	values      : (
 		n  : none,
@@ -12,6 +12,6 @@
 		f  : flex,
 		if : inline-flex
 	),
-	breakpoints : get-keys(breakpoints),
-	states      : get-keys(states)
+	breakpoints : get(breakpoint),
+	states      : option(namescheme, states)
 ) );

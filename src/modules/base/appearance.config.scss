@@ -1,8 +1,8 @@
-@include set-default( modules, 'appearance', (
+@include set-default(module, 'appearance', (
 	root        : 'appearance',
 	values      : (
 		a : auto,
 		n : none
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

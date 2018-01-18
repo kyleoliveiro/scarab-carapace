@@ -1,4 +1,4 @@
-@include set-default( modules, 'font-variant-numeric', (
+@include set-default(module, 'font-variant-numeric', (
 	root        : 'fvn',
 	values      : (
 		n  : normal,

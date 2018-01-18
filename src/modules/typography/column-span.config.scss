@@ -1,8 +1,8 @@
-@include set-default( modules, 'column-span', (
+@include set-default(module, 'column-span', (
 	root        : 'colspan',
 	values      : (
 		none : none,
 		all  : all
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

@@ -1,4 +1,4 @@
-@include set-default( modules, 'align-items', (
+@include set-default(module, 'align-items', (
 	root        : 'ai',
 	values      : (
 		n  : normal,
@@ -10,5 +10,5 @@
 		ss : self-start,
 		se : self-end
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

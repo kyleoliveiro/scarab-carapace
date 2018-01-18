@@ -1,4 +1,4 @@
-@include set-default( modules, 'column-count', (
+@include set-default(module, 'column-count', (
 	root        : 'cols',
 	values      : (
 		auto : auto,
@@ -8,5 +8,5 @@
 		3    : 3,
 		4    : 4
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

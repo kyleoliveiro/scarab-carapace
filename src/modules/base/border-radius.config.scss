@@ -1,6 +1,6 @@
-@include set-default( modules, 'border-radius', (
+@include set-default(module, 'border-radius', (
 	root        : 'rad',
 	values      : get(radii),
-	breakpoints : get-keys(breakpoints),
-	states      : get-keys(states)
+	breakpoints : get(breakpoint),
+	states      : option(namescheme, states)
 ) );

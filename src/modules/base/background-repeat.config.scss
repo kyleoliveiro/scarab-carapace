@@ -1,4 +1,4 @@
-@include set-default( modules, 'background-repeat', (
+@include set-default(module, 'background-repeat', (
 	root        : 'bgr',
 	values : (
 		x  : repeat-x,
@@ -6,5 +6,5 @@
 		xy : repeat,
 		n  : no-repeat
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

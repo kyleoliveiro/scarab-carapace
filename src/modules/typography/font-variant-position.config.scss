@@ -1,4 +1,4 @@
-@include set-default( modules, 'font-variant-position', (
+@include set-default(module, 'font-variant-position', (
 	root        : 'fvp',
 	values      : (
 		n     : normal,

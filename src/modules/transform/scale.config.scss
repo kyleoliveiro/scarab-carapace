@@ -1,6 +1,6 @@
-@include set-default( modules, 'scale', (
+@include set-default(module, 'scale', (
 	root        : 'scale',
-	values      : get(sizes),
-	breakpoints : get-keys(breakpoints),
-	states      : get-keys(states)
+	values      : get(spacing),
+	breakpoints : get(breakpoint),
+	states      : option(namescheme, states)
 ) );

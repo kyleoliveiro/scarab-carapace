@@ -24,6 +24,6 @@
 @import 'resize.config';
 @import 'user-select.config';
 
-@each $module in map-keys( get(modules) ) {
-	@include set-default( modules, $module, module-group, 'base' );
+@each $module in map-keys(get(module)) {
+	@include set-default(module, $module, group, 'base' );
 }

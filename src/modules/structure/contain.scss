@@ -2,8 +2,8 @@
 
 	$module: 'contain';
 
-	@include declare-style(
-		$module : $module
+	@include css-ruleset(
+		$module : module($module)
 	) {
 		& > * {
 			&:first-child {

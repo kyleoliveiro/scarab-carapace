@@ -1,4 +1,4 @@
-@include set-default( modules, 'webkit-overflow-scrolling', (
+@include set-default(module, 'webkit-overflow-scrolling', (
 	root        : 'scrolling',
 	values      : (
 		a : auto,

@@ -28,6 +28,6 @@
 @import 'word-spacing.config';
 @import 'word-wrap.config';
 
-@each $module in map-keys( get(modules) ) {
-	@include set-default( modules, $module, module-group, 'typography' );
+@each $module in map-keys(get(module)) {
+	@include set-default(module, $module, group, 'typography' );
 }

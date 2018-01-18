@@ -1,4 +1,4 @@
-@include set-default( modules, 'vertical-align', (
+@include set-default(module, 'vertical-align', (
 	root        : 'va',
 	values      : (
 		t   : top,
@@ -10,5 +10,5 @@
 		sub : sub,
 		sup : super
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

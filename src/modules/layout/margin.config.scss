@@ -1,5 +1,5 @@
-@include set-default( modules, 'margin', (
+@include set-default(module, 'margin', (
 	root        : 'm',
 	values      : get(coordinates),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

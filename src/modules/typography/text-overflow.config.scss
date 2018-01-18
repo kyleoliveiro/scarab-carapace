@@ -1,8 +1,8 @@
-@include set-default( modules, 'text-overflow', (
+@include set-default(module, 'text-overflow', (
 	root        : 'to',
 	values      : (
 		c : clip,
 		e : ellipsis
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

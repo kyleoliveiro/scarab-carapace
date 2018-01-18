@@ -1,6 +1,6 @@
-@include set-default( modules, 'color', (
+@include set-default(module, 'color', (
 	root        : 'c',
 	values      : build-color-map(get-keys(palettes)),
-	breakpoints : get-keys(breakpoints),
-	states      : get-keys(states)
+	breakpoints : get(breakpoint),
+	states      : option(namescheme, states)
 ) );

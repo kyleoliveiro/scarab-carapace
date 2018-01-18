@@ -1,5 +1,5 @@
-@include set-default( modules, 'type-scale', (
+@include set-default(module, 'type-scale', (
 	root        : 'ts',
 	values      : get-keys(font-sizes),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

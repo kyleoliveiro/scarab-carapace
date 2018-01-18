@@ -1,6 +1,6 @@
-@include set-default( modules, 'translate-y', (
+@include set-default(module, 'translate-y', (
 	root        : 'Y',
 	values      : get(coordinates),
-	breakpoints : get-keys(breakpoints),
-	states      : get-keys(states)
+	breakpoints : get(breakpoint),
+	states      : option(namescheme, states)
 ) );

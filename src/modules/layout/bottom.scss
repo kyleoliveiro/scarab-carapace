@@ -3,8 +3,8 @@
 	$module: 'bottom';
 
 	@each $key, $value in module($module, 'values') {
-		@include declare-style(
-			$module   : $module,
+		@include css-ruleset(
+			$module   : module($module),
 			$modifier : $key
 		) {
 			bottom: $value;

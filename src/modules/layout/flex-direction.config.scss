@@ -1,4 +1,4 @@
-@include set-default( modules, 'flex-direction', (
+@include set-default(module, 'flex-direction', (
 	root        : 'fld',
 	values      : (
 		r  : row,
@@ -6,5 +6,5 @@
 		rr : row-reverse,
 		cr : column-reverse
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

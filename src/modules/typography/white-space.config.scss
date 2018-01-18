@@ -1,4 +1,4 @@
-@include set-default( modules, 'white-space', (
+@include set-default(module, 'white-space', (
 	root        : 'ws',
 	values      : (
 		n  : normal,
@@ -7,5 +7,5 @@
 		pw : pre-wrap,
 		pl : pre-line
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

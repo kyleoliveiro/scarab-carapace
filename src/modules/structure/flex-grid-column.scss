@@ -5,17 +5,17 @@
 	// Loop 'flex-grid' values
 	@each $key, $value in module('flex-grid', 'values') {
 		@for $col from 1 through $value {
-			@include declare-style(
-				$module   : $module,
+			@include css-ruleset(
+				$module   : module($module),
 				$modifier : $col
 			) {
 				// Create the flex-grid selector
-				$flex-grid-selector: create-selector(
+				$flex-grid-selector: class-template(
 					$module:   'flex-grid',
 					$modifier: $key
 				);
 
-				$flex-grid-selector: validate-selector($flex-grid-selector);
+				$flex-grid-selector: class-escape($flex-grid-selector);
 
 				.#{$flex-grid-selector} & {
 					$column-width: ($col / $value) * 100%;

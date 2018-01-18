@@ -1,4 +1,4 @@
-@include set-default( modules, 'max-height', (
+@include set-default(module, 'max-height', (
 	root        : 'mxh',
 	values      : (
 		n     : none,
@@ -7,6 +7,6 @@
 		100vw : 100vw,
 		100vh : 100vh
 	),
-	breakpoints : get-keys(breakpoints),
-	states      : get-keys(states)
+	breakpoints : get(breakpoint),
+	states      : option(namescheme, states)
 ) );

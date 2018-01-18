@@ -1,5 +1,5 @@
-@include set-default( modules, 'font-family', (
+@include set-default(module, 'font-family', (
 	root        : 'ff',
 	values      : get(typefaces),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

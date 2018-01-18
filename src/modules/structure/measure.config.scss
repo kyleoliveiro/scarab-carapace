@@ -1,4 +1,4 @@
-@include set-default( modules, 'measure', (
+@include set-default(module, 'measure', (
 	root        : 'measure',
 	values      : (
 		xs : em(240),
@@ -7,5 +7,5 @@
 		l  : em(800),
 		xl : em(960)
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

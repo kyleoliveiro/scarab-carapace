@@ -1,8 +1,8 @@
-@include set-default( modules, 'table-layout', (
+@include set-default(module, 'table-layout', (
 	root        : 'tl',
 	values      : (
 		a: auto,
 		f: fixed
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

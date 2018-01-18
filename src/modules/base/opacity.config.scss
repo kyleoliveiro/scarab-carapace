@@ -1,6 +1,6 @@
-@include set-default( modules, 'opacity', (
+@include set-default(module, 'opacity', (
 	root        : 'o',
 	values      : get(opacity),
-	states      : get-keys(states),
-	breakpoints : get-keys(breakpoints)
+	states      : option(namescheme, states),
+	breakpoints : get(breakpoint)
 ) );

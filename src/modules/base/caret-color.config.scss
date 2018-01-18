@@ -1,6 +1,6 @@
-@include set-default( modules, 'caret-color', (
+@include set-default(module, 'caret-color', (
 	root        : 'caret',
 	values      : build-color-map(get-keys(palettes)),
-	breakpoints : get-keys(breakpoints),
-	states      : get-keys(states)
+	breakpoints : get(breakpoint),
+	states      : option(namescheme, states)
 ) );

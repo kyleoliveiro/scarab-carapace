@@ -1,8 +1,8 @@
-@include set-default( modules, 'empty-cells', (
+@include set-default(module, 'empty-cells', (
 	root        : 'ec',
 	values      : (
 		s: show,
 		h: hide
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

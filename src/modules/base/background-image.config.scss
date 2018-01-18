@@ -1,8 +1,8 @@
-@include set-default( modules, 'background-image', (
+@include set-default(module, 'background-image', (
 	root        : 'bgi',
 	values      : map-merge(
-    get(gradients),
-    get(background-images)
+    get(gradient),
+    get(background-image)
   ),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

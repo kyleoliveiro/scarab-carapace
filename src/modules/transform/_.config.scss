@@ -8,3 +8,7 @@
 @import 'translateX.config';
 @import 'translateY.config';
 @import 'translateZ.config';
+
+@each $module in map-keys(get(module)) {
+  @include set-default(module, $module, group, 'transform' );
+}

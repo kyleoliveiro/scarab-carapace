@@ -1,5 +1,5 @@
-@include set-default( modules, 'animation-name', (
+@include set-default(module, 'animation-name', (
 	root   : 'anim',
 	values : get-keys(animations),
-	states : get-keys(states)
+	states : option(namescheme, states)
 ) );

@@ -1,4 +1,4 @@
-@include set-default( modules, 'animation-direction', (
+@include set-default(module, 'animation-direction', (
 	root   : 'anim-dir',
 	values : (
 		n  : normal,
@@ -6,5 +6,5 @@
 		a  : alternate,
 		ar : alternate-reverse
 	),
-	states : get-keys(states)
+	states : option(namescheme, states)
 ) );

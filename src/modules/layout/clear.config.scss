@@ -1,4 +1,4 @@
-@include set-default( modules, 'clear', (
+@include set-default(module, 'clear', (
 	root        : 'cl',
 	values      : (
 		n : none,
@@ -6,5 +6,5 @@
 		r : right,
 		b : both
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

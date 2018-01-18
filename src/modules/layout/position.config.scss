@@ -1,4 +1,4 @@
-@include set-default( modules, 'position', (
+@include set-default(module, 'position', (
 	root        : 'pos',
 	values      : (
 		s : static,
@@ -6,5 +6,5 @@
 		a : absolute,
 		f : fixed
 	),
-	breakpoints : get-keys(breakpoints)
+	breakpoints : get(breakpoint)
 ) );

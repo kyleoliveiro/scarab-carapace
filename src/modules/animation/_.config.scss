@@ -11,6 +11,6 @@
 @import 'animation-fill-mode.config';
 @import 'animation-iteration-count.config';
 
-@each $module in map-keys( get(modules) ) {
-	@include set-default( modules, $module, module-group, 'animation' );
+@each $module in map-keys(get(module)) {
+	@include set-default(module, $module, group, 'animation' );
 }
