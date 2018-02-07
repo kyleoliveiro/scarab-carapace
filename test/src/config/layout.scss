@@ -22,3 +22,7 @@
 	90  : 90deg,
 	180 : 180deg
 ) );
+
+@include set( flex-grid, (
+	12 : 12
+) );

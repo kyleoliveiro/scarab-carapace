@@ -1,5 +1,5 @@
 // Import Scarab
-@import '../../core';
+@import 'scarab-scss/scarab';
 
 // Import example Scarab config
 @import 'config/_';
@@ -8,4 +8,4 @@
 @import '../../lib/modules/_.config';
 
 // Generate modules
-@import '../../lib/modules/_';
+@import '../../modules';

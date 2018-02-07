@@ -15,7 +15,7 @@
 					$modifier: $key
 				);
 
-				$flex-grid-selector: class-escape($flex-grid-selector);
+				$flex-grid-selector: class-escape(class-sanitize($flex-grid-selector));
 
 				.#{$flex-grid-selector} & {
 					$column-width: ($col / $value) * 100%;
