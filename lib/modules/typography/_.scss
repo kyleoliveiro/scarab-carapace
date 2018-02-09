@@ -1,10 +1,12 @@
+@import 'type-scale';
+@import 'font-size';
+@import 'line-height';
 @import 'column-count';
 @import 'column-gap';
 @import 'column-span';
 @import 'column-width';
 @import 'direction';
 @import 'font-family';
-@import 'font-size';
 @import 'font-style';
 @import 'font-weight';
 @import 'font-variant-caps';
@@ -12,7 +14,6 @@
 @import 'font-variant-numeric';
 @import 'font-variant-position';
 @import 'letter-spacing';
-@import 'line-height';
 @import 'list-style-type';
 @import 'text-align';
 @import 'text-decoration-color';
@@ -21,7 +22,6 @@
 @import 'text-indent';
 @import 'text-overflow';
 @import 'text-transform';
-@import 'type-scale';
 @import 'white-space';
 @import 'word-break';
 @import 'word-spacing';
