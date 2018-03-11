@@ -12,21 +12,21 @@
 					$modifier : $key
 				) {
 					& > * {
-						@if $direction == 'horizontal' {
-							display: inline-block;
-							margin-right: $value;
-						} @else if $direction == 'vertical' {
+						 @if $direction == 'vertical' {
 							display: block;
 							margin-bottom: $value;
+						} @else if $direction == 'horizontal' {
+							display: inline-block;
+							margin-right: $value;
 						}
 					}
 
 					& > *:last-child {
-						@if $direction == 'horizontal' {
-							margin-right: 0;
-						} @else if $direction == 'vertical' {
+						@if $direction == 'vertical' {
 							margin-bottom: 0;
-						}
+						} @else if $direction == 'horizontal' {
+							margin-right: 0;
+						} 
 					}
 				}
 			}

@@ -4,23 +4,32 @@
 
 	// Loop 'flex-grid' values
 	@each $key, $value in module('flex-grid', 'values') {
+		// Create the flex-grid selector
+		$flex-grid-selector: class-template(
+			$module:   'flex-grid',
+			$modifier: $key
+		);
+
+		$flex-grid-selector: class-escape(class-sanitize($flex-grid-selector));
+
 		@for $col from 1 through $value {
 			@include css-ruleset(
 				$module   : $module,
 				$modifier : $col
 			) {
-				// Create the flex-grid selector
-				$flex-grid-selector: class-template(
-					$module:   'flex-grid',
-					$modifier: $key
-				);
-
-				$flex-grid-selector: class-escape(class-sanitize($flex-grid-selector));
-
 				.#{$flex-grid-selector} & {
 					$column-width: ($col / $value) * 100%;
 					width: $column-width;
 				}
+			}
+		}
+
+		@include css-ruleset(
+			$module   : $module,
+			$modifier : 'a'
+		) {
+			.#{$flex-grid-selector} & {
+				width: auto;
 			}
 		}
 	}
