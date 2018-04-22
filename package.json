@@ -1,6 +1,6 @@
 {
   "name": "scarab-carapace",
-  "version": "4.0.0-beta.6",
+  "version": "4.0.0-beta.8",
   "description": "Highly configurable framework for generating functional CSS classes",
   "main": "core.scss",
   "scripts": {
@@ -34,12 +34,11 @@
   },
   "homepage": "https://github.com/watchtowerdigital/scarab-carapace#readme",
   "dependencies": {
-    "scarab-scss": "^7.0.0-beta.3"
+    "scarab-scss": "^7.0.0-beta.7"
   },
   "devDependencies": {
     "cssnano-cli": "^1.0.5",
     "node-sass": "^4.7.2",
-    "sakugawa": "^0.5.3",
-    "scarab-carapace": "^4.0.0-beta.2"
+    "sakugawa": "^0.5.3"
   }
 }
