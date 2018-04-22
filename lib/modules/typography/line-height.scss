@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			line-height: $value;
+			line-height: $value important();
 		}
 	}
 

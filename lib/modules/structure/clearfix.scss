@@ -7,12 +7,12 @@
 	) {
 		&:before,
 		&:after {
-			content: " ";
-			display: table;
+			content: " " important();
+			display: table important();
 		}
 
 		&:after {
-			clear: both;
+			clear: both important();
 		}
 	}
 

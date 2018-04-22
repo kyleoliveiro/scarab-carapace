@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			transform: scaleX($value);
+			transform: scaleX($value) important();
 		}
 	}
 

@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			list-style-type: $value;
+			list-style-type: $value important();
 		}
 	}
 

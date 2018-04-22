@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			caret-color: $value;
+			caret-color: $value important();
 		}
 	}
 

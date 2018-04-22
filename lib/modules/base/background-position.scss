@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			background-position: $value;
+			background-position: $value important();
 		}
 	}
 

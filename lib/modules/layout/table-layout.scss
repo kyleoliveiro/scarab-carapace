@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			table-layout: $value;
+			table-layout: $value important();
 		}
 	}
 

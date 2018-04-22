@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			flex-grow: $value;
+			flex-grow: $value important();
 		}
 	}
 

@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			transition-delay: $value;
+			transition-delay: $value important();
 		}
 	}
 

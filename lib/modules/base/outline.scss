@@ -7,8 +7,8 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			outline-width: $value;
-			outline-style: solid;
+			outline-width: $value important();
+			outline-style: solid important();
 		}
 	}
 

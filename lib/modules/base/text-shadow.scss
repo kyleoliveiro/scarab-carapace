@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			text-shadow: $value;
+			text-shadow: $value important();
 		}
 	}
 

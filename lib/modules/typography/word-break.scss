@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			word-break: $value;
+			word-break: $value important();
 		}
 	}
 

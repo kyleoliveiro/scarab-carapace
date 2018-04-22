@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			text-transform: $value;
+			text-transform: $value important();
 		}
 	}
 

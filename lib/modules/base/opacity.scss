@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			opacity: $value;
+			opacity: $value important();
 		}
 	}
 

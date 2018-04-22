@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			text-decoration-line: $value;
+			text-decoration-line: $value important();
 		}
 	}
 

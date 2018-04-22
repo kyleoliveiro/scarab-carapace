@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			flex-shrink: $value;
+			flex-shrink: $value important();
 		}
 	}
 

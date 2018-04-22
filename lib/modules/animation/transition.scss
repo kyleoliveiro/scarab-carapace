@@ -7,8 +7,8 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			transition-duration: $value;
-			transition-property: all;
+			transition-duration: $value important();
+			transition-property: all important();
 		}
 	}
 

@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			white-space: $value;
+			white-space: $value important();
 		}
 	}
 

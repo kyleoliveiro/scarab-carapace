@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			justify-content: $value;
+			justify-content: $value important();
 		}
 	}
 

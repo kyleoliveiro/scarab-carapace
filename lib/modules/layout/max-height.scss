@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			max-height: $value;
+			max-height: $value important();
 		}
 	}
 

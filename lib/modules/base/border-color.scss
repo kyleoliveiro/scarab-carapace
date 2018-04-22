@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			border-color: $value;
+			border-color: $value important();
 		}
 	}
 
@@ -23,13 +23,13 @@
 				$modifier : $key
 			) {
 				@if $direction == 'horizontal' {
-					border-left-color: $value;
-					border-right-color: $value;
+					border-left-color: $value important();
+					border-right-color: $value important();
 				} @else if $direction == 'vertical' {
-					border-top-color: $value;
-					border-bottom-color: $value;
+					border-top-color: $value important();
+					border-bottom-color: $value important();
 				} @else {
-					border-#{$direction}-color: $value;
+					border-#{$direction}-color: $value important();
 				}
 			}
 		}

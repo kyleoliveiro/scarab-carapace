@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			word-wrap: $value;
+			word-wrap: $value important();
 		}
 	}
 

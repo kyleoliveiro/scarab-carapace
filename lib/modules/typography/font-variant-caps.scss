@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			font-variant-caps: $value;
+			font-variant-caps: $value important();
 		}
 	}
 

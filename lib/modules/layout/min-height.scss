@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			min-height: $value;
+			min-height: $value important();
 		}
 	}
 

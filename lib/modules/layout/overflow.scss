@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			overflow: $value;
+			overflow: $value important();
 		}
 	}
 
@@ -23,9 +23,9 @@
 				$modifier : $key
 			) {
 				@if $direction == 'horizontal' {
-					overflow-x: $value;
+					overflow-x: $value important();
 				} @else if $direction == 'vertical' {
-					overflow-y: $value;
+					overflow-y: $value important();
 				}
 			}
 		}

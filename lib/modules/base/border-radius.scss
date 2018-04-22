@@ -7,8 +7,8 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			border-radius: $value;
-			-webkit-border-radius: $value;
+			border-radius: $value important();
+			-webkit-border-radius: $value important();
 		}
 	}
 

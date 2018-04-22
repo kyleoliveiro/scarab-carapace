@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			outline-offset: $value;
+			outline-offset: $value important();
 		}
 	}
 

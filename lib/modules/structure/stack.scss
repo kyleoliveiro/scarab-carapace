@@ -13,19 +13,17 @@
 				) {
 					& > * {
 						 @if $direction == 'vertical' {
-							display: block;
-							margin-bottom: $value;
+							margin-bottom: $value important();
 						} @else if $direction == 'horizontal' {
-							display: inline-block;
-							margin-right: $value;
+							margin-right: $value important();
 						}
 					}
 
 					& > *:last-child {
 						@if $direction == 'vertical' {
-							margin-bottom: 0;
+							margin-bottom: 0 important();
 						} @else if $direction == 'horizontal' {
-							margin-right: 0;
+							margin-right: 0 important();
 						} 
 					}
 				}

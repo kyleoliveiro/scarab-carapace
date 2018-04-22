@@ -19,7 +19,7 @@
 			) {
 				.#{$flex-grid-selector} & {
 					$column-width: ($col / $value) * 100%;
-					width: $column-width;
+					width: $column-width important();
 				}
 			}
 		}
@@ -29,7 +29,7 @@
 			$modifier : 'a'
 		) {
 			.#{$flex-grid-selector} & {
-				width: auto;
+				width: auto important();
 			}
 		}
 	}

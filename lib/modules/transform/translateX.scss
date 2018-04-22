@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			transform: translateX($value);
+			transform: translateX($value) important();
 		}
 	}
 

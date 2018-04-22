@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			align-self: $value;
+			align-self: $value important();
 		}
 	}
 

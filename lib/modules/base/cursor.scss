@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			cursor: $value;
+			cursor: $value important();
 		}
 	}
 

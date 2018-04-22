@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $value
 		) {
-			@include type-scale($value)
+			@include type-scale($value, important());
 		}
 	}
 

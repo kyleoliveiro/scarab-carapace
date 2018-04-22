@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			top: $value;
+			top: $value important();
 		}
 	}
 

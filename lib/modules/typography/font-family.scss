@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			font-family: $value;
+			font-family: $value important();
 		}
 	}
 

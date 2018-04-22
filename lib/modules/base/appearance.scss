@@ -7,8 +7,8 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			appearance: $value;
-			-webkit-appearance: $value;
+			appearance: $value important();
+			-webkit-appearance: $value important();
 		}
 	}
 

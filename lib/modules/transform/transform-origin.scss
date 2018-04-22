@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			transform-origin: $value;
+			transform-origin: $value important();
 		}
 	}
 

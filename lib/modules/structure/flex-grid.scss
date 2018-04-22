@@ -7,8 +7,8 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			display: flex;
-			flex-wrap: wrap;
+			display: flex important();
+			flex-wrap: wrap important();
 		}
 	}
 }

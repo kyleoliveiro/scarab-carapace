@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			font-variant-ligatures: $value;
+			font-variant-ligatures: $value important();
 		}
 	}
 

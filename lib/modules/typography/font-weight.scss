@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			font-weight: $value;
+			font-weight: $value important();
 		}
 	}
 

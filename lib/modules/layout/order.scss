@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			order: $value;
+			order: $value important();
 		}
 	}
 

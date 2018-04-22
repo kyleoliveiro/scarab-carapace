@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			column-span: $value;
+			column-span: $value important();
 		}
 	}
 

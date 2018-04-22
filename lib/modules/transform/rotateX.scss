@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			transform: rotateX($value);
+			transform: rotateX($value) important();
 		}
 	}
 

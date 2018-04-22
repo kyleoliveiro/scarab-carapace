@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			font-variant-position: $value;
+			font-variant-position: $value important();
 		}
 	}
 

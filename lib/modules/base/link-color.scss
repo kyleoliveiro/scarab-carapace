@@ -8,7 +8,7 @@
 			$modifier : $key
 		) {
 			a {
-				color: $value;
+				color: $value important();
 			}
 		}
 	}

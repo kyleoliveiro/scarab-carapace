@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			clip-path: $value;
+			clip-path: $value important();
 		}
 	}
 

@@ -8,7 +8,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			margin: to-negative($value);
+			margin: to-negative($value) important();
 		}
 	}
 
@@ -24,13 +24,13 @@
 				$modifier : $key
 			) {
 				@if $direction == 'horizontal' {
-					margin-left: to-negative($value);
-					margin-right: to-negative($value);
+					margin-left: to-negative($value) important();
+					margin-right: to-negative($value) important();
 				} @else if $direction == 'vertical' {
-					margin-top: to-negative($value);
-					margin-bottom: to-negative($value);
+					margin-top: to-negative($value) important();
+					margin-bottom: to-negative($value) important();
 				} @else {
-					margin-#{$direction}: to-negative($value);
+					margin-#{$direction}: to-negative($value) important();
 				}
 			}
 		}

@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			empty-cells: $value;
+			empty-cells: $value important();
 		}
 	}
 

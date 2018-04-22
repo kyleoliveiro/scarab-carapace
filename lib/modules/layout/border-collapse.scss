@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			border-collapse: $value;
+			border-collapse: $value important();
 		}
 	}
 

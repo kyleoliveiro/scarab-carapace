@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			animation-duration: $value;
+			animation-duration: $value important();
 		}
 	}
 

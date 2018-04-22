@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			border-spacing: $value;
+			border-spacing: $value important();
 		}
 	}
 

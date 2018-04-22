@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			column-gap: $value;
+			column-gap: $value important();
 		}
 	}
 

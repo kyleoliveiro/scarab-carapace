@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			column-count: $value;
+			column-count: $value important();
 		}
 	}
 

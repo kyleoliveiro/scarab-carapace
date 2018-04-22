@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			padding-bottom: $value;
+			padding-bottom: $value important();
 		}
 	}
 

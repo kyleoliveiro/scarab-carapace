@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			text-indent: $value;
+			text-indent: $value important();
 		}
 	}
 

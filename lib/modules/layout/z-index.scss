@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			z-index: $value;
+			z-index: $value important();
 		}
 	}
 

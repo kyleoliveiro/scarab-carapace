@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			letter-spacing: $value;
+			letter-spacing: $value important();
 		}
 	}
 

@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			text-overflow: $value;
+			text-overflow: $value important();
 		}
 	}
 

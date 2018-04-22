@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			padding: $value;
+			padding: $value important();
 		}
 	}
 
@@ -23,13 +23,13 @@
 				$modifier : $key
 			) {
 				@if $direction == 'horizontal' {
-					padding-left: $value;
-					padding-right: $value;
+					padding-left: $value important();
+					padding-right: $value important();
 				} @else if $direction == 'vertical' {
-					padding-top: $value;
-					padding-bottom: $value;
+					padding-top: $value important();
+					padding-bottom: $value important();
 				} @else {
-					padding-#{$direction}: $value;
+					padding-#{$direction}: $value important();
 				}
 			}
 		}

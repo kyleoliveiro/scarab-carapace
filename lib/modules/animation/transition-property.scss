@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			transition-property: $value;
+			transition-property: $value important();
 		}
 	}
 

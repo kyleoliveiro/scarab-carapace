@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			-webkit-overflow-scrolling: $value;
+			-webkit-overflow-scrolling: $value important();
 		}
 	}
 

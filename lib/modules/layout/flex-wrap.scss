@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			flex-wrap: $value;
+			flex-wrap: $value important();
 		}
 	}
 

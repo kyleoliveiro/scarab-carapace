@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			flex-direction: $value;
+			flex-direction: $value important();
 		}
 	}
 

@@ -7,7 +7,7 @@
 			$module   : $module,
 			$modifier : $key
 		) {
-			max-width: $value;
+			max-width: $value important();
 		}
 	}
 
