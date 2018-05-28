@@ -4,7 +4,7 @@
 	values      : (
 		a    : auto,
 		min  : const(CSS, MIN_Z_INDEX),
-		max  : const(CSS, MIN_Z_INDEX),
+		max  : const(CSS, MAX_Z_INDEX),
 		n3   : -3,
 		n2   : -2,
 		n1   : -1,
