@@ -8,11 +8,7 @@
 
 Although Carapace provides some defaults, it is not an opinionated CSS library. Think of it instead as a tool for rapidly creating custom CSS libraries on a per-project basis.
 
-
-
 ## Table of contents
-- [<img src="carapace-logo.png" width="342" height="96" alt="Carapace">](#img-srccarapace-logopng-width342-height96-altcarapace)
-  - [Table of contents](#table-of-contents)
   - [Features](#features)
   - [Installation](#installation)
   - [Configuration](#configuration)
@@ -24,7 +20,6 @@ Although Carapace provides some defaults, it is not an opinionated CSS library. 
   - [Documentation](#documentation)
   - [Related](#related)
 
-
 ## Features
 - Functional CSS *(a.k.a. Atomic CSS)*
 - Configuration-driven stylesheets
@@ -33,8 +28,6 @@ Although Carapace provides some defaults, it is not an opinionated CSS library. 
 - Optional CSS reset/normalize
 - Easily achieve vertical rythmn
 - Automatic styleguides for your project *(with [`scarab-styleguide`](https://github.com/watchtowerdigital/scarab-styleguide))*
-
-
 
 ## Installation
 1. Install `scarab-carapace` as a dev-dependency in your project via npm:
@@ -75,7 +68,6 @@ With the default naming convention, class names that *Carapace* generates will l
 
 The naming convention can be customized by changing the `namescheme` options in Scarab.
 
-
 ## Usage
 
 ### Modules
@@ -104,12 +96,8 @@ Refer to the [`modules/`](lib/modules/) folder for more information on how to co
 - Separate base CSS from styles in media queries ([`sakugawa`](https://github.com/paazmaya/sakugawa))
 - Inline base CSS, and `<link>` media query styles
 
-
-
 ## Documentation
 Documentation is a work-in-progress.
-
-
 
 ## Related
 * [**scarab-scss**](https://github.com/watchtowerdigital/scarab.git) — Sass utility framework for rapid stylesheet development
