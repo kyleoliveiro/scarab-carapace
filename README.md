@@ -1,6 +1,6 @@
 # <img src="carapace-logo.png" width="342" height="96" alt="Carapace">
 
-[![npm](https://img.shields.io/npm/v/scarab-carapace.svg)](https://www.npmjs.com/package/scarab-carapace) [![Build Status](https://travis-ci.org/watchtowerdigital/scarab-carapace.svg?branch=master)](https://travis-ci.org/watchtowerdigital/scarab-carapace) 
+[![npm](https://img.shields.io/npm/v/scarab-carapace/beta.svg)](https://www.npmjs.com/package/scarab-carapace) [![Build Status](https://travis-ci.org/watchtowerdigital/scarab-carapace.svg?branch=v4)](https://travis-ci.org/watchtowerdigital/scarab-carapace) 
 
 **Highly configurable framework for generating single-purpose, functional CSS classes**
 
@@ -11,17 +11,18 @@ Although Carapace provides some defaults, it is not an opinionated CSS library. 
 
 
 ## Table of contents
-- [Features](#features)
-- [Installation](#installation)
-- [Configuration](#configuration)
-  - [Variable Management](#variable-management)
-  - [Naming Convention](#naming-convention)
-- [Usage](#usage)
-  - [Reset/Normalize](#resetnormalize)
-  - [Modules](#modules)
-  - [Compiling CSS](#compiling-css)
-- [Documentation](#documentation)
-- [Resources](#resources)
+- [<img src="carapace-logo.png" width="342" height="96" alt="Carapace">](#img-srccarapace-logopng-width342-height96-altcarapace)
+  - [Table of contents](#table-of-contents)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+    - [Variable management](#variable-management)
+    - [Naming convention](#naming-convention)
+  - [Usage](#usage)
+    - [Modules](#modules)
+    - [Compiling CSS](#compiling-css)
+  - [Documentation](#documentation)
+  - [Related](#related)
 
 
 ## Features
