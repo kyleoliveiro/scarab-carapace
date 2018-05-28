@@ -10,8 +10,10 @@
 		t  : table,
 		it : inline-table,
 		tc : table-cell,
+		tr : table-row,
 		f  : flex,
-		if : inline-flex
+		if : inline-flex,
+		c  : contents
 	),
 	breakpoints : get(breakpoint),
 	states      : option(namescheme, states)
