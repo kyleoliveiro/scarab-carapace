@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/scarab-carapace.svg)](https://www.npmjs.com/package/scarab-carapace) [![Build Status](https://travis-ci.org/watchtowerdigital/scarab-carapace.svg?branch=master)](https://travis-ci.org/watchtowerdigital/scarab-carapace) 
 
-**Highly configurable framework for generating single-purpose, functional CSS classes**
+**Config-driven framework for generating CSS utility classes**
 
 *Carapace* is a Sass framework which generates [functional/atomic CSS](https://css-tricks.com/lets-define-exactly-atomic-css/) classes based on user-defined configuration. It depends on the [`scarab-scss`](https://github.com/watchtowerdigital/scarab) Sass utility library for low-level functions and mixins.
 
