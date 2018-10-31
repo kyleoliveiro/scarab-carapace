@@ -1,0 +1,5 @@
+{
+  "name": "@scarab/carapace",
+  "description": "CSS utility class generator",
+  "tags": ["design tokens", "design system", "utility classes", "css generator"]
+}

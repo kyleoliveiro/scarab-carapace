@@ -1,11 +1,11 @@
 // Import Scarab
-@import 'scarab-scss/scarab';
+@import '@scarab/core/_';
 
 // Import example Scarab config
 @import 'config/_';
 
-// Import module config
-@import '../../lib/modules/_.config';
+// Import default Carapace config
+@import '../../_';
 
-// Generate modules
-@import '../../modules';
+// Generate Carapace classes
+@import '../../classes';

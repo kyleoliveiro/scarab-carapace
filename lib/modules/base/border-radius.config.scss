@@ -1,5 +1,5 @@
 @include set-default(module, 'border-radius', (
-	root        : 'rad',
+	root        : 'bdr',
   group       : 'base',
 	values      : get(border-radius),
 	breakpoints : get(breakpoint),

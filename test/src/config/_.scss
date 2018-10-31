@@ -5,6 +5,3 @@
 @import 'animation';
 @import 'typography';
 @import 'layout';
-
-@include set-option(namescheme, variant-prefix, '-');
-@include set-option(namescheme, modifier-prefix, '--');

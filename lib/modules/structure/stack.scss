@@ -12,7 +12,7 @@
 					$modifier : $key
 				) {
 					& > * {
-						 @if $direction == 'vertical' {
+						@if $direction == 'vertical' {
 							margin-bottom: $value important();
 						} @else if $direction == 'horizontal' {
 							margin-right: $value important();

@@ -1,8 +1,8 @@
 {
-  "name": "scarab-carapace",
-  "version": "4.0.0-beta.10",
-  "description": "Highly configurable framework for generating functional CSS classes",
-  "main": "core.scss",
+  "name": "@scarab/carapace",
+  "version": "4.0.0-rc.0",
+  "description": "CSS utility class generator",
+  "main": "_.scss",
   "scripts": {
     "prebuild": "rm -f test/build/*",
     "build": "node-sass --include-path node_modules test/src/test.scss -o test/build/",
@@ -13,32 +13,33 @@
     "gzip": "for file in test/build/*.css.min\ndo\n tar -zcvf \"$file\".tar.gz \"$file\" \ndone",
     "test": "node-sass --include-path node_modules test/src/test.scss -o test/build/"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/watchtowerdigital/scarab-carapace.git"
-  },
   "keywords": [
     "sass",
     "scss",
     "css",
     "atomic",
     "functional",
+    "utility classes",
     "framework",
     "responsive",
     "front-end"
   ],
-  "author": "Kyle Oliveiro <kyle@watchtower.digital>",
+  "author": "Kyle Oliveiro <hello@kyle.sg>",
   "license": "BSD-3-Clause",
-  "bugs": {
-    "url": "https://github.com/watchtowerdigital/scarab-carapace/issues"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyleoliveiro/scarab-carapace.git"
   },
-  "homepage": "https://github.com/watchtowerdigital/scarab-carapace#readme",
+  "bugs": {
+    "url": "https://github.com/kyleoliveiro/scarab-carapace/issues"
+  },
+  "homepage": "https://scarab.style/carapace",
   "dependencies": {
-    "scarab-scss": "^7.0.0-beta.7"
+    "@scarab/core": "^7.0.0-rc.7"
   },
   "devDependencies": {
     "cssnano-cli": "^1.0.5",
-    "node-sass": "^4.7.2",
+    "node-sass": "^4.9.4",
     "sakugawa": "^0.5.3"
   }
 }
