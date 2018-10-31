@@ -53,7 +53,7 @@ $ npm install @scarab/carapace --save-dev
 
 ## 📚 Documentation
 Read the API documentation and guides:<br>
-[**https://scarab.style/docs/carapace**](https://scarab.style/docs/carapace)
+[**https://scarab.style/carapace**](https://scarab.style/carapace)
 
 ## ⭐️ Features
 
