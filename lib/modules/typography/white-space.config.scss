@@ -1,0 +1,12 @@
+@include set-default(module, 'white-space', (
+	root        : 'ws',
+  group       : 'typography',
+	values      : (
+		n  : normal,
+		nw : nowrap,
+		p  : pre,
+		pw : pre-wrap,
+		pl : pre-line
+	),
+	breakpoints : get(breakpoint)
+) );

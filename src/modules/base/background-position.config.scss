@@ -1,5 +1,0 @@
-@include set-default( modules, 'background-position', (
-	root        : 'bgp',
-	values      : get(anchors),
-	breakpoints : get-keys(breakpoints)
-) );

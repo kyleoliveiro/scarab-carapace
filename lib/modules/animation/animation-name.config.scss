@@ -1,0 +1,5 @@
+@include set-default(module, 'animation-name', (
+	root   : 'anim',
+  group  : 'animation',
+	values : map-keys(get(keyframe))
+) );

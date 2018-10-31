@@ -1,5 +1,0 @@
-@include set-default( modules, 'left', (
-	root        : 'l',
-	values      : get(coordinates),
-	breakpoints : get-keys(breakpoints)
-) );

@@ -1,6 +1,0 @@
-@include set-default( modules, 'translate-x', (
-	root        : 'X',
-	values      : get(coordinates),
-	breakpoints : get-keys(breakpoints),
-	states      : get-keys(states)
-) );

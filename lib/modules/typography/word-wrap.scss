@@ -1,0 +1,14 @@
+@at-root {
+
+	$module: 'word-wrap';
+
+	@each $key, $value in module($module, 'values') {
+		@include css-ruleset(
+			$module   : $module,
+			$modifier : $key
+		) {
+			word-wrap: $value important();
+		}
+	}
+
+}

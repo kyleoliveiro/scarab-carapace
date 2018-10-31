@@ -1,0 +1,39 @@
+@at-root {
+
+	$module: 'negative-margin';
+
+	@each $key, $value in module($module, 'values') {
+		// Ignore sizes with value==0
+		@include css-ruleset(
+			$module   : $module,
+			$modifier : $key
+		) {
+			margin: to-negative($value) important();
+		}
+	}
+
+	// Directional margins
+	//
+	// intentionally declared after the base margins
+	// so that directional margins are lower in the cascade
+	@each $d, $direction in option(namescheme, directions) {
+		@each $key, $value in module($module, 'values') {
+			@include css-ruleset(
+				$module   : $module,
+				$variant  : $d,
+				$modifier : $key
+			) {
+				@if $direction == 'horizontal' {
+					margin-left: to-negative($value) important();
+					margin-right: to-negative($value) important();
+				} @else if $direction == 'vertical' {
+					margin-top: to-negative($value) important();
+					margin-bottom: to-negative($value) important();
+				} @else {
+					margin-#{$direction}: to-negative($value) important();
+				}
+			}
+		}
+	}
+
+}

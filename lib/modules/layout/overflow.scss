@@ -1,0 +1,34 @@
+@at-root {
+
+	$module: 'overflow';
+
+	@each $key, $value in module($module, 'values') {
+		@include css-ruleset(
+			$module   : $module,
+			$modifier : $key
+		) {
+			overflow: $value important();
+		}
+	}
+
+	// Directional overflows
+	//
+	// intentionally declared after the base overflows
+	// so that directional overflows are lower in the cascade
+	@each $d, $direction in option(namescheme, directions) {
+		@each $key, $value in module($module, 'values') {
+			@include css-ruleset(
+				$module   : $module,
+				$variant  : $d,
+				$modifier : $key
+			) {
+				@if $direction == 'horizontal' {
+					overflow-x: $value important();
+				} @else if $direction == 'vertical' {
+					overflow-y: $value important();
+				}
+			}
+		}
+	}
+
+}

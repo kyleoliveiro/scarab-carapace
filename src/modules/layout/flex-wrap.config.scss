@@ -1,9 +1,0 @@
-@include set-default( modules, 'flex-wrap', (
-	root        : 'flw',
-	values      : (
-		w  : wrap,
-		n  : nowrap,
-		wr : wrap-reverse
-	),
-	breakpoints : get-keys(breakpoints)
-) );

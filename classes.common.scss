@@ -1,0 +1,63 @@
+// Generates common Carapace modules
+
+// Base
+@import 'lib/modules/base/background-color';
+@import 'lib/modules/base/background-image';
+@import 'lib/modules/base/background-size';
+@import 'lib/modules/base/background-position';
+@import 'lib/modules/base/background-repeat';
+@import 'lib/modules/base/border';
+@import 'lib/modules/base/border-color';
+@import 'lib/modules/base/border-style';
+@import 'lib/modules/base/border-width';
+@import 'lib/modules/base/border-radius';
+@import 'lib/modules/base/box-shadow';
+@import 'lib/modules/base/color';
+@import 'lib/modules/base/link-color';
+@import 'lib/modules/base/opacity';
+@import 'lib/modules/base/text-shadow';
+
+// Layout
+@import 'lib/modules/layout/align-content';
+@import 'lib/modules/layout/align-items';
+@import 'lib/modules/layout/align-self';
+@import 'lib/modules/layout/clear';
+@import 'lib/modules/layout/display';
+@import 'lib/modules/layout/flex-direction';
+@import 'lib/modules/layout/flex-grow';
+@import 'lib/modules/layout/flex-wrap';
+@import 'lib/modules/layout/float';
+@import 'lib/modules/layout/height';
+@import 'lib/modules/layout/min-height';
+@import 'lib/modules/layout/max-height';
+@import 'lib/modules/layout/justify-content';
+@import 'lib/modules/layout/margin';
+@import 'lib/modules/layout/negative-margin';
+@import 'lib/modules/layout/order';
+@import 'lib/modules/layout/overflow';
+@import 'lib/modules/layout/padding';
+@import 'lib/modules/layout/position';
+@import 'lib/modules/layout/vertical-align';
+@import 'lib/modules/layout/width';
+@import 'lib/modules/layout/min-width';
+@import 'lib/modules/layout/max-width';
+@import 'lib/modules/layout/z-index';
+
+// Structure
+@import 'lib/modules/structure/_';
+
+// Typography
+@import 'lib/modules/typography/type-scale';
+@import 'lib/modules/typography/font-size';
+@import 'lib/modules/typography/line-height';
+@import 'lib/modules/typography/font-family';
+@import 'lib/modules/typography/font-style';
+@import 'lib/modules/typography/font-weight';
+@import 'lib/modules/typography/letter-spacing';
+@import 'lib/modules/typography/list-style-type';
+@import 'lib/modules/typography/text-align';
+@import 'lib/modules/typography/text-decoration-color';
+@import 'lib/modules/typography/text-decoration-line';
+@import 'lib/modules/typography/text-decoration-style';
+@import 'lib/modules/typography/text-transform';
+@import 'lib/modules/typography/white-space';

@@ -1,0 +1,7 @@
+@include set-default(module, 'text-decoration-style', (
+	root        : 'tds',
+  group       : 'typography',
+	values      : get(line-style),
+	breakpoints : get(breakpoint),
+	states      : option(namescheme, states)
+) );

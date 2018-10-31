@@ -1,0 +1,6 @@
+@include set-default(module, 'stack', (
+	root        : 'stack',
+  group       : 'structure',
+	values      : get(spacing),
+	breakpoints : get(breakpoint)
+) );

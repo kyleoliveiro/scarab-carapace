@@ -1,0 +1,15 @@
+@at-root {
+
+	$module: 'transition';
+
+	@each $key, $value in module($module, 'values') {
+		@include css-ruleset(
+			$module   : $module,
+			$modifier : $key
+		) {
+			transition-duration: $value important();
+			transition-property: all important();
+		}
+	}
+
+}

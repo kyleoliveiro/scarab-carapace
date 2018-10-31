@@ -1,0 +1,10 @@
+@include set-default(module, 'animation-direction', (
+  root   : 'anim-dir',
+  group  : 'animation',
+  values : (
+    n  : normal,
+    r  : reverse,
+    a  : alternate,
+    ar : alternate-reverse
+  )
+) );

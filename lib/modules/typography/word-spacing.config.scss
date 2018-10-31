@@ -1,0 +1,6 @@
+@include set-default(module, 'word-spacing', (
+	root        : 'ws',
+  group       : 'typography',
+	values      : get(letter-spacing),
+	breakpoints : get(breakpoint)
+) );

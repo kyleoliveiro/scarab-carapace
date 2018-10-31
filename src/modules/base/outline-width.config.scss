@@ -1,6 +1,0 @@
-@include set-default( modules, 'outline-width', (
-	root        : 'lnw',
-	values      : get(line-widths),
-	breakpoints : get-keys(breakpoints),
-	states      : get-keys(states)
-) );

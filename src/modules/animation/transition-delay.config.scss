@@ -1,5 +1,0 @@
-@include set-default( modules, 'transition-delay', (
-	root   : 'tsn-delay',
-	values : get(durations),
-	states : get-keys(states)
-) );

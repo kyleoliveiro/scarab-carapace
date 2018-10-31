@@ -1,0 +1,6 @@
+@include set-default(module, 'letter-spacing', (
+	root        : 'ls',
+  group       : 'typography',
+	values      : get(letter-spacing),
+	breakpoints : get(breakpoint)
+) );

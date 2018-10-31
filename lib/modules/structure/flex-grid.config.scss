@@ -1,0 +1,6 @@
+@include set-default(module, 'flex-grid', (
+	root        : 'g',
+  group       : 'structure',
+	values      : get(flex-grid),
+	breakpoints : get(breakpoint)
+) );

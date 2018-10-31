@@ -1,6 +1,0 @@
-@include set-default( modules, 'opacity', (
-	root        : 'o',
-	values      : get(opacity),
-	states      : get-keys(states),
-	breakpoints : get-keys(breakpoints)
-) );

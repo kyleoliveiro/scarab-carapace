@@ -1,6 +1,0 @@
-@include set-default( modules, 'box-shadow', (
-	root        : 'bsh',
-	values      : get(box-shadows),
-	breakpoints : get-keys(breakpoints),
-	states      : get-keys(states)
-) );

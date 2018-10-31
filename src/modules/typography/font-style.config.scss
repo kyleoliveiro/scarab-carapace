@@ -1,9 +1,0 @@
-@include set-default( modules, 'font-style', (
-	root        : 'fs',
-	values      : (
-		n : normal,
-		i : italic,
-		o : oblique
-	),
-	breakpoints : get-keys(breakpoints)
-) );

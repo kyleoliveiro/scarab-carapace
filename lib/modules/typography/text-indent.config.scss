@@ -1,0 +1,6 @@
+@include set-default(module, 'text-indent', (
+	root        : 'ti',
+  group       : 'typography',
+	values      : get(spacing),
+	breakpoints : get(breakpoint)
+) );

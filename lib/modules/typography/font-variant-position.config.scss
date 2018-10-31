@@ -1,0 +1,9 @@
+@include set-default(module, 'font-variant-position', (
+	root        : 'fvp',
+  group       : 'typography',
+	values      : (
+		n     : normal,
+		sub   : sub,
+		super : super
+	)
+) );

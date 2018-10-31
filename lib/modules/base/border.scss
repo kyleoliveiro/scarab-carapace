@@ -1,0 +1,44 @@
+@at-root {
+
+	$module: 'border';
+
+	@each $key, $value in module($module, 'values') {
+		@include css-ruleset(
+			$module   : $module,
+			$modifier : $key
+		) {
+			border-width: $value important();
+			border-style: solid important();
+		}
+	}
+
+	// Directional borders
+	//
+	// intentionally declared after the base borders
+	// so that directional borders are lower in the cascade
+	@each $d, $direction in option(namescheme, directions) {
+		@each $key, $value in module($module, 'values') {
+			@include css-ruleset(
+				$module   : $module,
+				$variant  : $d,
+				$modifier : $key
+			) {
+				@if $direction == 'horizontal' {
+					border-left-width: $value important();
+					border-left-style: solid important();
+					border-right-width: $value important();
+					border-right-style: solid important();
+				} @else if $direction == 'vertical' {
+					border-top-width: $value important();
+					border-top-style: solid important();
+					border-bottom-width: $value important();
+					border-bottom-style: solid important();
+				} @else {
+					border-#{$direction}-width: $value important();
+					border-#{$direction}-style: solid important();
+				}
+			}
+		}
+	}
+
+}

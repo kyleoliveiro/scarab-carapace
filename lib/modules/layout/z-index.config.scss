@@ -1,0 +1,17 @@
+@include set-default(module, 'z-index', (
+	root        : 'z',
+	group       : 'layout',
+	values      : (
+		a    : auto,
+		min  : const(CSS, MIN_Z_INDEX),
+		max  : const(CSS, MAX_Z_INDEX),
+		n3   : -3,
+		n2   : -2,
+		n1   : -1,
+		0    : 0,
+		1    : 1,
+		2    : 2,
+		3    : 3
+	),
+	breakpoints : get(breakpoint)
+) );

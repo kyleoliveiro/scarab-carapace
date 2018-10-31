@@ -1,0 +1,6 @@
+@include set-default(module, 'wrap', (
+	root        : 'wrap',
+  group       : 'structure',
+	values      : get(wrap),
+	breakpoints : get(breakpoint)
+) );

@@ -1,6 +1,0 @@
-@include set-default( modules, 'border-style', (
-	root        : 'bds',
-	values      : get(line-styles),
-	breakpoints : get-keys(breakpoints),
-	states      : get-keys(states)
-) );

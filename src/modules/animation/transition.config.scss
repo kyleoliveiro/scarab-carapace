@@ -1,5 +1,0 @@
-@include set-default( modules, 'transition', (
-	root   : 'tsn',
-	values : get(durations),
-	states : get-keys(states)
-) );

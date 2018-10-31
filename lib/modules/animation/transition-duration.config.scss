@@ -1,0 +1,5 @@
+@include set-default(module, 'transition-duration', (
+	root   : 'tsn-dur',
+  group  : 'animation',
+	values : get(duration)
+) );

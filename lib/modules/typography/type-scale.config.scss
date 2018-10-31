@@ -1,0 +1,5 @@
+@include set-default(module, 'type-scale', (
+	root   : 'ts',
+  group  : 'typography',
+	values : map-keys(get(font-size))
+) );

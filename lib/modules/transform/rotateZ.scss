@@ -1,0 +1,14 @@
+@at-root {
+
+	$module: 'rotate-z';
+
+	@each $key, $value in module($module, 'values') {
+		@include css-ruleset(
+			$module   : $module,
+			$modifier : $key
+		) {
+			transform: rotateZ($value) important();
+		}
+	}
+
+}

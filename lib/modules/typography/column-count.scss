@@ -1,0 +1,14 @@
+@at-root {
+
+	$module: 'column-count';
+
+	@each $key, $value in module($module, 'values') {
+		@include css-ruleset(
+			$module   : $module,
+			$modifier : $key
+		) {
+			column-count: $value important();
+		}
+	}
+
+}

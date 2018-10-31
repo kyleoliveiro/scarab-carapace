@@ -1,0 +1,7 @@
+@include set-default(module, 'outline-style', (
+	root        : 'lns',
+  group       : 'base',
+	values      : get(line-style),
+	breakpoints : get(breakpoint),
+	states      : option(namescheme, states)
+) );

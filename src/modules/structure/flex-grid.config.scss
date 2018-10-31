@@ -1,7 +1,0 @@
-@include set-default( modules, 'flex-grid', (
-	root        : 'g',
-	values      : (
-		12 : 12
-	),
-	breakpoints : get-keys(breakpoints)
-) );

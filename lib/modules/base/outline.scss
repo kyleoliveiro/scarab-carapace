@@ -1,0 +1,15 @@
+@at-root {
+
+	$module: 'outline';
+
+	@each $key, $value in module($module, 'values') {
+		@include css-ruleset(
+			$module   : $module,
+			$modifier : $key
+		) {
+			outline-width: $value important();
+			outline-style: solid important();
+		}
+	}
+
+}

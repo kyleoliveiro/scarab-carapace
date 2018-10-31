@@ -1,0 +1,12 @@
+@include set-default(module, 'max-height', (
+	root        : 'mxh',
+	group       : 'layout',
+	values      : (
+		'n'     : none,
+		'0'     : 0,
+		'100'   : 100%,
+		'100vh' : 100vh
+	),
+	breakpoints : get(breakpoint),
+	states      : option(namescheme, states)
+) );

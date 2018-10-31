@@ -1,0 +1,9 @@
+@include set-default(module, 'empty-cells', (
+	root        : 'ec',
+  group       : 'layout',
+	values      : (
+		s: show,
+		h: hide
+	),
+	breakpoints : get(breakpoint)
+) );

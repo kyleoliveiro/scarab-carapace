@@ -1,0 +1,4 @@
+@include set-default(module, 'contain', (
+	root  : 'contain',
+  group : 'structure'
+) );

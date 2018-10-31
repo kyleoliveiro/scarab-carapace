@@ -1,0 +1,13 @@
+@include set-default(module, 'column-count', (
+	root        : 'cols',
+	group       : 'typography',
+	values      : (
+		a : auto,
+		0 : 0,
+		1 : 1,
+		2 : 2,
+		3 : 3,
+		4 : 4
+	),
+	breakpoints : get(breakpoint)
+) );

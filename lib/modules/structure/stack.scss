@@ -1,0 +1,34 @@
+@at-root {
+
+	$module: 'stack';
+
+	@each $d, $direction in option(namescheme, directions) {
+		// Only generate horizontal and vertical classes
+		@if $direction == 'horizontal' or $direction == 'vertical' {
+			@each $key, $value in module($module, 'values') {
+				@include css-ruleset(
+					$module   : $module,
+					$variant  : $d,
+					$modifier : $key
+				) {
+					& > * {
+						@if $direction == 'vertical' {
+							margin-bottom: $value important();
+						} @else if $direction == 'horizontal' {
+							margin-right: $value important();
+						}
+					}
+
+					& > *:last-child {
+						@if $direction == 'vertical' {
+							margin-bottom: 0 important();
+						} @else if $direction == 'horizontal' {
+							margin-right: 0 important();
+						} 
+					}
+				}
+			}
+		}
+	}
+
+}

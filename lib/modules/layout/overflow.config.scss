@@ -1,0 +1,11 @@
+@include set-default(module, 'overflow', (
+	root        : 'of',
+  group       : 'layout',
+	values:      (
+		a : auto,
+		v : visible,
+		h : hidden,
+		s : scroll
+	),
+	breakpoints : get(breakpoint)
+) );

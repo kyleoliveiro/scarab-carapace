@@ -1,135 +1,83 @@
-# <img src="carapace-logo.png" width="342" height="96" alt="Carapace">
+<div align="center" style="text-align:center;">
+<img src="https://raw.githubusercontent.com/kyleoliveiro/scarab-carapace/master/carapace-logo.svg?sanitize=true" width="128">
+<h1>Scarab Carapace</h1>
+<strong>CSS utility class generator</strong>
 
-[![npm](https://img.shields.io/npm/v/scarab-carapace.svg)](https://www.npmjs.com/package/scarab-carapace) [![Build Status](https://travis-ci.org/watchtowerdigital/scarab-carapace.svg?branch=master)](https://travis-ci.org/watchtowerdigital/scarab-carapace) 
+Automatically generate CSS from design tokens <br>Breakpoints and states · Highly configurable
 
-**Config-driven framework for generating CSS utility classes**
+_An extension for the [Scarab](https://github.com/kyleoliveiro/scarab-core) Sass ecosystem._
 
-*Carapace* is a Sass framework which generates [functional/atomic CSS](https://css-tricks.com/lets-define-exactly-atomic-css/) classes based on user-defined configuration. It depends on the [`scarab-scss`](https://github.com/watchtowerdigital/scarab) Sass utility library for low-level functions and mixins.
+[![npm-beta](https://img.shields.io/npm/v/@scarab/carapace.svg)](https://www.npmjs.com/package/@scarab/carapace)
+[![Build Status](https://travis-ci.org/kyleoliveiro/scarab-carapace.svg)](https://travis-ci.org/kyleoliveiro/scarab-carapace.svg) 
 
-Although Carapace provides some defaults, it is not an opinionated CSS library. Think of it instead as a tool for rapidly creating custom CSS libraries on a per-project basis.
+---
 
+[💿 Installation](#installation)&ensp;·&ensp;[📚 Documentation](#documentation)&ensp;·&ensp;[⭐️ Features](#features)&ensp;·&ensp;[🍃 Ecosystem](#ecosystem)
+<br>
+[🎉 Motivation](#motivation)&ensp;·&ensp;[❤️ Contributing](#contributing)&ensp;·&ensp;[📃️ License](#license)
+</div>
 
+---
 
-## Table of contents
-- [Features](#features)
-- [Installation](#installation)
-- [Configuration](#configuration)
-  - [Variable Management](#variable-management)
-  - [Naming Convention](#naming-convention)
-- [Usage](#usage)
-  - [Reset/Normalize](#resetnormalize)
-  - [Modules](#modules)
-  - [Compiling CSS](#compiling-css)
-- [Documentation](#documentation)
-- [Resources](#resources)
+## 💿 Installation
+1. Install Scarab Carapace as a dev-dependency (this also installs Scarab Core):
 
+```bash
+# With yarn
+$ yarn add @scarab/carapace -D
 
-## Features
-- Functional CSS *(a.k.a. Atomic CSS)*
-- Configuration-driven stylesheets
-- Bring-your-own naming convention
-- Responsive and mobile-first
-- Optional CSS reset/normalize
-- Easily achieve vertical rythmn
-- Automatic styleguides for your project *(with [`scarab-styleguide`](https://github.com/watchtowerdigital/scarab-styleguide))*
-
-
-
-## Installation
-1. Install `scarab-carapace` as a dev-dependency in your project via npm:
-```
-npm install scarab-carapace --save-dev
+# Or with npm
+$ npm install @scarab/carapace --save-dev
 ```
 
-2. Add your `node_modules` folder to your Sass [`includePath`](https://github.com/sass/node-sass#includepaths).
+2. Add `node_modules/` to your Sass [`includePaths`](https://github.com/sass/node-sass#includepaths).
 
-3. Import the necessary files in your main stylesheet:
+3. Import the following files to configure Carapace and generate CSS classes:
+
 ```scss
-// IMPORTANT
-// 
-// Follow the import order below to ensure modules are generated properly.
+// Import the Scarab Core library
+@import '@scarab/core/_';
 
-@import 'scarab-carapace/core';      // Imports scarab-scss, core utils & config
-@import 'custom/config.scss';        // Your custom Carapace settings & config
-@import 'scarab-carapace/config';    // Imports default module config
-@import 'custom/module-config.scss'; // Your custom Carapace module config
-@import 'scarab-carapace/modules';   // Generates CSS classes
+// Import your design token config
+@import 'your-design-tokens.scss';
+
+// Import the Carapace library
+@import '@scarab/carapace/_';
+
+// Import your custom module config (more on this later)
+@import 'your-custom-module-config.scss';
+
+// Generate Carapace CSS classes
+@import '@scarab/carapace/classes';
 ```
 
-## Configuration
+## 📚 Documentation
+Read the API documentation and guides:<br>
+[**https://scarab.style/carapace**](https://scarab.style/carapace)
 
-The quickest way to get up to speed on configuring *Carapace* is by looking at the [default configuration files](src/config/).
+## ⭐️ Features
 
-### Variable management
-*Carapace* imports the `scarab-scss` utility library, exposing the `get()` function and `set()` mixin. These utilities allow you to configure the *Carapace* theme and modules. Refer to the [Configuration section](https://github.com/watchtowerdigital/scarab#configuration) of the `README` in `scarab-scss` for more information on `get()` and `set()`.
+### 🏭 CSS utility class generator
+Carapace generates single purpose CSS utility classes from design tokens defined with Scarab. These are the kinds of classes used in the [Functional CSS (a.k.a. Atomic CSS) methodology](https://css-tricks.com/lets-define-exactly-atomic-css/).
 
-### Naming convention
-With the default naming convention, class names that *Carpace* generates will look something like this:
-```html
-<section class="bgc:black c:white  m(bgc:white) m(c:black)  hv(c:grey) m(hv(c:dark-grey))">
-	<p>This section has a 'black' background with 'white' text.
-	When hovered, the text color changes to 'grey'.</p>
-	<p>On 'medium'-sized screens, it has a 'white' background with 'black' text.
-	When hovered, the text color changes to 'dark-grey'.</p>
-</section>
-```
+### 📲 Breakpoint-specific classes
 
-Breakpoint and state shorthands and values can be configured in the `breakpoints` and `states` maps, while the selector format, prefixes and suffixes can be customized by changing the values of the following keys in `$SCARAB`:
-- `selector-format`
-- `root-prefix`
-- `root-suffix`
-- `variant-prefix`
-- `variant-suffix`
-- `modifier-prefix`
-- `modifier-suffix`
-- `breakpoint-prefix`
-- `breakpoint-suffix`
-- `state-prefix`
-- `state-suffix`
+### 👆 State-specific classes
 
-Be sure to prefix any special characters in the `selector-format`, `*-prefix` and `*-suffix` values with a `\`, so that generated CSS class names are properly escaped.
+### ⚙️ Configurable naming convention
 
+## 🍃 Ecosystem
 
+In addition to the core library, the following packages are available in the Scarab ecosystem:
 
-## Usage
+| Package | Description |
+| :-- | :-- |
+| [**Scarab Core**](https://github.com/kyleoliveiro/scarab-core.git) | Sass library for rapid stylesheet development |
+| [**Scarab CLI** (WIP)](https://github.com/kyleoliveiro/scarab-cli.git) | Command-line tools for the Scarab ecosystem |
+| [**Scarab snippets** (WIP)](https://github.com/kyleoliveiro/scarab-snippets.git) | Scarab snippets for your favorite text editors and IDE's |
 
-### Reset/Normalize
-These styles are included by default. If you wish to turn them off, set the `reset-styles` and/or `normalize-styles` keys in `$SCARAB` to `false`.
+### ❤️ Contributing
+Issues and feature requests and PR's are welcome!
 
-### Modules
-Modules are single-purpose, functional CSS classes. Module class names and values are dynamically generated by *Carapace*, depending on the values set in the global `$SCARAB` variable.
-
-Module class names consist of a `root`, and optionally: `variant`, `modifier`, `breakpoint` and `state`.
-
-In Carapace, configuration for a module typically looks like this:
-```scss
-@include set-default( modules, 'opacity', (
-  root        : 'o',                  // String which defines the module's `root`
-  values      : get(opacity),         // Map  of `modifier` names to CSS property values
-  states      : get-keys(states),     // List of `state` names
-  breakpoints : get-keys(breakpoints) // List of `breakpoint` names
-) );
-```
-
-Refer to the [`modules/`](src/modules/) folder for more information on how to configure modules.
-
-### Compiling CSS
-*Carapace* does not include a build step to compile Sass to CSS. The following tasks are recommended for production:
-
-- Prefix compiled CSS for cross-browser compatibility ([`autoprefixer`](https://github.com/postcss/autoprefixer))
-- Minify compiled CSS ([`cssnano`](https://github.com/ben-eb/cssnano))
-- Separate base CSS from styles in media queries ([`sakugawa`](https://github.com/paazmaya/sakugawa))
-- Inline base CSS, and `<link>` media query styles
-
-
-
-## Documentation
-Documentation is a work-in-progress.
-
-
-
-## Related
-* [**scarab-scss**](https://github.com/watchtowerdigital/scarab.git) — Sass utility framework for rapid stylesheet development
-* [**scarab-styleguide**](https://github.com/watchtowerdigital/scarab-styleguide.git) — Generate automatic styleguides from scarab-carapace configuration
-* [**scarab-cli**](https://github.com/watchtowerdigital/scarab-cli.git) — Command-Line Interface for the Scarab Sass ecosystem
-* [**scarab-snippets**](https://github.com/watchtowerdigital/scarab-snippets.git) — Sublime Text snippets for the Scarab Sass utility framework
+### 📃️ License
+Licensed under BSD 3-Clause. Copyright &copy; Kyle Oliveiro 2018.
