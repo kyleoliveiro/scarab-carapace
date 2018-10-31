@@ -1,0 +1,14 @@
+@include set( color, (
+	black: (
+		_: #000000
+	),
+	grey:  (
+		_:  #cccccc,
+		light: #f3f3f3,
+		dark:  #666666
+	),
+	white: (
+		_: #ffffff
+	),
+	transparent: transparent
+) );
